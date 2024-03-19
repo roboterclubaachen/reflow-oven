@@ -759,7 +759,7 @@
   (symbol (lib_id "Device:RotaryEncoder_Switch") (at 58.42 96.52 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 09a274c9-af3a-459d-8f66-9fb2f650327c)
-    (property "Reference" "SW101" (at 58.42 86.36 0)
+    (property "Reference" "SW1002" (at 58.42 86.36 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "PEC12R-3220F-S0024" (at 58.42 88.9 0)
@@ -778,9 +778,6 @@
     (pin "S2" (uuid d32df35d-6584-401c-8ca8-29010cf0d062))
     (instances
       (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d"
-          (reference "SW101") (unit 1)
-        )
         (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/732d703e-e996-4cd3-add9-becac623524e"
           (reference "SW1002") (unit 1)
         )

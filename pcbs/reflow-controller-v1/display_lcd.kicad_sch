@@ -398,7 +398,7 @@
   (symbol (lib_id "Mechanical:MountingHole_Pad") (at 215.9 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3697abda-3ae0-493f-859a-f1c7ba36f67d)
-    (property "Reference" "H801" (at 218.44 78.74 0)
+    (property "Reference" "H702" (at 218.44 78.74 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "SMTSO2540CTJ" (at 218.44 81.28 0)
@@ -413,12 +413,6 @@
     (pin "1" (uuid 3c924dae-937c-4391-8a11-e2cede4a6026))
     (instances
       (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
-          (reference "H801") (unit 1)
-        )
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
-          (reference "H901") (unit 1)
-        )
         (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f628d05d-4e2a-4195-9ee3-f88b775e9255"
           (reference "H702") (unit 1)
         )
@@ -478,7 +472,7 @@
   (symbol (lib_id "Mechanical:MountingHole_Pad") (at 215.9 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 921bd1c2-97a4-43b0-988b-4fa2b09aac7e)
-    (property "Reference" "H801" (at 218.44 69.85 0)
+    (property "Reference" "H701" (at 218.44 69.85 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "SMTSO2540CTJ" (at 218.44 72.39 0)
@@ -493,12 +487,6 @@
     (pin "1" (uuid ee0f39f6-c697-4c13-9943-ee71f4702fef))
     (instances
       (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
-          (reference "H801") (unit 1)
-        )
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
-          (reference "H901") (unit 1)
-        )
         (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f628d05d-4e2a-4195-9ee3-f88b775e9255"
           (reference "H701") (unit 1)
         )
@@ -520,7 +508,7 @@
   (symbol (lib_id "Mechanical:MountingHole_Pad") (at 215.9 90.17 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ae0d1c12-c6e6-4ee5-a718-202ccabd28d1)
-    (property "Reference" "H801" (at 218.44 87.63 0)
+    (property "Reference" "H703" (at 218.44 87.63 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "SMTSO2540CTJ" (at 218.44 90.17 0)
@@ -535,12 +523,6 @@
     (pin "1" (uuid 0c693478-ec05-4b48-bf4e-c24420650452))
     (instances
       (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
-          (reference "H801") (unit 1)
-        )
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
-          (reference "H901") (unit 1)
-        )
         (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f628d05d-4e2a-4195-9ee3-f88b775e9255"
           (reference "H703") (unit 1)
         )
@@ -587,7 +569,7 @@
   (symbol (lib_id "Mechanical:MountingHole_Pad") (at 215.9 99.06 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d185ab36-d90b-41c5-a4e3-e4da145b8cb0)
-    (property "Reference" "H801" (at 218.44 96.52 0)
+    (property "Reference" "H704" (at 218.44 96.52 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "SMTSO2540CTJ" (at 218.44 99.06 0)
@@ -602,12 +584,6 @@
     (pin "1" (uuid 202507f0-c7e0-4ee6-a8b0-3f97d475b230))
     (instances
       (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
-          (reference "H801") (unit 1)
-        )
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
-          (reference "H901") (unit 1)
-        )
         (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f628d05d-4e2a-4195-9ee3-f88b775e9255"
           (reference "H704") (unit 1)
         )
