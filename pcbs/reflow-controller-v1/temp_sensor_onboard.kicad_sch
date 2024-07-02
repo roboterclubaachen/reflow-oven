@@ -1,635 +1,1695 @@
-(kicad_sch (version 20230121) (generator eeschema)
-
-  (uuid d73372ed-258c-4078-a5a3-076a87da0566)
-
-  (paper "A4")
-
-  (lib_symbols
-    (symbol "Device:R" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "R" (at 2.032 0 90)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "R" (at 0 0 90)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at -1.778 0 90)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "R res resistor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Resistor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "R_*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "R_0_1"
-        (rectangle (start -1.016 -2.54) (end 1.016 2.54)
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "R_1_1"
-        (pin passive line (at 0 3.81 270) (length 1.27)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 -3.81 90) (length 1.27)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Sensor_Temperature:TMP1075DSG" (in_bom yes) (on_board yes)
-      (property "Reference" "U" (at -6.35 6.35 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "TMP1075DSG" (at 6.35 6.35 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm_ThermalVias" (at 1.905 -6.35 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "https://www.ti.com/lit/gpn/tmp1075" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "temperature sensor I2C single channel" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "I2C-bus digital temperature sensor and thermal watchdog, WSON-8" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "WSON*1EP*2x2mm*P0.5mm*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "TMP1075DSG_0_1"
-        (rectangle (start -7.62 5.08) (end 7.62 -5.08)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-      )
-      (symbol "TMP1075DSG_1_1"
-        (pin bidirectional line (at 10.16 2.54 180) (length 2.54)
-          (name "SDA" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at 10.16 0 180) (length 2.54)
-          (name "SCL" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin open_collector line (at 10.16 -2.54 180) (length 2.54)
-          (name "ALERT" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 0 -7.62 90) (length 2.54)
-          (name "GND" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -10.16 -2.54 0) (length 2.54)
-          (name "A2" (effects (font (size 1.27 1.27))))
-          (number "5" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -10.16 0 0) (length 2.54)
-          (name "A1" (effects (font (size 1.27 1.27))))
-          (number "6" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -10.16 2.54 0) (length 2.54)
-          (name "A0" (effects (font (size 1.27 1.27))))
-          (number "7" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 0 7.62 270) (length 2.54)
-          (name "V+" (effects (font (size 1.27 1.27))))
-          (number "8" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at -2.54 -7.62 90) (length 2.54)
-          (name "EP" (effects (font (size 1.27 1.27))))
-          (number "9" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "power:+3V3" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "+3V3" (at 0 3.556 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"+3V3\"" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "+3V3_0_1"
-        (polyline
-          (pts
-            (xy -0.762 1.27)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy 0.762 1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "+3V3_1_1"
-        (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+3V3" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "power:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -6.35 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "GND" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "GND_0_1"
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 -1.27)
-            (xy 1.27 -1.27)
-            (xy 0 -2.54)
-            (xy -1.27 -1.27)
-            (xy 0 -1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "GND_1_1"
-        (pin power_in line (at 0 0 270) (length 0) hide
-          (name "GND" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-  )
-
-  (junction (at 130.81 91.44) (diameter 0) (color 0 0 0 0)
-    (uuid 0ac8277b-3298-446b-9902-373add61667c)
-  )
-  (junction (at 130.175 125.095) (diameter 0) (color 0 0 0 0)
-    (uuid 13cc3cc8-c80d-4708-a4f9-b7a0c93d0af9)
-  )
-  (junction (at 140.335 119.38) (diameter 0) (color 0 0 0 0)
-    (uuid 1908cdd9-7349-4175-9169-df0319100779)
-  )
-  (junction (at 140.335 136.525) (diameter 0) (color 0 0 0 0)
-    (uuid 1d3dd4a3-6588-4b41-a268-2687abd9565c)
-  )
-  (junction (at 173.99 88.9) (diameter 0) (color 0 0 0 0)
-    (uuid 456de18d-c686-4e86-aa68-1e823cf7e254)
-  )
-  (junction (at 160.02 86.36) (diameter 0) (color 0 0 0 0)
-    (uuid 93a78478-86b5-4d98-b517-2ec248756195)
-  )
-  (junction (at 140.97 80.645) (diameter 0) (color 0 0 0 0)
-    (uuid a1b008e4-6d2d-45cf-9f94-8e508e0e955c)
-  )
-  (junction (at 140.97 97.79) (diameter 0) (color 0 0 0 0)
-    (uuid cd9aa3ec-5d34-43bf-b090-77ff60903dc5)
-  )
-
-  (no_connect (at 137.795 135.255) (uuid 455e2887-de09-4309-9eb5-f64a25e65d39))
-  (no_connect (at 151.13 91.44) (uuid 7a00fa0b-bd3d-439d-82dd-aecba7036a10))
-  (no_connect (at 138.43 96.52) (uuid 85e82fe7-a6ad-4118-884e-203c9691d7d6))
-  (no_connect (at 150.495 130.175) (uuid ab34a9d6-4a4a-462a-861d-5d876d2a7c67))
-
-  (wire (pts (xy 140.97 78.105) (xy 140.97 80.645))
-    (stroke (width 0) (type default))
-    (uuid 05c0e402-26b2-4146-be4a-bb813edb78c1)
-  )
-  (wire (pts (xy 130.175 119.38) (xy 140.335 119.38))
-    (stroke (width 0) (type default))
-    (uuid 06d9817a-b4af-47c9-8056-c4280e0250e7)
-  )
-  (wire (pts (xy 130.175 125.095) (xy 130.175 119.38))
-    (stroke (width 0) (type default))
-    (uuid 0d607efd-b69c-4800-8a2a-63a3b57deeb9)
-  )
-  (wire (pts (xy 140.97 80.645) (xy 140.97 81.28))
-    (stroke (width 0) (type default))
-    (uuid 0e313ea9-bff2-448b-a7e0-a480bd011c8b)
-  )
-  (wire (pts (xy 160.02 83.82) (xy 160.02 86.36))
-    (stroke (width 0) (type default))
-    (uuid 18334737-429b-4c02-9437-78b37cc85caf)
-  )
-  (wire (pts (xy 130.175 130.175) (xy 130.175 136.525))
-    (stroke (width 0) (type default))
-    (uuid 2dad614e-129f-49a1-ac7d-fdb668447862)
-  )
-  (wire (pts (xy 130.81 91.44) (xy 130.81 97.79))
-    (stroke (width 0) (type default))
-    (uuid 3fdf9a72-2530-4867-8c50-6855e0b4c5cf)
-  )
-  (wire (pts (xy 130.175 125.095) (xy 130.175 127.635))
-    (stroke (width 0) (type default))
-    (uuid 44849884-aa20-410b-89c2-25fc3b92a09f)
-  )
-  (wire (pts (xy 150.495 125.095) (xy 160.02 125.095))
-    (stroke (width 0) (type default))
-    (uuid 642acebf-df88-4482-bb6d-2a9e68c27947)
-  )
-  (wire (pts (xy 160.02 86.36) (xy 182.245 86.36))
-    (stroke (width 0) (type default))
-    (uuid 66ef89ab-87c6-466a-9eb2-2679590b7886)
-  )
-  (wire (pts (xy 160.02 75.565) (xy 160.02 76.2))
-    (stroke (width 0) (type default))
-    (uuid 6b7c768b-e6de-40dd-bd99-0f9ed7307e7f)
-  )
-  (wire (pts (xy 130.81 97.79) (xy 140.97 97.79))
-    (stroke (width 0) (type default))
-    (uuid 6e4bb2db-9d10-434b-b779-1c3a8d0625b6)
-  )
-  (wire (pts (xy 140.335 135.255) (xy 140.335 136.525))
-    (stroke (width 0) (type default))
-    (uuid 6f55b575-b309-4264-baf3-5acc43312578)
-  )
-  (wire (pts (xy 140.97 97.79) (xy 140.97 100.33))
-    (stroke (width 0) (type default))
-    (uuid 78a64ed8-6cec-4193-b08d-8096218a8165)
-  )
-  (wire (pts (xy 130.81 80.645) (xy 140.97 80.645))
-    (stroke (width 0) (type default))
-    (uuid 819e3bf5-5e8c-4868-a4d5-72a1400ae7f9)
-  )
-  (wire (pts (xy 173.99 75.565) (xy 173.99 76.2))
-    (stroke (width 0) (type default))
-    (uuid 844121a6-2f75-464a-be00-7261c94a7641)
-  )
-  (wire (pts (xy 150.495 127.635) (xy 173.99 127.635))
-    (stroke (width 0) (type default))
-    (uuid 8e25e4d7-411b-44b1-a73f-f047712ac3fc)
-  )
-  (wire (pts (xy 173.99 127.635) (xy 173.99 88.9))
-    (stroke (width 0) (type default))
-    (uuid 8f30b9eb-9c0d-4b72-ae95-b3c257c9c102)
-  )
-  (wire (pts (xy 140.335 116.84) (xy 140.335 119.38))
-    (stroke (width 0) (type default))
-    (uuid a0ef766e-d317-4821-a062-c7ee773d1f3f)
-  )
-  (wire (pts (xy 140.97 96.52) (xy 140.97 97.79))
-    (stroke (width 0) (type default))
-    (uuid ab37b28a-3a64-42d9-ab95-996225703576)
-  )
-  (wire (pts (xy 140.335 136.525) (xy 140.335 139.065))
-    (stroke (width 0) (type default))
-    (uuid b331d615-0e3c-4952-8819-ee5109afc396)
-  )
-  (wire (pts (xy 130.81 88.9) (xy 130.81 91.44))
-    (stroke (width 0) (type default))
-    (uuid bf9ab82b-9fdc-4dfb-8a9f-d04f86602c0e)
-  )
-  (wire (pts (xy 160.02 86.36) (xy 160.02 125.095))
-    (stroke (width 0) (type default))
-    (uuid c038c67c-55e8-4e22-b41d-04d3fefe1a7e)
-  )
-  (wire (pts (xy 130.81 86.36) (xy 130.81 80.645))
-    (stroke (width 0) (type default))
-    (uuid cc8a1d00-5832-42a4-8e4b-9ddf365e20b4)
-  )
-  (wire (pts (xy 140.335 119.38) (xy 140.335 120.015))
-    (stroke (width 0) (type default))
-    (uuid dc1627f6-74db-45a5-b047-4fe99be80704)
-  )
-  (wire (pts (xy 173.99 83.82) (xy 173.99 88.9))
-    (stroke (width 0) (type default))
-    (uuid f0bf89e1-9414-484a-8d28-a516e400a412)
-  )
-  (wire (pts (xy 151.13 88.9) (xy 173.99 88.9))
-    (stroke (width 0) (type default))
-    (uuid f4689fa8-f58b-425a-9f70-bc967577dd17)
-  )
-  (wire (pts (xy 130.175 136.525) (xy 140.335 136.525))
-    (stroke (width 0) (type default))
-    (uuid f72874e5-6a7e-44ac-a674-072e259cea8a)
-  )
-  (wire (pts (xy 173.99 88.9) (xy 182.245 88.9))
-    (stroke (width 0) (type default))
-    (uuid f79483ef-bf52-4322-9350-52ab66d1a9fd)
-  )
-  (wire (pts (xy 151.13 86.36) (xy 160.02 86.36))
-    (stroke (width 0) (type default))
-    (uuid fa6581aa-c72b-48c9-95ec-c3cf4242f154)
-  )
-
-  (hierarchical_label "SDA" (shape bidirectional) (at 182.245 86.36 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 479d0781-231c-4501-b6c1-8da6e77b77f0)
-  )
-  (hierarchical_label "SCL" (shape input) (at 182.245 88.9 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid f4689393-c81f-47f7-b4df-b89b59d08a21)
-  )
-
-  (symbol (lib_id "power:+3V3") (at 160.02 75.565 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 101e165d-04ab-4dfc-a960-075f38bdbaa3)
-    (property "Reference" "#PWR05" (at 160.02 79.375 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3V3" (at 160.02 71.12 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 160.02 75.565 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 160.02 75.565 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 407356d5-1320-463e-80f1-11a84c560c0d))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
-          (reference "#PWR05") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3V3") (at 173.99 75.565 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 44fce6d5-13d8-4618-be1a-88357c534b5b)
-    (property "Reference" "#PWR06" (at 173.99 79.375 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3V3" (at 173.99 71.12 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 173.99 75.565 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 173.99 75.565 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 9e4047ec-a15b-4397-acc5-5afdc9a41210))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
-          (reference "#PWR06") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Sensor_Temperature:TMP1075DSG") (at 140.335 127.635 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 6ea45313-f983-4fa6-91d2-6b068d88622e)
-    (property "Reference" "U2" (at 142.5291 117.475 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "TMP1075DSG" (at 142.5291 120.015 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm" (at 142.24 133.985 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://www.ti.com/lit/gpn/tmp1075" (at 140.335 127.635 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "8" (uuid cfc84ae4-5d25-4d2a-9869-e1d9c1db562e))
-    (pin "9" (uuid dcf2aa67-2bc9-4db6-91e5-c1224703c664))
-    (pin "5" (uuid d6d4a35e-c9be-42d8-a47e-645c8ae2f230))
-    (pin "4" (uuid 3b58614d-5510-4532-a26c-030efcb9cab8))
-    (pin "6" (uuid d02c7ada-8444-4a14-bd54-cb14b495eb7e))
-    (pin "7" (uuid 1f4207f8-8bd0-4260-8525-b10c5bf84c87))
-    (pin "1" (uuid 6e0e0283-8493-44f1-95f1-0fe8cbec9491))
-    (pin "3" (uuid 38b9b7dc-0d8a-4799-9883-9570ad08c22c))
-    (pin "2" (uuid f009d03b-2533-4e38-abd4-06b15c6981f6))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
-          (reference "U2") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 140.335 139.065 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 9bfdb2f2-d121-4d3b-bbf1-d9ae3c66f26f)
-    (property "Reference" "#PWR04" (at 140.335 145.415 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 140.335 144.145 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 140.335 139.065 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 140.335 139.065 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 5fe2dc21-df45-4dc0-9af4-0457847526bf))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
-          (reference "#PWR04") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 140.97 100.33 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid ae63f1e1-fbb8-4a68-997d-245374d6e407)
-    (property "Reference" "#PWR01" (at 140.97 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 140.97 105.41 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 140.97 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 140.97 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 96482ece-2d2b-4c59-aaa9-f2621d3cd755))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
-          (reference "#PWR01") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 173.99 80.01 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid c8c230c9-5632-4edb-bfdc-24f16760287c)
-    (property "Reference" "R2" (at 176.53 78.74 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "3k3" (at 176.53 81.28 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 172.212 80.01 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 173.99 80.01 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4b3d9f02-270b-440d-b816-35003d81214d))
-    (pin "2" (uuid 095e117f-57f5-43c6-9843-839a9bf98fcd))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
-          (reference "R2") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 160.02 80.01 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid d7debcd1-6134-418a-a431-7441f9b29868)
-    (property "Reference" "R1" (at 162.56 78.74 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "3k3" (at 162.56 81.28 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 158.242 80.01 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 160.02 80.01 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 49805125-8c14-4da7-98db-b354af999d03))
-    (pin "2" (uuid 4ebbe506-dd09-4cf3-a18b-c0743601d72e))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
-          (reference "R1") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Sensor_Temperature:TMP1075DSG") (at 140.97 88.9 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid d85631d1-d4a6-4cde-b3bb-68fa145f1ac4)
-    (property "Reference" "U1" (at 143.1641 78.74 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "TMP1075DSG" (at 143.1641 81.28 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm" (at 142.875 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://www.ti.com/lit/gpn/tmp1075" (at 140.97 88.9 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "8" (uuid 1f08792e-7e97-423a-8e0b-a7b277ee9731))
-    (pin "9" (uuid 73f84576-cd82-40af-b24d-e00439b95cbe))
-    (pin "5" (uuid 1edfb09f-1e92-4558-a460-4a038df4a6dd))
-    (pin "4" (uuid dcd6a41d-cec8-4aa8-96d9-ea4f1832b2a0))
-    (pin "6" (uuid d5c52452-5486-4bc1-b0e1-b4754de47c01))
-    (pin "7" (uuid c0a1aa61-8bad-436d-9bd7-dbe6459a4d00))
-    (pin "1" (uuid acc817b6-0b48-4bf3-8256-e138bfa681a7))
-    (pin "3" (uuid 19bf0c39-0bca-498f-9ef3-cf430e25d0f1))
-    (pin "2" (uuid 529afc92-dc4d-4b1a-b251-001f0d5eabbe))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
-          (reference "U1") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3V3") (at 140.97 78.105 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid ea1b76d5-562a-4ac3-a827-b694b5fd77e0)
-    (property "Reference" "#PWR02" (at 140.97 81.915 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3V3" (at 140.97 73.66 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 140.97 78.105 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 140.97 78.105 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 11209400-bd33-474d-ab2e-2c2cb16cba71))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
-          (reference "#PWR02") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3V3") (at 140.335 116.84 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid f195576b-c916-41dd-bdba-b600879eef5b)
-    (property "Reference" "#PWR03" (at 140.335 120.65 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3V3" (at 140.335 112.395 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 140.335 116.84 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 140.335 116.84 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 3b15dfe4-10ed-4e34-87e3-db806b0a0186))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
-          (reference "#PWR03") (unit 1)
-        )
-      )
-    )
-  )
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "d73372ed-258c-4078-a5a3-076a87da0566")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Device:R"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Sensor_Temperature:TMP1075DSG"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -6.35 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TMP1075DSG"
+				(at 6.35 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm_ThermalVias"
+				(at 1.905 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/gpn/tmp1075"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "I2C-bus digital temperature sensor and thermal watchdog, WSON-8"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "temperature sensor I2C single channel"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "WSON*1EP*2x2mm*P0.5mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TMP1075DSG_0_1"
+				(rectangle
+					(start -7.62 5.08)
+					(end 7.62 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TMP1075DSG_1_1"
+				(pin bidirectional line
+					(at 10.16 2.54 180)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "ALERT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "A0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 -7.62 90)
+					(length 2.54)
+					(name "EP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:+3V3"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+3V3"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+3V3\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+3V3_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3V3_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0) hide
+					(name "+3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:GND"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0) hide
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 130.81 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0ac8277b-3298-446b-9902-373add61667c")
+	)
+	(junction
+		(at 130.175 125.095)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "13cc3cc8-c80d-4708-a4f9-b7a0c93d0af9")
+	)
+	(junction
+		(at 140.335 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1908cdd9-7349-4175-9169-df0319100779")
+	)
+	(junction
+		(at 140.335 136.525)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1d3dd4a3-6588-4b41-a268-2687abd9565c")
+	)
+	(junction
+		(at 173.99 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "456de18d-c686-4e86-aa68-1e823cf7e254")
+	)
+	(junction
+		(at 160.02 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "93a78478-86b5-4d98-b517-2ec248756195")
+	)
+	(junction
+		(at 140.97 80.645)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a1b008e4-6d2d-45cf-9f94-8e508e0e955c")
+	)
+	(junction
+		(at 140.97 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cd9aa3ec-5d34-43bf-b090-77ff60903dc5")
+	)
+	(no_connect
+		(at 137.795 135.255)
+		(uuid "455e2887-de09-4309-9eb5-f64a25e65d39")
+	)
+	(no_connect
+		(at 151.13 91.44)
+		(uuid "7a00fa0b-bd3d-439d-82dd-aecba7036a10")
+	)
+	(no_connect
+		(at 138.43 96.52)
+		(uuid "85e82fe7-a6ad-4118-884e-203c9691d7d6")
+	)
+	(no_connect
+		(at 150.495 130.175)
+		(uuid "ab34a9d6-4a4a-462a-861d-5d876d2a7c67")
+	)
+	(wire
+		(pts
+			(xy 140.97 78.105) (xy 140.97 80.645)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05c0e402-26b2-4146-be4a-bb813edb78c1")
+	)
+	(wire
+		(pts
+			(xy 130.175 119.38) (xy 140.335 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06d9817a-b4af-47c9-8056-c4280e0250e7")
+	)
+	(wire
+		(pts
+			(xy 130.175 125.095) (xy 130.175 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d607efd-b69c-4800-8a2a-63a3b57deeb9")
+	)
+	(wire
+		(pts
+			(xy 140.97 80.645) (xy 140.97 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e313ea9-bff2-448b-a7e0-a480bd011c8b")
+	)
+	(wire
+		(pts
+			(xy 160.02 83.82) (xy 160.02 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18334737-429b-4c02-9437-78b37cc85caf")
+	)
+	(wire
+		(pts
+			(xy 130.175 130.175) (xy 130.175 136.525)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2dad614e-129f-49a1-ac7d-fdb668447862")
+	)
+	(wire
+		(pts
+			(xy 130.81 91.44) (xy 130.81 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fdf9a72-2530-4867-8c50-6855e0b4c5cf")
+	)
+	(wire
+		(pts
+			(xy 130.175 125.095) (xy 130.175 127.635)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44849884-aa20-410b-89c2-25fc3b92a09f")
+	)
+	(wire
+		(pts
+			(xy 150.495 125.095) (xy 160.02 125.095)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "642acebf-df88-4482-bb6d-2a9e68c27947")
+	)
+	(wire
+		(pts
+			(xy 160.02 86.36) (xy 182.245 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66ef89ab-87c6-466a-9eb2-2679590b7886")
+	)
+	(wire
+		(pts
+			(xy 160.02 75.565) (xy 160.02 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b7c768b-e6de-40dd-bd99-0f9ed7307e7f")
+	)
+	(wire
+		(pts
+			(xy 130.81 97.79) (xy 140.97 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e4bb2db-9d10-434b-b779-1c3a8d0625b6")
+	)
+	(wire
+		(pts
+			(xy 140.335 135.255) (xy 140.335 136.525)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f55b575-b309-4264-baf3-5acc43312578")
+	)
+	(wire
+		(pts
+			(xy 140.97 97.79) (xy 140.97 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78a64ed8-6cec-4193-b08d-8096218a8165")
+	)
+	(wire
+		(pts
+			(xy 130.81 80.645) (xy 140.97 80.645)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "819e3bf5-5e8c-4868-a4d5-72a1400ae7f9")
+	)
+	(wire
+		(pts
+			(xy 173.99 75.565) (xy 173.99 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "844121a6-2f75-464a-be00-7261c94a7641")
+	)
+	(wire
+		(pts
+			(xy 150.495 127.635) (xy 173.99 127.635)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e25e4d7-411b-44b1-a73f-f047712ac3fc")
+	)
+	(wire
+		(pts
+			(xy 173.99 127.635) (xy 173.99 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f30b9eb-9c0d-4b72-ae95-b3c257c9c102")
+	)
+	(wire
+		(pts
+			(xy 140.335 116.84) (xy 140.335 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0ef766e-d317-4821-a062-c7ee773d1f3f")
+	)
+	(wire
+		(pts
+			(xy 140.97 96.52) (xy 140.97 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab37b28a-3a64-42d9-ab95-996225703576")
+	)
+	(wire
+		(pts
+			(xy 140.335 136.525) (xy 140.335 139.065)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b331d615-0e3c-4952-8819-ee5109afc396")
+	)
+	(wire
+		(pts
+			(xy 130.81 88.9) (xy 130.81 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf9ab82b-9fdc-4dfb-8a9f-d04f86602c0e")
+	)
+	(wire
+		(pts
+			(xy 160.02 86.36) (xy 160.02 125.095)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c038c67c-55e8-4e22-b41d-04d3fefe1a7e")
+	)
+	(wire
+		(pts
+			(xy 130.81 86.36) (xy 130.81 80.645)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc8a1d00-5832-42a4-8e4b-9ddf365e20b4")
+	)
+	(wire
+		(pts
+			(xy 140.335 119.38) (xy 140.335 120.015)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc1627f6-74db-45a5-b047-4fe99be80704")
+	)
+	(wire
+		(pts
+			(xy 173.99 83.82) (xy 173.99 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0bf89e1-9414-484a-8d28-a516e400a412")
+	)
+	(wire
+		(pts
+			(xy 151.13 88.9) (xy 173.99 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4689fa8-f58b-425a-9f70-bc967577dd17")
+	)
+	(wire
+		(pts
+			(xy 130.175 136.525) (xy 140.335 136.525)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f72874e5-6a7e-44ac-a674-072e259cea8a")
+	)
+	(wire
+		(pts
+			(xy 173.99 88.9) (xy 182.245 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f79483ef-bf52-4322-9350-52ab66d1a9fd")
+	)
+	(wire
+		(pts
+			(xy 151.13 86.36) (xy 160.02 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa6581aa-c72b-48c9-95ec-c3cf4242f154")
+	)
+	(hierarchical_label "SDA"
+		(shape bidirectional)
+		(at 182.245 86.36 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "479d0781-231c-4501-b6c1-8da6e77b77f0")
+	)
+	(hierarchical_label "SCL"
+		(shape input)
+		(at 182.245 88.9 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f4689393-c81f-47f7-b4df-b89b59d08a21")
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 160.02 75.565 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "101e165d-04ab-4dfc-a960-075f38bdbaa3")
+		(property "Reference" "#PWR05"
+			(at 160.02 79.375 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 160.02 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 75.565 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 75.565 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 75.565 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "407356d5-1320-463e-80f1-11a84c560c0d")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 173.99 75.565 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "44fce6d5-13d8-4618-be1a-88357c534b5b")
+		(property "Reference" "#PWR06"
+			(at 173.99 79.375 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 173.99 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 173.99 75.565 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 75.565 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 173.99 75.565 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9e4047ec-a15b-4397-acc5-5afdc9a41210")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Sensor_Temperature:TMP1075DSG")
+		(at 140.335 127.635 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6ea45313-f983-4fa6-91d2-6b068d88622e")
+		(property "Reference" "U2"
+			(at 142.5291 117.475 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TMP1075DSG"
+			(at 142.5291 120.015 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm"
+			(at 142.24 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/tmp1075"
+			(at 140.335 127.635 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 140.335 127.635 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "8"
+			(uuid "cfc84ae4-5d25-4d2a-9869-e1d9c1db562e")
+		)
+		(pin "9"
+			(uuid "dcf2aa67-2bc9-4db6-91e5-c1224703c664")
+		)
+		(pin "5"
+			(uuid "d6d4a35e-c9be-42d8-a47e-645c8ae2f230")
+		)
+		(pin "4"
+			(uuid "3b58614d-5510-4532-a26c-030efcb9cab8")
+		)
+		(pin "6"
+			(uuid "d02c7ada-8444-4a14-bd54-cb14b495eb7e")
+		)
+		(pin "7"
+			(uuid "1f4207f8-8bd0-4260-8525-b10c5bf84c87")
+		)
+		(pin "1"
+			(uuid "6e0e0283-8493-44f1-95f1-0fe8cbec9491")
+		)
+		(pin "3"
+			(uuid "38b9b7dc-0d8a-4799-9883-9570ad08c22c")
+		)
+		(pin "2"
+			(uuid "f009d03b-2533-4e38-abd4-06b15c6981f6")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 140.335 139.065 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9bfdb2f2-d121-4d3b-bbf1-d9ae3c66f26f")
+		(property "Reference" "#PWR04"
+			(at 140.335 145.415 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 140.335 144.145 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.335 139.065 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.335 139.065 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 140.335 139.065 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5fe2dc21-df45-4dc0-9af4-0457847526bf")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 140.97 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ae63f1e1-fbb8-4a68-997d-245374d6e407")
+		(property "Reference" "#PWR01"
+			(at 140.97 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 140.97 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 140.97 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "96482ece-2d2b-4c59-aaa9-f2621d3cd755")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 173.99 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c8c230c9-5632-4edb-bfdc-24f16760287c")
+		(property "Reference" "R2"
+			(at 176.53 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "3k3"
+			(at 176.53 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 172.212 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 173.99 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 173.99 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4b3d9f02-270b-440d-b816-35003d81214d")
+		)
+		(pin "2"
+			(uuid "095e117f-57f5-43c6-9843-839a9bf98fcd")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 160.02 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d7debcd1-6134-418a-a431-7441f9b29868")
+		(property "Reference" "R1"
+			(at 162.56 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "3k3"
+			(at 162.56 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 158.242 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 160.02 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "49805125-8c14-4da7-98db-b354af999d03")
+		)
+		(pin "2"
+			(uuid "4ebbe506-dd09-4cf3-a18b-c0743601d72e")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Sensor_Temperature:TMP1075DSG")
+		(at 140.97 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d85631d1-d4a6-4cde-b3bb-68fa145f1ac4")
+		(property "Reference" "U1"
+			(at 143.1641 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TMP1075DSG"
+			(at 143.1641 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm"
+			(at 142.875 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/tmp1075"
+			(at 140.97 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 140.97 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "8"
+			(uuid "1f08792e-7e97-423a-8e0b-a7b277ee9731")
+		)
+		(pin "9"
+			(uuid "73f84576-cd82-40af-b24d-e00439b95cbe")
+		)
+		(pin "5"
+			(uuid "1edfb09f-1e92-4558-a460-4a038df4a6dd")
+		)
+		(pin "4"
+			(uuid "dcd6a41d-cec8-4aa8-96d9-ea4f1832b2a0")
+		)
+		(pin "6"
+			(uuid "d5c52452-5486-4bc1-b0e1-b4754de47c01")
+		)
+		(pin "7"
+			(uuid "c0a1aa61-8bad-436d-9bd7-dbe6459a4d00")
+		)
+		(pin "1"
+			(uuid "acc817b6-0b48-4bf3-8256-e138bfa681a7")
+		)
+		(pin "3"
+			(uuid "19bf0c39-0bca-498f-9ef3-cf430e25d0f1")
+		)
+		(pin "2"
+			(uuid "529afc92-dc4d-4b1a-b251-001f0d5eabbe")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 140.97 78.105 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ea1b76d5-562a-4ac3-a827-b694b5fd77e0")
+		(property "Reference" "#PWR02"
+			(at 140.97 81.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 140.97 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 78.105 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 78.105 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 140.97 78.105 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "11209400-bd33-474d-ab2e-2c2cb16cba71")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 140.335 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f195576b-c916-41dd-bdba-b600879eef5b")
+		(property "Reference" "#PWR03"
+			(at 140.335 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 140.335 112.395 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.335 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.335 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 140.335 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3b15dfe4-10ed-4e34-87e3-db806b0a0186")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/34e546ab-bb22-4653-bb8c-eaca24077e54"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
 )

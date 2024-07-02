@@ -1,726 +1,1735 @@
-(kicad_sch (version 20230121) (generator eeschema)
-
-  (uuid cef49501-d615-44b2-9b78-8c153249d0fe)
-
-  (paper "A4")
-
-  (lib_symbols
-    (symbol "Connector_Generic:Conn_01x04" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "J" (at 0 5.08 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "Conn_01x04" (at 0 -7.62 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "connector" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "Connector*:*_1x??_*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "Conn_01x04_1_1"
-        (rectangle (start -1.27 -4.953) (end 0 -5.207)
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (rectangle (start -1.27 -2.413) (end 0 -2.667)
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (rectangle (start -1.27 0.127) (end 0 -0.127)
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (rectangle (start -1.27 2.667) (end 0 2.413)
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (rectangle (start -1.27 3.81) (end 1.27 -6.35)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-        (pin passive line (at -5.08 2.54 0) (length 3.81)
-          (name "Pin_1" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at -5.08 0 0) (length 3.81)
-          (name "Pin_2" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at -5.08 -2.54 0) (length 3.81)
-          (name "Pin_3" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at -5.08 -5.08 0) (length 3.81)
-          (name "Pin_4" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Device:R" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "R" (at 2.032 0 90)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "R" (at 0 0 90)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at -1.778 0 90)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "R res resistor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Resistor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "R_*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "R_0_1"
-        (rectangle (start -1.016 -2.54) (end 1.016 2.54)
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "R_1_1"
-        (pin passive line (at 0 3.81 270) (length 1.27)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 -3.81 90) (length 1.27)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Mechanical:MountingHole_Pad" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "H" (at 0 6.35 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "MountingHole_Pad" (at 0 4.445 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "mounting hole" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Mounting Hole with connection" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "MountingHole*Pad*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "MountingHole_Pad_0_1"
-        (circle (center 0 1.27) (radius 1.27)
-          (stroke (width 1.27) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "MountingHole_Pad_1_1"
-        (pin input line (at 0 -2.54 90) (length 2.54)
-          (name "1" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "power:+3V3" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "+3V3" (at 0 3.556 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"+3V3\"" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "+3V3_0_1"
-        (polyline
-          (pts
-            (xy -0.762 1.27)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy 0.762 1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "+3V3_1_1"
-        (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+3V3" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "power:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -6.35 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "GND" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "GND_0_1"
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 -1.27)
-            (xy 1.27 -1.27)
-            (xy 0 -2.54)
-            (xy -1.27 -1.27)
-            (xy 0 -1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "GND_1_1"
-        (pin power_in line (at 0 0 270) (length 0) hide
-          (name "GND" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-  )
-
-  (junction (at 113.03 88.9) (diameter 0) (color 0 0 0 0)
-    (uuid 1b439de9-418e-4ada-b0dc-4123b8704442)
-  )
-  (junction (at 101.6 76.2) (diameter 0) (color 0 0 0 0)
-    (uuid 7e3b5b52-e846-4509-ba49-8c5fe010d671)
-  )
-  (junction (at 101.6 91.44) (diameter 0) (color 0 0 0 0)
-    (uuid 83e8a059-cbfa-4053-b8e6-41bffa2fc554)
-  )
-
-  (no_connect (at 194.31 83.82) (uuid 026e5bf4-e950-4027-bdc6-ec2b856dad36))
-  (no_connect (at 194.31 115.57) (uuid 14bbad0a-e015-4074-a1df-f5fb1efb1b4f))
-  (no_connect (at 137.16 115.57) (uuid 35ae81bc-7e94-4a35-b563-09bf6c663817))
-  (no_connect (at 137.16 83.82) (uuid ba8d38d2-83a7-44bb-8497-7d9c491bd8c0))
-
-  (wire (pts (xy 101.6 91.44) (xy 175.26 91.44))
-    (stroke (width 0) (type default))
-    (uuid 1f7528da-d204-4d46-8988-1ec7b43c4dde)
-  )
-  (wire (pts (xy 170.18 85.09) (xy 160.02 85.09))
-    (stroke (width 0) (type default))
-    (uuid 20166142-7076-436c-ab13-5bc4f4b5a331)
-  )
-  (wire (pts (xy 113.03 78.74) (xy 113.03 76.2))
-    (stroke (width 0) (type default))
-    (uuid 2e74ca06-28fc-4801-a3d2-2c5539d00081)
-  )
-  (wire (pts (xy 170.18 82.55) (xy 170.18 85.09))
-    (stroke (width 0) (type default))
-    (uuid 39fe8861-48cf-4846-b426-1d85bc6891b8)
-  )
-  (wire (pts (xy 172.72 88.9) (xy 172.72 82.55))
-    (stroke (width 0) (type default))
-    (uuid 4e9dbf14-bfbb-4f7a-aab0-a4f220454574)
-  )
-  (wire (pts (xy 101.6 76.2) (xy 113.03 76.2))
-    (stroke (width 0) (type default))
-    (uuid 54c0f1fd-bae4-4a02-9154-65baadd31efd)
-  )
-  (wire (pts (xy 101.6 76.2) (xy 101.6 78.74))
-    (stroke (width 0) (type default))
-    (uuid 67fd615a-a204-42ad-9502-0d54103eadf5)
-  )
-  (wire (pts (xy 167.64 82.55) (xy 167.64 99.06))
-    (stroke (width 0) (type default))
-    (uuid 7bdce56b-d997-4baf-8865-0a415b487b39)
-  )
-  (wire (pts (xy 160.02 83.82) (xy 160.02 85.09))
-    (stroke (width 0) (type default))
-    (uuid 7c55cd94-0654-4d68-a878-154cc16c7327)
-  )
-  (wire (pts (xy 91.44 91.44) (xy 101.6 91.44))
-    (stroke (width 0) (type default))
-    (uuid a3981a5b-444a-4982-b39c-78e1a6925a7b)
-  )
-  (wire (pts (xy 175.26 82.55) (xy 175.26 91.44))
-    (stroke (width 0) (type default))
-    (uuid a3d6d98c-f40e-4009-a850-8aad1dc33beb)
-  )
-  (wire (pts (xy 91.44 88.9) (xy 113.03 88.9))
-    (stroke (width 0) (type default))
-    (uuid ab71a98d-8a5c-4c17-9d19-8a88841c08e7)
-  )
-  (wire (pts (xy 101.6 86.36) (xy 101.6 91.44))
-    (stroke (width 0) (type default))
-    (uuid ace8e72a-b203-4a23-b87c-eb13ef4887c6)
-  )
-  (wire (pts (xy 101.6 73.66) (xy 101.6 76.2))
-    (stroke (width 0) (type default))
-    (uuid b228695f-fa44-4528-bb34-82523ec4a43e)
-  )
-  (wire (pts (xy 113.03 86.36) (xy 113.03 88.9))
-    (stroke (width 0) (type default))
-    (uuid b5494420-2118-4e56-97cf-d7ef4f60225b)
-  )
-  (wire (pts (xy 113.03 88.9) (xy 172.72 88.9))
-    (stroke (width 0) (type default))
-    (uuid cdb3fe25-fa8b-4c9d-b8c7-6d0923988026)
-  )
-
-  (rectangle (start 133.35 69.85) (end 210.82 120.65)
-    (stroke (width 0) (type default))
-    (fill (type none))
-    (uuid 80c7275f-a8a7-4d07-bacb-4bef2187be76)
-  )
-
-  (hierarchical_label "I2C_SCL" (shape input) (at 91.44 88.9 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 38e8af1d-0617-41da-93c0-3b95d83aae9d)
-  )
-  (hierarchical_label "I2C_SDA" (shape bidirectional) (at 91.44 91.44 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 75a5e0e1-5431-4341-9994-702b354c0210)
-  )
-
-  (symbol (lib_id "power:GND") (at 167.64 99.06 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 02017202-7908-4c78-ad7d-d6af453a9ec0)
-    (property "Reference" "#PWR0803" (at 167.64 105.41 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 167.64 104.14 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 167.64 99.06 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 167.64 99.06 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 0a8ba0fd-4b7f-4cd9-8cb2-dc73c04412eb))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
-          (reference "#PWR0803") (unit 1)
-        )
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
-          (reference "#PWR0903") (unit 1)
-        )
-      )
-      (project "controller_v1"
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
-          (reference "#PWR0203") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
-          (reference "#PWR0303") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
-          (reference "#PWR0403") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Connector_Generic:Conn_01x04") (at 170.18 77.47 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 148caf22-468b-4c36-8fed-01e2f42d736c)
-    (property "Reference" "J801" (at 171.45 71.12 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "SSD1306 white module" (at 171.45 73.66 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" (at 170.18 77.47 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 170.18 77.47 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 63366345-9c8e-44d8-aaf5-a591534398af))
-    (pin "2" (uuid efeeda75-54a3-4bb5-86f6-cd1ee36621cf))
-    (pin "3" (uuid 32457a87-eb82-4e89-b731-1acc656e039b))
-    (pin "4" (uuid 59e36d96-98fd-4bc9-9ba1-e7d8c99c9e34))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
-          (reference "J801") (unit 1)
-        )
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
-          (reference "J901") (unit 1)
-        )
-      )
-      (project "controller_v1"
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
-          (reference "J201") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
-          (reference "J301") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
-          (reference "J401") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 113.03 82.55 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 3f4cb0a0-49a7-4d30-b41d-7c8f88c0d122)
-    (property "Reference" "R802" (at 115.57 81.28 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "4.7k" (at 115.57 83.82 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 111.252 82.55 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 113.03 82.55 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 841a89f3-7586-44f3-936d-ff7cc9851928))
-    (pin "2" (uuid 9c89e151-4613-4bd0-946f-31f7706722cf))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
-          (reference "R802") (unit 1)
-        )
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
-          (reference "R902") (unit 1)
-        )
-      )
-      (project "controller_v1"
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
-          (reference "R202") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
-          (reference "R302") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
-          (reference "R402") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 137.16 81.28 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 4474ca79-2c22-4b87-afad-a4f3e65af6ab)
-    (property "Reference" "H801" (at 139.7 78.74 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "SMTSO2540CTJ" (at 139.7 81.28 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "WA-SMSI_M2.5:Mounting_Wuerth_WA-SMSI-M2.5_H4mm_9774040151" (at 137.16 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 137.16 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid db8422d9-78c2-4149-963e-5eb763906ca7))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
-          (reference "H801") (unit 1)
-        )
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
-          (reference "H901") (unit 1)
-        )
-      )
-      (project "controller_v1"
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
-          (reference "H201") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
-          (reference "H301") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
-          (reference "H401") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 137.16 113.03 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 5a94acfd-3b77-4e00-83ee-e05894103ef9)
-    (property "Reference" "H802" (at 139.7 110.49 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "SMTSO2540CTJ" (at 139.7 113.03 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "WA-SMSI_M2.5:Mounting_Wuerth_WA-SMSI-M2.5_H4mm_9774040151" (at 137.16 113.03 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 137.16 113.03 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid fb149654-83b7-44ae-87f9-aac47961fe95))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
-          (reference "H802") (unit 1)
-        )
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
-          (reference "H902") (unit 1)
-        )
-      )
-      (project "controller_v1"
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
-          (reference "H202") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
-          (reference "H302") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
-          (reference "H402") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 194.31 81.28 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 7b3de728-af84-424c-a848-fbdc8a2f10f6)
-    (property "Reference" "H803" (at 196.85 78.74 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "SMTSO2540CTJ" (at 196.85 81.28 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "WA-SMSI_M2.5:Mounting_Wuerth_WA-SMSI-M2.5_H4mm_9774040151" (at 194.31 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 194.31 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 5745f9c5-6175-4184-b93b-70d184d2eed8))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
-          (reference "H803") (unit 1)
-        )
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
-          (reference "H903") (unit 1)
-        )
-      )
-      (project "controller_v1"
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
-          (reference "H203") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
-          (reference "H303") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
-          (reference "H403") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3V3") (at 160.02 83.82 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 7b46b3eb-3cda-4ab2-a348-a75b00946d05)
-    (property "Reference" "#PWR0802" (at 160.02 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3V3" (at 160.02 78.74 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 160.02 83.82 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 160.02 83.82 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid bea74ba1-c3e5-40a7-8e4c-e5654275f838))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
-          (reference "#PWR0802") (unit 1)
-        )
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
-          (reference "#PWR0902") (unit 1)
-        )
-      )
-      (project "controller_v1"
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
-          (reference "#PWR0202") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
-          (reference "#PWR0302") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
-          (reference "#PWR0402") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3V3") (at 101.6 73.66 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 81c37921-1615-424f-b862-7d45435533b3)
-    (property "Reference" "#PWR0801" (at 101.6 77.47 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3V3" (at 101.6 68.58 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 101.6 73.66 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 101.6 73.66 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 0713113e-d2a6-4b56-bf5d-e3213f9dea46))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
-          (reference "#PWR0801") (unit 1)
-        )
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
-          (reference "#PWR0901") (unit 1)
-        )
-      )
-      (project "controller_v1"
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
-          (reference "#PWR0201") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
-          (reference "#PWR0301") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
-          (reference "#PWR0401") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 101.6 82.55 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 9631ea77-32ac-4076-afdd-7a3296294912)
-    (property "Reference" "R801" (at 104.14 81.28 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "4.7k" (at 104.14 83.82 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 99.822 82.55 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 101.6 82.55 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid cc7b8884-6a51-4eca-bc9b-dc707d078ac9))
-    (pin "2" (uuid 906394a8-0928-40ac-88af-334667df66a3))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
-          (reference "R801") (unit 1)
-        )
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
-          (reference "R901") (unit 1)
-        )
-      )
-      (project "controller_v1"
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
-          (reference "R201") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
-          (reference "R301") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
-          (reference "R401") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 194.31 113.03 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid f6e6d3c0-ca9e-4e00-b412-78dfd1872e31)
-    (property "Reference" "H804" (at 196.85 110.49 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "SMTSO2540CTJ" (at 196.85 113.03 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "WA-SMSI_M2.5:Mounting_Wuerth_WA-SMSI-M2.5_H4mm_9774040151" (at 194.31 113.03 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 194.31 113.03 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 6fbfd3ff-f9c8-4cb9-ae72-f7ed51f648b8))
-    (instances
-      (project "reflow-controller-v1"
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
-          (reference "H804") (unit 1)
-        )
-        (path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
-          (reference "H904") (unit 1)
-        )
-      )
-      (project "controller_v1"
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
-          (reference "H204") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
-          (reference "H304") (unit 1)
-        )
-        (path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
-          (reference "H404") (unit 1)
-        )
-      )
-    )
-  )
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "cef49501-d615-44b2-9b78-8c153249d0fe")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Connector_Generic:Conn_01x04"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x04"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x04_1_1"
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:R"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Mechanical:MountingHole_Pad"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole_Pad"
+				(at 0 4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole with connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*Pad*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_Pad_0_1"
+				(circle
+					(center 0 1.27)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_1_1"
+				(pin input line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:+3V3"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+3V3"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+3V3\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+3V3_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3V3_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0) hide
+					(name "+3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:GND"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0) hide
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 113.03 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1b439de9-418e-4ada-b0dc-4123b8704442")
+	)
+	(junction
+		(at 101.6 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7e3b5b52-e846-4509-ba49-8c5fe010d671")
+	)
+	(junction
+		(at 101.6 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "83e8a059-cbfa-4053-b8e6-41bffa2fc554")
+	)
+	(no_connect
+		(at 194.31 83.82)
+		(uuid "026e5bf4-e950-4027-bdc6-ec2b856dad36")
+	)
+	(no_connect
+		(at 194.31 115.57)
+		(uuid "14bbad0a-e015-4074-a1df-f5fb1efb1b4f")
+	)
+	(no_connect
+		(at 137.16 115.57)
+		(uuid "35ae81bc-7e94-4a35-b563-09bf6c663817")
+	)
+	(no_connect
+		(at 137.16 83.82)
+		(uuid "ba8d38d2-83a7-44bb-8497-7d9c491bd8c0")
+	)
+	(wire
+		(pts
+			(xy 101.6 91.44) (xy 175.26 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f7528da-d204-4d46-8988-1ec7b43c4dde")
+	)
+	(wire
+		(pts
+			(xy 170.18 85.09) (xy 160.02 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20166142-7076-436c-ab13-5bc4f4b5a331")
+	)
+	(wire
+		(pts
+			(xy 113.03 78.74) (xy 113.03 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e74ca06-28fc-4801-a3d2-2c5539d00081")
+	)
+	(wire
+		(pts
+			(xy 170.18 82.55) (xy 170.18 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39fe8861-48cf-4846-b426-1d85bc6891b8")
+	)
+	(wire
+		(pts
+			(xy 172.72 88.9) (xy 172.72 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e9dbf14-bfbb-4f7a-aab0-a4f220454574")
+	)
+	(wire
+		(pts
+			(xy 101.6 76.2) (xy 113.03 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54c0f1fd-bae4-4a02-9154-65baadd31efd")
+	)
+	(wire
+		(pts
+			(xy 101.6 76.2) (xy 101.6 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67fd615a-a204-42ad-9502-0d54103eadf5")
+	)
+	(wire
+		(pts
+			(xy 167.64 82.55) (xy 167.64 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7bdce56b-d997-4baf-8865-0a415b487b39")
+	)
+	(wire
+		(pts
+			(xy 160.02 83.82) (xy 160.02 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c55cd94-0654-4d68-a878-154cc16c7327")
+	)
+	(wire
+		(pts
+			(xy 91.44 91.44) (xy 101.6 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3981a5b-444a-4982-b39c-78e1a6925a7b")
+	)
+	(wire
+		(pts
+			(xy 175.26 82.55) (xy 175.26 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3d6d98c-f40e-4009-a850-8aad1dc33beb")
+	)
+	(wire
+		(pts
+			(xy 91.44 88.9) (xy 113.03 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab71a98d-8a5c-4c17-9d19-8a88841c08e7")
+	)
+	(wire
+		(pts
+			(xy 101.6 86.36) (xy 101.6 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ace8e72a-b203-4a23-b87c-eb13ef4887c6")
+	)
+	(wire
+		(pts
+			(xy 101.6 73.66) (xy 101.6 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b228695f-fa44-4528-bb34-82523ec4a43e")
+	)
+	(wire
+		(pts
+			(xy 113.03 86.36) (xy 113.03 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5494420-2118-4e56-97cf-d7ef4f60225b")
+	)
+	(wire
+		(pts
+			(xy 113.03 88.9) (xy 172.72 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cdb3fe25-fa8b-4c9d-b8c7-6d0923988026")
+	)
+	(rectangle
+		(start 133.35 69.85)
+		(end 210.82 120.65)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 80c7275f-a8a7-4d07-bacb-4bef2187be76)
+	)
+	(hierarchical_label "I2C_SCL"
+		(shape input)
+		(at 91.44 88.9 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "38e8af1d-0617-41da-93c0-3b95d83aae9d")
+	)
+	(hierarchical_label "I2C_SDA"
+		(shape bidirectional)
+		(at 91.44 91.44 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "75a5e0e1-5431-4341-9994-702b354c0210")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 167.64 99.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "02017202-7908-4c78-ad7d-d6af453a9ec0")
+		(property "Reference" "#PWR0803"
+			(at 167.64 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 167.64 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 167.64 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 167.64 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 167.64 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0a8ba0fd-4b7f-4cd9-8cb2-dc73c04412eb")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
+					(reference "#PWR0903")
+					(unit 1)
+				)
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
+					(reference "#PWR0803")
+					(unit 1)
+				)
+			)
+			(project "controller_v1"
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
+					(reference "#PWR0403")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
+					(reference "#PWR0303")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
+					(reference "#PWR0203")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 170.18 77.47 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "148caf22-468b-4c36-8fed-01e2f42d736c")
+		(property "Reference" "J801"
+			(at 171.45 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SSD1306 white module"
+			(at 171.45 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+			(at 170.18 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 170.18 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 170.18 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "63366345-9c8e-44d8-aaf5-a591534398af")
+		)
+		(pin "2"
+			(uuid "efeeda75-54a3-4bb5-86f6-cd1ee36621cf")
+		)
+		(pin "3"
+			(uuid "32457a87-eb82-4e89-b731-1acc656e039b")
+		)
+		(pin "4"
+			(uuid "59e36d96-98fd-4bc9-9ba1-e7d8c99c9e34")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
+					(reference "J901")
+					(unit 1)
+				)
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
+					(reference "J801")
+					(unit 1)
+				)
+			)
+			(project "controller_v1"
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
+					(reference "J401")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
+					(reference "J301")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
+					(reference "J201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 113.03 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3f4cb0a0-49a7-4d30-b41d-7c8f88c0d122")
+		(property "Reference" "R802"
+			(at 115.57 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "3k3"
+			(at 115.57 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 111.252 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 113.03 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 113.03 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "841a89f3-7586-44f3-936d-ff7cc9851928")
+		)
+		(pin "2"
+			(uuid "9c89e151-4613-4bd0-946f-31f7706722cf")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
+					(reference "R902")
+					(unit 1)
+				)
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
+					(reference "R802")
+					(unit 1)
+				)
+			)
+			(project "controller_v1"
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
+					(reference "R402")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
+					(reference "R302")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
+					(reference "R202")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 137.16 81.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4474ca79-2c22-4b87-afad-a4f3e65af6ab")
+		(property "Reference" "H801"
+			(at 139.7 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SMTSO2540CTJ"
+			(at 139.7 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "WA-SMSI_M2.5:Mounting_Wuerth_WA-SMSI-M2.5_H4mm_9774040151"
+			(at 137.16 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 137.16 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 137.16 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "db8422d9-78c2-4149-963e-5eb763906ca7")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
+					(reference "H901")
+					(unit 1)
+				)
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
+					(reference "H801")
+					(unit 1)
+				)
+			)
+			(project "controller_v1"
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
+					(reference "H401")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
+					(reference "H301")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
+					(reference "H201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 137.16 113.03 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5a94acfd-3b77-4e00-83ee-e05894103ef9")
+		(property "Reference" "H802"
+			(at 139.7 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SMTSO2540CTJ"
+			(at 139.7 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "WA-SMSI_M2.5:Mounting_Wuerth_WA-SMSI-M2.5_H4mm_9774040151"
+			(at 137.16 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 137.16 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 137.16 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fb149654-83b7-44ae-87f9-aac47961fe95")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
+					(reference "H902")
+					(unit 1)
+				)
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
+					(reference "H802")
+					(unit 1)
+				)
+			)
+			(project "controller_v1"
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
+					(reference "H402")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
+					(reference "H302")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
+					(reference "H202")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 194.31 81.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7b3de728-af84-424c-a848-fbdc8a2f10f6")
+		(property "Reference" "H803"
+			(at 196.85 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SMTSO2540CTJ"
+			(at 196.85 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "WA-SMSI_M2.5:Mounting_Wuerth_WA-SMSI-M2.5_H4mm_9774040151"
+			(at 194.31 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 194.31 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 194.31 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5745f9c5-6175-4184-b93b-70d184d2eed8")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
+					(reference "H903")
+					(unit 1)
+				)
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
+					(reference "H803")
+					(unit 1)
+				)
+			)
+			(project "controller_v1"
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
+					(reference "H403")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
+					(reference "H303")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
+					(reference "H203")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 160.02 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7b46b3eb-3cda-4ab2-a348-a75b00946d05")
+		(property "Reference" "#PWR0802"
+			(at 160.02 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 160.02 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bea74ba1-c3e5-40a7-8e4c-e5654275f838")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
+					(reference "#PWR0902")
+					(unit 1)
+				)
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
+					(reference "#PWR0802")
+					(unit 1)
+				)
+			)
+			(project "controller_v1"
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
+					(reference "#PWR0402")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
+					(reference "#PWR0302")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
+					(reference "#PWR0202")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 101.6 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "81c37921-1615-424f-b862-7d45435533b3")
+		(property "Reference" "#PWR0801"
+			(at 101.6 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 101.6 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0713113e-d2a6-4b56-bf5d-e3213f9dea46")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
+					(reference "#PWR0901")
+					(unit 1)
+				)
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
+					(reference "#PWR0801")
+					(unit 1)
+				)
+			)
+			(project "controller_v1"
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
+					(reference "#PWR0401")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
+					(reference "#PWR0301")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
+					(reference "#PWR0201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 101.6 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9631ea77-32ac-4076-afdd-7a3296294912")
+		(property "Reference" "R801"
+			(at 104.14 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "3k3"
+			(at 104.14 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 99.822 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 101.6 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cc7b8884-6a51-4eca-bc9b-dc707d078ac9")
+		)
+		(pin "2"
+			(uuid "906394a8-0928-40ac-88af-334667df66a3")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
+					(reference "R901")
+					(unit 1)
+				)
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
+					(reference "R801")
+					(unit 1)
+				)
+			)
+			(project "controller_v1"
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
+					(reference "R401")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
+					(reference "R301")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
+					(reference "R201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 194.31 113.03 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f6e6d3c0-ca9e-4e00-b412-78dfd1872e31")
+		(property "Reference" "H804"
+			(at 196.85 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SMTSO2540CTJ"
+			(at 196.85 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "WA-SMSI_M2.5:Mounting_Wuerth_WA-SMSI-M2.5_H4mm_9774040151"
+			(at 194.31 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 194.31 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 194.31 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6fbfd3ff-f9c8-4cb9-ae72-f7ed51f648b8")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/28d32604-417d-4cd4-a8ef-2fae619450e6"
+					(reference "H904")
+					(unit 1)
+				)
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/41c2d982-496b-4922-a077-a2a7f833416c"
+					(reference "H804")
+					(unit 1)
+				)
+			)
+			(project "controller_v1"
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/1880ae86-b315-43a9-9217-9492e81597b0"
+					(reference "H404")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/4f03f492-0b54-42f8-83e4-aaa576a1d068"
+					(reference "H304")
+					(unit 1)
+				)
+				(path "/c1daf800-73ea-4b6c-aa60-e9f4e3094257/d31388c9-964a-4783-beb1-0c9e163732c0"
+					(reference "H204")
+					(unit 1)
+				)
+			)
+		)
+	)
 )
