@@ -882,7 +882,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "02017202-7908-4c78-ad7d-d6af453a9ec0")
-		(property "Reference" "#PWR0803"
+		(property "Reference" "#PWR0903"
 			(at 167.64 105.41 0)
 			(effects
 				(font
@@ -966,7 +966,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "148caf22-468b-4c36-8fed-01e2f42d736c")
-		(property "Reference" "J801"
+		(property "Reference" "J901"
 			(at 171.45 71.12 90)
 			(effects
 				(font
@@ -1058,7 +1058,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3f4cb0a0-49a7-4d30-b41d-7c8f88c0d122")
-		(property "Reference" "R802"
+		(property "Reference" "R902"
 			(at 115.57 81.28 0)
 			(effects
 				(font
@@ -1146,8 +1146,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4474ca79-2c22-4b87-afad-a4f3e65af6ab")
-		(property "Reference" "H801"
-			(at 139.7 78.74 0)
+		(property "Reference" "H901"
+			(at 139.7 78.7399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1155,8 +1155,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMTSO2540CTJ"
-			(at 139.7 81.28 0)
+		(property "Value" "SMTSO2040CTJ"
+			(at 139.7 81.2799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1164,7 +1164,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "WA-SMSI_M2.5:Mounting_Wuerth_WA-SMSI-M2.5_H4mm_9774040151"
+		(property "Footprint" "Mounting_Wuerth:Mounting_Wuerth_WA-SMSI-M2_H4mm_9774040243"
 			(at 137.16 81.28 0)
 			(effects
 				(font
@@ -1231,8 +1231,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5a94acfd-3b77-4e00-83ee-e05894103ef9")
-		(property "Reference" "H802"
-			(at 139.7 110.49 0)
+		(property "Reference" "H902"
+			(at 139.7 110.4899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1240,8 +1240,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMTSO2540CTJ"
-			(at 139.7 113.03 0)
+		(property "Value" "SMTSO2040CTJ"
+			(at 139.7 113.0299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1249,7 +1249,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "WA-SMSI_M2.5:Mounting_Wuerth_WA-SMSI-M2.5_H4mm_9774040151"
+		(property "Footprint" "Mounting_Wuerth:Mounting_Wuerth_WA-SMSI-M2_H4mm_9774040243"
 			(at 137.16 113.03 0)
 			(effects
 				(font
@@ -1316,8 +1316,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7b3de728-af84-424c-a848-fbdc8a2f10f6")
-		(property "Reference" "H803"
-			(at 196.85 78.74 0)
+		(property "Reference" "H903"
+			(at 196.85 78.7399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1325,8 +1325,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMTSO2540CTJ"
-			(at 196.85 81.28 0)
+		(property "Value" "SMTSO2040CTJ"
+			(at 196.85 81.2799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1334,7 +1334,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "WA-SMSI_M2.5:Mounting_Wuerth_WA-SMSI-M2.5_H4mm_9774040151"
+		(property "Footprint" "Mounting_Wuerth:Mounting_Wuerth_WA-SMSI-M2_H4mm_9774040243"
 			(at 194.31 81.28 0)
 			(effects
 				(font
@@ -1401,7 +1401,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7b46b3eb-3cda-4ab2-a348-a75b00946d05")
-		(property "Reference" "#PWR0802"
+		(property "Reference" "#PWR0902"
 			(at 160.02 87.63 0)
 			(effects
 				(font
@@ -1485,7 +1485,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "81c37921-1615-424f-b862-7d45435533b3")
-		(property "Reference" "#PWR0801"
+		(property "Reference" "#PWR0901"
 			(at 101.6 77.47 0)
 			(effects
 				(font
@@ -1569,7 +1569,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9631ea77-32ac-4076-afdd-7a3296294912")
-		(property "Reference" "R801"
+		(property "Reference" "R901"
 			(at 104.14 81.28 0)
 			(effects
 				(font
@@ -1657,8 +1657,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f6e6d3c0-ca9e-4e00-b412-78dfd1872e31")
-		(property "Reference" "H804"
-			(at 196.85 110.49 0)
+		(property "Reference" "H904"
+			(at 196.85 110.4899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1666,8 +1666,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMTSO2540CTJ"
-			(at 196.85 113.03 0)
+		(property "Value" "SMTSO2040CTJ"
+			(at 196.85 113.0299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1675,7 +1675,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "WA-SMSI_M2.5:Mounting_Wuerth_WA-SMSI-M2.5_H4mm_9774040151"
+		(property "Footprint" "Mounting_Wuerth:Mounting_Wuerth_WA-SMSI-M2_H4mm_9774040243"
 			(at 194.31 113.03 0)
 			(effects
 				(font

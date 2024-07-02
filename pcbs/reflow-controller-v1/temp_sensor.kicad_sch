@@ -1860,7 +1860,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "238bbe04-ce95-48b0-8781-f3a2a62195d1")
-		(property "Reference" "R1102"
+		(property "Reference" "R1201"
 			(at 161.29 111.76 0)
 			(effects
 				(font
@@ -1938,7 +1938,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2f69bcbe-9d68-4f8d-a7ea-2a482124bb2c")
-		(property "Reference" "C1102"
+		(property "Reference" "C1201"
 			(at 124.46 58.42 0)
 			(effects
 				(font
@@ -1956,7 +1956,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 121.6152 63.5 0)
 			(effects
 				(font
@@ -2016,7 +2016,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "36264897-ec5c-4f78-838b-27454b5232e7")
-		(property "Reference" "#PWR01104"
+		(property "Reference" "#PWR01204"
 			(at 143.51 72.39 0)
 			(effects
 				(font
@@ -2090,7 +2090,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3869fbd3-cdf5-4206-958c-ee841a13862f")
-		(property "Reference" "R1101"
+		(property "Reference" "R1202"
 			(at 167.64 82.55 0)
 			(effects
 				(font
@@ -2168,7 +2168,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3c739518-9dda-4f3a-bd89-6068b313e4a2")
-		(property "Reference" "J1101"
+		(property "Reference" "J1201"
 			(at 201.93 101.6 0)
 			(effects
 				(font
@@ -2251,7 +2251,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "498afea1-f9e5-408f-b5ed-6ea7c4658205")
-		(property "Reference" "U1101"
+		(property "Reference" "U1201"
 			(at 123.19 74.93 0)
 			(effects
 				(font
@@ -2387,7 +2387,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4da87b01-3672-474c-8429-4b6e6fb32801")
-		(property "Reference" "#PWR01103"
+		(property "Reference" "#PWR01201"
 			(at 120.65 72.39 0)
 			(effects
 				(font
@@ -2461,7 +2461,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "89b0c157-8288-4d45-8268-744d6ad7b298")
-		(property "Reference" "C1101"
+		(property "Reference" "C1202"
 			(at 147.32 58.42 0)
 			(effects
 				(font
@@ -2479,7 +2479,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 144.4752 63.5 0)
 			(effects
 				(font
@@ -2539,7 +2539,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b073a7b8-8020-4d3c-93a2-dab633f60477")
-		(property "Reference" "#PWR01101"
+		(property "Reference" "#PWR01202"
 			(at 135.89 54.61 0)
 			(effects
 				(font
@@ -2613,7 +2613,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e53b317f-39c6-4bdb-a410-9155284ba739")
-		(property "Reference" "#PWR01102"
+		(property "Reference" "#PWR01203"
 			(at 135.89 128.27 0)
 			(effects
 				(font
@@ -2686,7 +2686,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "f3cfecf1-82aa-479f-bdd1-4fad325d5042")
-		(property "Reference" "R1103"
+		(property "Reference" "R1203"
 			(at 165.1 92.71 90)
 			(effects
 				(font

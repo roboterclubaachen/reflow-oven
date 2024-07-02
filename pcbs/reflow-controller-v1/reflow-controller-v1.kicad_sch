@@ -1484,7 +1484,7 @@
 		(uuid "f07652f0-6456-4627-a274-34fda7332be4")
 	)
 	(no_connect
-		(at 218.44 115.57)
+		(at 240.03 139.7)
 		(uuid "2112e8af-c36b-4410-9107-7825109ecf36")
 	)
 	(wire
@@ -1496,6 +1496,16 @@
 			(type default)
 		)
 		(uuid "00b5f10e-98e2-4fed-b32c-196925937eac")
+	)
+	(wire
+		(pts
+			(xy 200.66 111.76) (xy 220.98 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0344a756-c936-4057-b122-3ffcd6ac1a1f")
 	)
 	(wire
 		(pts
@@ -1519,7 +1529,7 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 107.95) (xy 226.06 110.49)
+			(xy 247.65 132.08) (xy 247.65 134.62)
 		)
 		(stroke
 			(width 0)
@@ -1589,6 +1599,16 @@
 	)
 	(wire
 		(pts
+			(xy 218.44 116.84) (xy 218.44 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60bd5f75-f12b-46f7-80ad-ed29bb328fba")
+	)
+	(wire
+		(pts
 			(xy 87.63 16.51) (xy 87.63 21.59)
 		)
 		(stroke
@@ -1619,13 +1639,23 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 123.19) (xy 226.06 125.73)
+			(xy 247.65 147.32) (xy 247.65 149.86)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "7489cfc4-c557-4665-9826-30ca12a92c6b")
+	)
+	(wire
+		(pts
+			(xy 218.44 109.22) (xy 218.44 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ea592d8-ce0b-4c88-88c2-3de1c22ea94d")
 	)
 	(wire
 		(pts
@@ -1666,6 +1696,16 @@
 			(type default)
 		)
 		(uuid "988cbbcc-7721-48a0-ba2b-bbc5fb306448")
+	)
+	(wire
+		(pts
+			(xy 220.98 116.84) (xy 218.44 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2993811-ab5b-4fb5-a775-475a09eee784")
 	)
 	(wire
 		(pts
@@ -1739,7 +1779,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 120.65) (xy 218.44 120.65)
+			(xy 222.25 144.78) (xy 240.03 144.78)
 		)
 		(stroke
 			(width 0)
@@ -1879,6 +1919,16 @@
 	)
 	(wire
 		(pts
+			(xy 220.98 114.3) (xy 218.44 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7df5dc0-f68c-4d76-aa15-d592f152f4e6")
+	)
+	(wire
+		(pts
 			(xy 218.44 90.17) (xy 218.44 92.71)
 		)
 		(stroke
@@ -1909,8 +1959,19 @@
 		)
 		(uuid "2ee045ee-f8c4-4ffe-98f8-3a4313a82e27")
 	)
+	(text "Servo"
+		(exclude_from_sim no)
+		(at 223.52 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cdc4d6f1-fac2-499c-8e43-126f9cf23dca")
+	)
 	(label "Fan_PWM"
-		(at 205.74 120.65 0)
+		(at 227.33 144.78 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1942,7 +2003,7 @@
 		)
 		(uuid "2384de9f-79ca-4de8-927b-5e2f74070621")
 	)
-	(label "Servo"
+	(label "Servo1"
 		(at 205.74 85.09 0)
 		(fields_autoplaced yes)
 		(effects
@@ -1963,6 +2024,17 @@
 			(justify left bottom)
 		)
 		(uuid "83cd6fcb-9720-4e24-b0ea-7c907e8d3d74")
+	)
+	(label "Servo2"
+		(at 205.74 111.76 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "88e66aee-8bcd-4e7b-b641-a63bf5a27d3d")
 	)
 	(label "Phase_N"
 		(at 64.77 26.67 0)
@@ -2113,17 +2185,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Motor:Fan_Tacho_PWM")
-		(at 226.06 118.11 0)
+		(lib_id "Connector_Generic:Conn_01x03")
+		(at 226.06 114.3 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1003f6cd-cd2f-4acf-95fb-c93b5009b69d")
-		(property "Reference" "M101"
-			(at 231.14 116.84 0)
+		(uuid "0bd42c17-5192-462b-97a6-abc34141734d")
+		(property "Reference" "J1"
+			(at 228.6 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2131,8 +2203,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "47053-1000"
-			(at 231.14 119.38 0)
+		(property "Value" "PinHeader 1x03 P2.54mm"
+			(at 228.6 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2140,8 +2212,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical"
-			(at 226.06 117.856 0)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+			(at 226.06 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2149,8 +2221,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf"
-			(at 226.06 117.856 0)
+		(property "Datasheet" "~"
+			(at 226.06 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2159,7 +2231,80 @@
 			)
 		)
 		(property "Description" ""
-			(at 226.06 118.11 0)
+			(at 226.06 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d60cb2fb-3f5e-4032-a709-5e53d5f5b80b")
+		)
+		(pin "2"
+			(uuid "12a64c6b-fa62-47e6-9128-30ff0ad3cfbe")
+		)
+		(pin "3"
+			(uuid "65dd4755-5442-4f9c-b790-3999ea459fef")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Motor:Fan_Tacho_PWM")
+		(at 247.65 142.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1003f6cd-cd2f-4acf-95fb-c93b5009b69d")
+		(property "Reference" "M101"
+			(at 252.73 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47053-1000"
+			(at 252.73 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical"
+			(at 247.65 141.986 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf"
+			(at 247.65 141.986 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 247.65 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2190,7 +2335,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 226.06 107.95 0)
+		(at 247.65 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2199,7 +2344,7 @@
 		(fields_autoplaced yes)
 		(uuid "208c0b07-ec68-423e-9a8a-27f52d988372")
 		(property "Reference" "#PWR0104"
-			(at 226.06 111.76 0)
+			(at 247.65 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2208,7 +2353,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 226.06 102.87 0)
+			(at 247.65 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2216,7 +2361,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 226.06 107.95 0)
+			(at 247.65 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2225,7 +2370,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 226.06 107.95 0)
+			(at 247.65 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2234,7 +2379,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 226.06 107.95 0)
+			(at 247.65 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2325,6 +2470,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 218.44 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "370f1388-f4c5-4070-8661-d369cdfa8382")
+		(property "Reference" "#PWR016"
+			(at 218.44 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 218.44 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 218.44 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 218.44 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 218.44 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "72800cf4-0149-4c54-aa3c-7d9e4d67bd2e")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:Fuse")
 		(at 57.15 21.59 90)
 		(unit 1)
@@ -2342,7 +2553,7 @@
 				)
 			)
 		)
-		(property "Value" "Fuse"
+		(property "Value" "Schurter 0031.8221"
 			(at 57.15 19.05 90)
 			(effects
 				(font
@@ -2350,7 +2561,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_OGN-SMD_Horizontal_Open"
 			(at 57.15 23.368 90)
 			(effects
 				(font
@@ -2536,6 +2747,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 218.44 109.22 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6b524e16-3370-4f03-bf49-54ff7e8b9d4c")
+		(property "Reference" "#PWR014"
+			(at 218.44 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 218.44 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 218.44 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 218.44 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 218.44 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "49aa1bef-b93c-44da-b86b-d1e2dbaf6d58")
+		)
+		(instances
+			(project "reflow-controller-v1"
+				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Screw_Terminal_01x03")
 		(at 25.4 24.13 0)
 		(mirror y)
@@ -2624,7 +2901,7 @@
 				)
 			)
 		)
-		(property "Value" "Fuse"
+		(property "Value" "Schurter 0031.8221"
 			(at 57.15 31.75 90)
 			(effects
 				(font
@@ -2632,7 +2909,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_OGN-SMD_Horizontal_Open"
 			(at 57.15 28.448 90)
 			(effects
 				(font
@@ -2676,7 +2953,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 226.06 125.73 0)
+		(at 247.65 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2685,7 +2962,7 @@
 		(fields_autoplaced yes)
 		(uuid "a1a69f9d-327f-4d54-85b0-780fca8ce637")
 		(property "Reference" "#PWR0105"
-			(at 226.06 132.08 0)
+			(at 247.65 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2694,7 +2971,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 226.06 130.81 0)
+			(at 247.65 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2702,7 +2979,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 226.06 125.73 0)
+			(at 247.65 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2711,7 +2988,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 226.06 125.73 0)
+			(at 247.65 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2720,7 +2997,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 226.06 125.73 0)
+			(at 247.65 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)

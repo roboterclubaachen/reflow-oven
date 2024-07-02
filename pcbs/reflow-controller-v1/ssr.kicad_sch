@@ -1701,7 +1701,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-6_W7.62mm_SMDSocket_SmallPads"
 			(at 134.62 95.25 0)
 			(effects
 				(font
@@ -1798,7 +1798,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_2220_5650Metric"
+		(property "Footprint" "Capacitor_SMD:C_2220_5750Metric"
 			(at 197.8152 107.95 0)
 			(effects
 				(font
