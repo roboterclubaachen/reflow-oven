@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 0.0,
+          "height": 1.6,
+          "width": 1.6
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -529,6 +529,54 @@
       {
         "netclass": "High Voltage",
         "pattern": "Earth_Protective"
+      },
+      {
+        "netclass": "High Voltage",
+        "pattern": "*R603*"
+      },
+      {
+        "netclass": "High Voltage",
+        "pattern": "*R403*"
+      },
+      {
+        "netclass": "High Voltage",
+        "pattern": "*R302*"
+      },
+      {
+        "netclass": "High Voltage",
+        "pattern": "*R503*"
+      },
+      {
+        "netclass": "High Voltage",
+        "pattern": "*D401*"
+      },
+      {
+        "netclass": "High Voltage",
+        "pattern": "*D601*"
+      },
+      {
+        "netclass": "High Voltage",
+        "pattern": "*D301*"
+      },
+      {
+        "netclass": "High Voltage",
+        "pattern": "*D501*"
+      },
+      {
+        "netclass": "High Voltage",
+        "pattern": "*C301*"
+      },
+      {
+        "netclass": "High Voltage",
+        "pattern": "*C401*"
+      },
+      {
+        "netclass": "High Voltage",
+        "pattern": "*C501*"
+      },
+      {
+        "netclass": "High Voltage",
+        "pattern": "*C601*"
       }
     ]
   },
