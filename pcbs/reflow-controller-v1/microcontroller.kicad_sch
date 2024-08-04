@@ -3863,7 +3863,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 128.27) (xy 151.13 128.27)
+			(xy 144.78 128.27) (xy 148.59 128.27)
 		)
 		(stroke
 			(width 0)
@@ -4343,7 +4343,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 125.73) (xy 151.13 125.73)
+			(xy 144.78 125.73) (xy 148.59 125.73)
 		)
 		(stroke
 			(width 0)
@@ -4423,7 +4423,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 130.81) (xy 151.13 130.81)
+			(xy 144.78 130.81) (xy 148.59 130.81)
 		)
 		(stroke
 			(width 0)
@@ -4460,6 +4460,17 @@
 			)
 		)
 		(uuid "249d8e81-6c02-4def-b778-704e882dd14a")
+	)
+	(text "TIM1_CH1"
+		(exclude_from_sim no)
+		(at 156.972 125.984 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "29f3d2ea-789a-41a7-b07e-480e6bdc73b8")
 	)
 	(text "SPI3"
 		(exclude_from_sim no)
@@ -4530,6 +4541,28 @@
 			)
 		)
 		(uuid "bb17036b-1f24-4ea3-8b71-0d799b6ca3cd")
+	)
+	(text "TIM1_CH2"
+		(exclude_from_sim no)
+		(at 156.972 128.27 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c6c294d9-efca-464d-81c4-961fbc2cd66a")
+	)
+	(text "TIM20_CH2"
+		(exclude_from_sim no)
+		(at 156.972 131.064 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f24ed9f1-f6b4-4ba2-9262-311db5163900")
 	)
 	(label "USART1_RX"
 		(at 163.83 138.43 0)
@@ -4696,7 +4729,7 @@
 	)
 	(hierarchical_label "PWM_3"
 		(shape input)
-		(at 151.13 130.81 0)
+		(at 148.59 130.81 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5020,7 +5053,7 @@
 	)
 	(hierarchical_label "PWM_2"
 		(shape input)
-		(at 151.13 128.27 0)
+		(at 148.59 128.27 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5080,7 +5113,7 @@
 	)
 	(hierarchical_label "PWM_1"
 		(shape input)
-		(at 151.13 125.73 0)
+		(at 148.59 125.73 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
