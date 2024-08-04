@@ -4453,7 +4453,7 @@
 	)
 	(text "SPI4"
 		(exclude_from_sim no)
-		(at 76.2 72.136 0)
+		(at 73.152 73.406 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4522,6 +4522,17 @@
 			)
 		)
 		(uuid "727f6f8b-4e6a-4759-908d-e46afe8cad52")
+	)
+	(text "TIM3_CH3"
+		(exclude_from_sim no)
+		(at 78.486 75.184 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "862fd430-dc7c-4732-b1bd-2006124d4ae7")
 	)
 	(text "TIM4_CH1"
 		(exclude_from_sim no)
