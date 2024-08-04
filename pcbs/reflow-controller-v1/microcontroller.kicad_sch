@@ -4453,7 +4453,7 @@
 	)
 	(text "SPI4"
 		(exclude_from_sim no)
-		(at 78.232 67.564 0)
+		(at 76.2 72.136 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4471,6 +4471,17 @@
 			(justify left)
 		)
 		(uuid "29f3d2ea-789a-41a7-b07e-480e6bdc73b8")
+	)
+	(text "TIM4_CH2"
+		(exclude_from_sim no)
+		(at 71.628 141.224 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "332c8280-1b9e-4312-adab-3f674adc5c66")
 	)
 	(text "SPI3"
 		(exclude_from_sim no)
@@ -4511,6 +4522,17 @@
 			)
 		)
 		(uuid "727f6f8b-4e6a-4759-908d-e46afe8cad52")
+	)
+	(text "TIM4_CH1"
+		(exclude_from_sim no)
+		(at 71.628 138.684 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "88dd4456-5a31-4cf5-a224-843eed395745")
 	)
 	(text "SPI1"
 		(exclude_from_sim no)
