@@ -954,7 +954,7 @@
 		(uuid "aac791d1-5829-4911-8470-26d2a16b0e90")
 	)
 	(hierarchical_label "SD_MOSI"
-		(shape output)
+		(shape input)
 		(at 151.13 99.06 0)
 		(fields_autoplaced yes)
 		(effects
@@ -990,7 +990,7 @@
 		(uuid "eb2c3bba-911b-49d2-a101-366bd17a3eaf")
 	)
 	(hierarchical_label "SD_SCK"
-		(shape output)
+		(shape input)
 		(at 151.13 96.52 0)
 		(fields_autoplaced yes)
 		(effects

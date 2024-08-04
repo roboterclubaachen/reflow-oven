@@ -5371,7 +5371,7 @@
 				(justify left top)
 			)
 		)
-		(pin "Temp_SPI_SCK" input
+		(pin "Temp_SPI_SCK" output
 			(at 101.6 147.32 180)
 			(effects
 				(font
@@ -5391,7 +5391,7 @@
 			)
 			(uuid "f9a6ae92-ce3e-4641-9004-d5ea4c20626f")
 		)
-		(pin "Temp_SPI_MOSI" input
+		(pin "Temp_SPI_MOSI" output
 			(at 101.6 144.78 180)
 			(effects
 				(font
@@ -5401,7 +5401,7 @@
 			)
 			(uuid "73ed583b-cddb-4c5c-9ec9-99cd8a8b5861")
 		)
-		(pin "OLED1_I2C_SCL" input
+		(pin "OLED1_I2C_SCL" output
 			(at 101.6 88.9 180)
 			(effects
 				(font
@@ -5411,7 +5411,7 @@
 			)
 			(uuid "aac66ff1-11c3-4153-809c-0ac07efd2d6e")
 		)
-		(pin "OLED1_I2C_SDA" input
+		(pin "OLED1_I2C_SDA" bidirectional
 			(at 101.6 86.36 180)
 			(effects
 				(font
@@ -5421,7 +5421,7 @@
 			)
 			(uuid "d6db32cb-d97a-4322-8f26-5aa502771def")
 		)
-		(pin "OLED2_I2C_SDA" input
+		(pin "OLED2_I2C_SDA" bidirectional
 			(at 101.6 99.06 180)
 			(effects
 				(font
@@ -5431,7 +5431,7 @@
 			)
 			(uuid "62202f74-a5d5-4d8a-a321-3be51b0b7b07")
 		)
-		(pin "OLED2_I2C_SCL" input
+		(pin "OLED2_I2C_SCL" output
 			(at 101.6 101.6 180)
 			(effects
 				(font
@@ -5441,7 +5441,7 @@
 			)
 			(uuid "d3b32ed7-f81e-4d8a-ba04-3f2207225816")
 		)
-		(pin "Display_SPI_SCK" input
+		(pin "Display_SPI_SCK" output
 			(at 101.6 40.64 180)
 			(effects
 				(font
@@ -5461,7 +5461,7 @@
 			)
 			(uuid "27098f1d-0814-4eb1-85f3-31bc6a97930f")
 		)
-		(pin "Display_SPI_MOSI" input
+		(pin "Display_SPI_MOSI" output
 			(at 101.6 43.18 180)
 			(effects
 				(font
@@ -5471,7 +5471,7 @@
 			)
 			(uuid "1b0fc08b-f121-4a88-8dac-3c211d4e9c09")
 		)
-		(pin "Touch_SPI_SCK" input
+		(pin "Touch_SPI_SCK" output
 			(at 101.6 58.42 180)
 			(effects
 				(font
@@ -5491,7 +5491,7 @@
 			)
 			(uuid "47ebe339-467b-476c-8586-2fd82817dd25")
 		)
-		(pin "Touch_SPI_MOSI" input
+		(pin "Touch_SPI_MOSI" output
 			(at 101.6 60.96 180)
 			(effects
 				(font
@@ -5531,7 +5531,7 @@
 			)
 			(uuid "9e8d6e49-ce16-4bb2-a1a6-3718b9ebde4f")
 		)
-		(pin "Temp_I2C_SCL" input
+		(pin "Temp_I2C_SCL" output
 			(at 133.35 167.64 270)
 			(effects
 				(font
@@ -5541,7 +5541,7 @@
 			)
 			(uuid "15975db5-a347-4082-8539-7554fcd977ca")
 		)
-		(pin "Temp_I2C_SDA" input
+		(pin "Temp_I2C_SDA" bidirectional
 			(at 137.16 167.64 270)
 			(effects
 				(font
@@ -5601,7 +5601,7 @@
 			)
 			(uuid "3ebccce2-d77b-43fc-8215-ceac5e7b4c96")
 		)
-		(pin "LED_green" input
+		(pin "LED_green" output
 			(at 101.6 111.76 180)
 			(effects
 				(font
@@ -5611,7 +5611,7 @@
 			)
 			(uuid "1635b738-5ec9-48a8-875e-7e3a4f3bcfb6")
 		)
-		(pin "LED_red" input
+		(pin "LED_red" output
 			(at 101.6 114.3 180)
 			(effects
 				(font
@@ -5621,7 +5621,7 @@
 			)
 			(uuid "25d6b545-7cc2-42fb-86f2-7e872155357a")
 		)
-		(pin "Buzzer" input
+		(pin "Buzzer" output
 			(at 101.6 116.84 180)
 			(effects
 				(font
@@ -5631,7 +5631,7 @@
 			)
 			(uuid "bf2b01e4-e399-429b-8aa9-a75c44ff050c")
 		)
-		(pin "SSR1" input
+		(pin "SSR1" output
 			(at 142.24 45.72 0)
 			(effects
 				(font
@@ -5641,7 +5641,7 @@
 			)
 			(uuid "a96b2d03-ff71-49e6-b2fd-fcc9a5b4cc82")
 		)
-		(pin "SSR3" input
+		(pin "SSR3" output
 			(at 142.24 50.8 0)
 			(effects
 				(font
@@ -5651,7 +5651,7 @@
 			)
 			(uuid "c4065d46-7df2-4347-b8a9-eb6789fd59ab")
 		)
-		(pin "SSR2" input
+		(pin "SSR2" output
 			(at 142.24 48.26 0)
 			(effects
 				(font
@@ -5661,7 +5661,7 @@
 			)
 			(uuid "ddb5c61c-15f2-46b7-9bba-a6d344763b53")
 		)
-		(pin "SSR4" input
+		(pin "SSR4" output
 			(at 142.24 53.34 0)
 			(effects
 				(font
@@ -5681,7 +5681,7 @@
 			)
 			(uuid "109dbf2d-7450-4439-b01b-b5448402aaad")
 		)
-		(pin "Touch_SPI_CS" input
+		(pin "Touch_SPI_CS" output
 			(at 101.6 66.04 180)
 			(effects
 				(font
@@ -5691,7 +5691,7 @@
 			)
 			(uuid "3125b326-503a-4bf3-ab47-03b4574193a7")
 		)
-		(pin "DISP_LED" input
+		(pin "DISP_LED" output
 			(at 101.6 55.88 180)
 			(effects
 				(font
@@ -5701,7 +5701,7 @@
 			)
 			(uuid "ebdcc3f3-4386-4146-ae2c-f758c9865f5c")
 		)
-		(pin "Display_SPI_DC{slash}RS" input
+		(pin "Display_SPI_DC{slash}RS" output
 			(at 101.6 48.26 180)
 			(effects
 				(font
@@ -5711,7 +5711,7 @@
 			)
 			(uuid "b6076a31-0da4-4727-b3f5-4ff9268db58c")
 		)
-		(pin "~{Display_RESET}" input
+		(pin "~{Display_RESET}" output
 			(at 101.6 53.34 180)
 			(effects
 				(font
@@ -5721,7 +5721,7 @@
 			)
 			(uuid "e79f1649-a958-4ab5-baa0-ac1c8cbaf5b3")
 		)
-		(pin "~{Display_CS}" input
+		(pin "~{Display_CS}" output
 			(at 101.6 50.8 180)
 			(effects
 				(font
@@ -5741,7 +5741,7 @@
 			)
 			(uuid "4bc2ab3a-7ee4-48a8-b978-e56c1ad9c061")
 		)
-		(pin "Touch" output
+		(pin "Touch" input
 			(at 101.6 71.12 180)
 			(effects
 				(font
@@ -6348,7 +6348,7 @@
 			)
 			(uuid "14ab62f7-8ae0-49ac-b216-6c214263d3a2")
 		)
-		(pin "SD_SCK" output
+		(pin "SD_SCK" input
 			(at 49.53 73.66 0)
 			(effects
 				(font
@@ -6358,7 +6358,7 @@
 			)
 			(uuid "44871951-8231-4eb4-a72a-844aad7cef5e")
 		)
-		(pin "SD_MOSI" output
+		(pin "SD_MOSI" input
 			(at 49.53 76.2 0)
 			(effects
 				(font

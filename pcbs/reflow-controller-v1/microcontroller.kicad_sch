@@ -3541,6 +3541,142 @@
 		(color 0 0 0 0)
 		(uuid "fc74dc70-20b4-496a-8911-dd4a930843d9")
 	)
+	(no_connect
+		(at 101.6 113.03)
+		(uuid "031e4320-96d0-409d-b6ca-0a03f49ad260")
+	)
+	(no_connect
+		(at 144.78 158.75)
+		(uuid "08ec728a-e5ab-445b-93eb-c999bc3abe01")
+	)
+	(no_connect
+		(at 101.6 123.19)
+		(uuid "0be88dda-f80f-4b80-b836-766a77c287ae")
+	)
+	(no_connect
+		(at 101.6 54.61)
+		(uuid "1185bfc4-4256-47bf-be0f-3061fd5b228c")
+	)
+	(no_connect
+		(at 101.6 85.09)
+		(uuid "16a3c3d5-034f-4378-a659-5d0b27f92b05")
+	)
+	(no_connect
+		(at 101.6 100.33)
+		(uuid "18bf0ce2-71b0-4c2b-9f26-43013215185d")
+	)
+	(no_connect
+		(at 144.78 82.55)
+		(uuid "1eeb8bad-09ac-4ea8-898c-37fff5662c6d")
+	)
+	(no_connect
+		(at 144.78 85.09)
+		(uuid "2970189e-3a9e-4642-b55c-dc23d1c7a56c")
+	)
+	(no_connect
+		(at 101.6 97.79)
+		(uuid "29e13dbc-8b17-4c73-a22b-536965cda684")
+	)
+	(no_connect
+		(at 101.6 95.25)
+		(uuid "309ba699-bfd2-4a87-a64e-051259a41814")
+	)
+	(no_connect
+		(at 144.78 105.41)
+		(uuid "36a48d04-6de0-43e6-bcc3-0095dbde03be")
+	)
+	(no_connect
+		(at 144.78 67.31)
+		(uuid "3f94a9f1-95ca-4d7c-8471-b67e60e953f1")
+	)
+	(no_connect
+		(at 144.78 64.77)
+		(uuid "4bcb9fda-7a3b-4409-bed4-f7db9df6083f")
+	)
+	(no_connect
+		(at 144.78 133.35)
+		(uuid "58c99d02-eff6-48fc-af28-c0eabdcb7821")
+	)
+	(no_connect
+		(at 144.78 41.91)
+		(uuid "58f54398-a11f-4e64-bb4f-66839c996109")
+	)
+	(no_connect
+		(at 144.78 87.63)
+		(uuid "6f7896ce-4f56-4608-8fd1-79e1c1fbf0f6")
+	)
+	(no_connect
+		(at 101.6 90.17)
+		(uuid "70ad105b-b851-4560-bfb0-ed0699075569")
+	)
+	(no_connect
+		(at 101.6 120.65)
+		(uuid "80007359-c594-4a61-ad97-5ca1a9f0512f")
+	)
+	(no_connect
+		(at 144.78 54.61)
+		(uuid "8e895826-7390-435d-bba6-ab47408cf8c7")
+	)
+	(no_connect
+		(at 101.6 102.87)
+		(uuid "99b72c53-b0e9-4963-8b34-82e809b5d79c")
+	)
+	(no_connect
+		(at 101.6 92.71)
+		(uuid "9ef489cd-4986-417e-8d2d-f9683fedfb6a")
+	)
+	(no_connect
+		(at 144.78 46.99)
+		(uuid "a8083e47-9c33-47f9-9221-a9ab9b469960")
+	)
+	(no_connect
+		(at 101.6 87.63)
+		(uuid "b0d81061-6929-4e83-b442-c0cb3d290dda")
+	)
+	(no_connect
+		(at 144.78 107.95)
+		(uuid "d11560d9-5b16-47f7-bd70-1883f661315a")
+	)
+	(no_connect
+		(at 101.6 82.55)
+		(uuid "dd53f8a3-ce23-4d6c-adbc-28941f801bfa")
+	)
+	(no_connect
+		(at 101.6 110.49)
+		(uuid "e18436da-2927-4efb-a680-09a7a4004bbc")
+	)
+	(no_connect
+		(at 144.78 39.37)
+		(uuid "e81d0ec0-1475-4a2e-bdd8-0ea7dbf78ba3")
+	)
+	(no_connect
+		(at 101.6 72.39)
+		(uuid "eb115944-bdcf-43d9-b693-58c8f75080b0")
+	)
+	(no_connect
+		(at 101.6 115.57)
+		(uuid "f0b28e00-4697-4aa2-8c3f-68f962950c78")
+	)
+	(no_connect
+		(at 101.6 118.11)
+		(uuid "f229d94d-8bed-47ff-9d2b-e7658a0cf2f9")
+	)
+	(no_connect
+		(at 144.78 44.45)
+		(uuid "f383e657-d617-4448-8a42-0863cf68742f")
+	)
+	(no_connect
+		(at 144.78 69.85)
+		(uuid "fad968e3-d8e6-48b1-8db2-e1b0043766b3")
+	)
+	(no_connect
+		(at 144.78 57.15)
+		(uuid "fc0b0e05-7be8-45b4-8409-2481942551f7")
+	)
+	(no_connect
+		(at 101.6 67.31)
+		(uuid "fcb71b0d-b96a-41e7-a96f-ddb22cc69e9e")
+	)
 	(wire
 		(pts
 			(xy 144.78 113.03) (xy 148.59 113.03)
@@ -4665,7 +4801,7 @@
 		(uuid "0b18568a-cc2b-4da1-89f3-157136ca759e")
 	)
 	(hierarchical_label "OLED2_I2C_SCL"
-		(shape input)
+		(shape output)
 		(at 151.13 140.97 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4677,7 +4813,7 @@
 		(uuid "0cec3f29-a21a-4a0f-aae8-b7c6c52ca5a9")
 	)
 	(hierarchical_label "SSR4"
-		(shape input)
+		(shape output)
 		(at 93.98 146.05 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4689,7 +4825,7 @@
 		(uuid "0d060916-2082-419a-9f10-b5f081f67c38")
 	)
 	(hierarchical_label "SSR2"
-		(shape input)
+		(shape output)
 		(at 93.98 135.89 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4701,7 +4837,7 @@
 		(uuid "0fd69820-4570-4497-ba0e-ad624b5ec235")
 	)
 	(hierarchical_label "Touch_SPI_SCK"
-		(shape input)
+		(shape output)
 		(at 151.13 151.13 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4725,7 +4861,7 @@
 		(uuid "1a3b3761-dc01-4b35-973e-e1b84f0a1ffb")
 	)
 	(hierarchical_label "OLED2_I2C_SDA"
-		(shape input)
+		(shape bidirectional)
 		(at 151.13 143.51 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4761,7 +4897,7 @@
 		(uuid "27041197-b510-4f3c-9301-6949e189744b")
 	)
 	(hierarchical_label "PWM_3"
-		(shape input)
+		(shape output)
 		(at 148.59 130.81 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4797,7 +4933,7 @@
 		(uuid "334082f9-0afc-4e18-9e27-040df37518cb")
 	)
 	(hierarchical_label "OLED1_I2C_SCL"
-		(shape input)
+		(shape output)
 		(at 151.13 146.05 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4821,7 +4957,7 @@
 		(uuid "5088369e-752a-4019-baed-bb255746a080")
 	)
 	(hierarchical_label "Display_SPI_DC{slash}RS"
-		(shape input)
+		(shape output)
 		(at 156.21 97.79 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4833,7 +4969,7 @@
 		(uuid "50aae869-ae54-4fd2-9c7c-a8f9694effeb")
 	)
 	(hierarchical_label "SSR3"
-		(shape input)
+		(shape output)
 		(at 93.98 143.51 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4857,7 +4993,7 @@
 		(uuid "5e8445a6-707b-4cc6-aad1-ee7b179ac0ab")
 	)
 	(hierarchical_label "~{Display_RESET}"
-		(shape input)
+		(shape output)
 		(at 156.21 100.33 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4881,7 +5017,7 @@
 		(uuid "5f2cad7b-d3f5-4d12-944a-94bf2071b5b1")
 	)
 	(hierarchical_label "Touch_SPI_CS"
-		(shape input)
+		(shape output)
 		(at 92.71 107.95 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4905,7 +5041,7 @@
 		(uuid "6375dc64-513a-46ea-8914-3778b9e0586b")
 	)
 	(hierarchical_label "Touch_SPI_MOSI"
-		(shape input)
+		(shape output)
 		(at 151.13 156.21 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4917,7 +5053,7 @@
 		(uuid "69925081-4d28-4258-ba7a-fb1506724b26")
 	)
 	(hierarchical_label "Buzzer"
-		(shape input)
+		(shape output)
 		(at 96.52 74.93 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4941,7 +5077,7 @@
 		(uuid "6daf7447-5d23-4686-a928-f8be78c169cd")
 	)
 	(hierarchical_label "LED_green"
-		(shape input)
+		(shape output)
 		(at 149.86 49.53 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4977,7 +5113,7 @@
 		(uuid "76485d66-e47f-4fcb-b672-8b769c25e892")
 	)
 	(hierarchical_label "OLED1_I2C_SDA"
-		(shape input)
+		(shape bidirectional)
 		(at 151.13 148.59 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4989,7 +5125,7 @@
 		(uuid "78ececad-fc9c-404e-ba7b-5687e9bed530")
 	)
 	(hierarchical_label "Temp_I2C_SDA"
-		(shape input)
+		(shape bidirectional)
 		(at 149.86 59.69 0)
 		(fields_autoplaced yes)
 		(effects
@@ -5001,7 +5137,7 @@
 		(uuid "7a111ea9-2bdb-42ae-a1ad-41ec9b61c87a")
 	)
 	(hierarchical_label "Temp_SPI_SCK"
-		(shape input)
+		(shape output)
 		(at 96.52 69.85 180)
 		(fields_autoplaced yes)
 		(effects
@@ -5037,7 +5173,7 @@
 		(uuid "8c34b932-3071-4c63-9176-1e665239d6f5")
 	)
 	(hierarchical_label "Temp_I2C_SCL"
-		(shape input)
+		(shape output)
 		(at 149.86 62.23 0)
 		(fields_autoplaced yes)
 		(effects
@@ -5085,7 +5221,7 @@
 		(uuid "bff8e20b-bb56-4822-a6ff-e494b45b5c71")
 	)
 	(hierarchical_label "PWM_2"
-		(shape input)
+		(shape output)
 		(at 148.59 128.27 0)
 		(fields_autoplaced yes)
 		(effects
@@ -5097,7 +5233,7 @@
 		(uuid "c485454d-8b49-48a3-a7ae-0ceece465b9b")
 	)
 	(hierarchical_label "LED_red"
-		(shape input)
+		(shape output)
 		(at 149.86 52.07 0)
 		(fields_autoplaced yes)
 		(effects
@@ -5109,7 +5245,7 @@
 		(uuid "c60b8d55-8b46-4947-aa02-41f5e9f381f3")
 	)
 	(hierarchical_label "Temp_SPI_MOSI"
-		(shape input)
+		(shape output)
 		(at 96.52 80.01 180)
 		(fields_autoplaced yes)
 		(effects
@@ -5121,7 +5257,7 @@
 		(uuid "ccd3b4ba-3bfa-4169-b98b-d977b09e9ce3")
 	)
 	(hierarchical_label "Display_SPI_MOSI"
-		(shape input)
+		(shape output)
 		(at 156.21 95.25 0)
 		(fields_autoplaced yes)
 		(effects
@@ -5145,7 +5281,7 @@
 		(uuid "dc6fd048-6f9b-42ad-bb5f-0503638d7cbe")
 	)
 	(hierarchical_label "PWM_1"
-		(shape input)
+		(shape output)
 		(at 148.59 125.73 0)
 		(fields_autoplaced yes)
 		(effects
@@ -5169,7 +5305,7 @@
 		(uuid "f3d2099b-1293-4d5e-83a5-fcaac1e1c492")
 	)
 	(hierarchical_label "Display_SPI_SCK"
-		(shape input)
+		(shape output)
 		(at 156.21 90.17 0)
 		(fields_autoplaced yes)
 		(effects
@@ -5181,7 +5317,7 @@
 		(uuid "f52f4622-a13d-4908-b5d9-49963c751d43")
 	)
 	(hierarchical_label "SSR1"
-		(shape input)
+		(shape output)
 		(at 93.98 133.35 180)
 		(fields_autoplaced yes)
 		(effects
