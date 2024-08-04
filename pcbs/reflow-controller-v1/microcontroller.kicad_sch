@@ -4523,13 +4523,57 @@
 	)
 	(text "USART1"
 		(exclude_from_sim no)
-		(at 170.688 134.874 0)
+		(at 190.246 134.62 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 		(uuid "bb17036b-1f24-4ea3-8b71-0d799b6ca3cd")
+	)
+	(label "USART1_RX"
+		(at 163.83 138.43 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "094e521f-2d33-4e40-a691-b7f06b91fed5")
+	)
+	(label "USART1_TX"
+		(at 163.83 135.89 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "32e3aaab-f173-4e98-8ce9-bc4170f1c9c6")
+	)
+	(label "SWDIO"
+		(at 156.21 72.39 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c218b4b1-bd44-40f9-a153-f5e19da32fc0")
+	)
+	(label "SWCLK"
+		(at 156.21 74.93 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cf01bd39-6900-41d7-9e8e-55ee2b805306")
 	)
 	(label "Boot0"
 		(at 152.4 102.87 180)
