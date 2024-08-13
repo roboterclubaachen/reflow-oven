@@ -3666,7 +3666,7 @@
 		(uuid "f383e657-d617-4448-8a42-0863cf68742f")
 	)
 	(no_connect
-		(at 144.78 69.85)
+		(at 101.6 74.93)
 		(uuid "fad968e3-d8e6-48b1-8db2-e1b0043766b3")
 	)
 	(no_connect
@@ -3856,16 +3856,6 @@
 			(type default)
 		)
 		(uuid "2f2eb211-bbbf-4821-b82f-855af4064d80")
-	)
-	(wire
-		(pts
-			(xy 96.52 74.93) (xy 101.6 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2f6a772d-da27-4277-ab45-8742cf5c38b3")
 	)
 	(wire
 		(pts
@@ -4269,6 +4259,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 69.85) (xy 149.86 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b9ed57a-7eb0-4002-8c18-6918fd7c11ad")
+	)
+	(wire
+		(pts
 			(xy 101.6 140.97) (xy 93.98 140.97)
 		)
 		(stroke
@@ -4659,9 +4659,9 @@
 		)
 		(uuid "727f6f8b-4e6a-4759-908d-e46afe8cad52")
 	)
-	(text "TIM3_CH3"
+	(text "TIM16_CH1"
 		(exclude_from_sim no)
-		(at 78.486 75.184 0)
+		(at 155.956 68.58 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5054,13 +5054,13 @@
 	)
 	(hierarchical_label "Buzzer"
 		(shape output)
-		(at 96.52 74.93 180)
+		(at 149.86 69.85 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "69a9ad99-e9d8-4d28-8b26-69b549a05775")
 	)
