@@ -3646,10 +3646,6 @@
 		(uuid "e18436da-2927-4efb-a680-09a7a4004bbc")
 	)
 	(no_connect
-		(at 144.78 39.37)
-		(uuid "e81d0ec0-1475-4a2e-bdd8-0ea7dbf78ba3")
-	)
-	(no_connect
 		(at 101.6 72.39)
 		(uuid "eb115944-bdcf-43d9-b693-58c8f75080b0")
 	)
@@ -4459,6 +4455,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 39.37) (xy 149.86 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbb5a9be-aa6c-4e0d-ba9a-d64e010e79bb")
+	)
+	(wire
+		(pts
 			(xy 144.78 100.33) (xy 156.21 100.33)
 		)
 		(stroke
@@ -4596,6 +4602,17 @@
 			)
 		)
 		(uuid "249d8e81-6c02-4def-b778-704e882dd14a")
+	)
+	(text "TIM2_ETR"
+		(exclude_from_sim no)
+		(at 162.814 39.624 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "283279d5-e965-417f-96c3-163d6127f3f0")
 	)
 	(text "TIM1_CH1"
 		(exclude_from_sim no)
@@ -4895,6 +4912,18 @@
 			(justify right)
 		)
 		(uuid "27041197-b510-4f3c-9301-6949e189744b")
+	)
+	(hierarchical_label "Zero_Cross"
+		(shape input)
+		(at 149.86 39.37 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "283ebd62-8421-4167-a157-095f5079f46b")
 	)
 	(hierarchical_label "PWM_3"
 		(shape output)
