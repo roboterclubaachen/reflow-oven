@@ -849,9 +849,9 @@
 		)
 		(symbol "power:+3V3"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -949,8 +949,8 @@
 			(symbol "+3V3_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+3V3"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7905,7 +7905,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 152.4 104.14 0)
 			(effects
 				(font
@@ -7985,7 +7985,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 118.11 87.63 0)
 			(effects
 				(font
@@ -8065,7 +8065,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 158.75 87.63 0)
 			(effects
 				(font
@@ -8147,7 +8147,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 196.85 93.98 0)
 			(effects
 				(font
@@ -8230,7 +8230,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Zero Cross Opto-Triac, Vdrm 400V, Ift 5mA, DIP6"
 			(at 139.7 90.17 0)
 			(effects
 				(font
@@ -8324,7 +8324,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 196.85 104.14 0)
 			(effects
 				(font
@@ -8405,7 +8405,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
 			(at 104.14 82.55 0)
 			(effects
 				(font

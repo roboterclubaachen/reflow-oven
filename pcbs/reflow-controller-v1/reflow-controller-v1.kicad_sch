@@ -1178,9 +1178,9 @@
 		)
 		(symbol "power:+5V"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1278,8 +1278,8 @@
 			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+5V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1298,14 +1298,14 @@
 		)
 		(symbol "power:Earth_Protective"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "#PWR"
-				(at 6.35 -6.35 0)
+				(at 0 -10.16 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1314,12 +1314,11 @@
 				)
 			)
 			(property "Value" "Earth_Protective"
-				(at 11.43 -3.81 0)
+				(at 0 -7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Footprint" ""
@@ -1422,8 +1421,8 @@
 			(symbol "Earth_Protective_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "Earth_Protective"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1442,9 +1441,9 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1518,8 +1517,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GND"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1536,12 +1535,6 @@
 				)
 			)
 		)
-	)
-	(junction
-		(at 185.42 121.92)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "188629d7-2cf5-45df-a419-d4423bfb2787")
 	)
 	(junction
 		(at 87.63 21.59)
@@ -1566,12 +1559,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4244298c-80bd-4b34-b5ba-8388def04f50")
-	)
-	(junction
-		(at 185.42 142.24)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "45e0d26b-d64b-452e-9648-0bc77cb8d969")
 	)
 	(junction
 		(at 132.08 13.97)
@@ -1634,18 +1621,6 @@
 		(uuid "c1031e62-25ac-402f-819e-e5db12b58d07")
 	)
 	(junction
-		(at 185.42 132.08)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cb0b209a-af3b-493c-a47c-bf48a2e73852")
-	)
-	(junction
-		(at 185.42 152.4)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e4f19b94-4284-428f-9480-346e712122a3")
-	)
-	(junction
 		(at 236.22 26.67)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1660,6 +1635,26 @@
 	(no_connect
 		(at 240.03 139.7)
 		(uuid "2112e8af-c36b-4410-9107-7825109ecf36")
+	)
+	(no_connect
+		(at 180.34 142.24)
+		(uuid "753ed364-91ec-4576-9df5-6af5f95b000d")
+	)
+	(no_connect
+		(at 180.34 121.92)
+		(uuid "9499af8e-3634-4003-8fbb-33642ef595a6")
+	)
+	(no_connect
+		(at 180.34 132.08)
+		(uuid "b04f373c-65e7-4335-ab44-814f025654bb")
+	)
+	(no_connect
+		(at 185.42 121.92)
+		(uuid "b2bf7bf8-d502-4932-8753-e68391842854")
+	)
+	(no_connect
+		(at 189.23 121.92)
+		(uuid "b53fc605-cf80-49b7-8936-9e530c741418")
 	)
 	(wire
 		(pts
@@ -1783,16 +1778,6 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 121.92) (xy 189.23 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "13789059-eac5-4501-a867-9ad2984e635a")
-	)
-	(wire
-		(pts
 			(xy 144.78 40.64) (xy 142.24 40.64)
 		)
 		(stroke
@@ -1800,16 +1785,6 @@
 			(type default)
 		)
 		(uuid "143be107-ea35-4f7f-8274-8f23f8957140")
-	)
-	(wire
-		(pts
-			(xy 185.42 121.92) (xy 185.42 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "14df9299-9707-4490-b098-78590f217bb6")
 	)
 	(wire
 		(pts
@@ -1893,16 +1868,6 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 132.08) (xy 185.42 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "262d63b8-4dec-4386-8214-20c258192d46")
-	)
-	(wire
-		(pts
 			(xy 49.53 127) (xy 101.6 127)
 		)
 		(stroke
@@ -1943,16 +1908,6 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 121.92) (xy 185.42 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2ff0e6bd-a931-4f93-b2d4-d7ea2d53a425")
-	)
-	(wire
-		(pts
 			(xy 133.35 177.8) (xy 130.81 177.8)
 		)
 		(stroke
@@ -1960,16 +1915,6 @@
 			(type default)
 		)
 		(uuid "3042e507-c10d-43df-b705-4988a7edde6a")
-	)
-	(wire
-		(pts
-			(xy 185.42 152.4) (xy 189.23 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "327d32e3-4060-4ca7-b2b9-04ef74a9445a")
 	)
 	(wire
 		(pts
@@ -2160,16 +2105,6 @@
 			(type default)
 		)
 		(uuid "515b3f93-76aa-42c2-a22f-186745ff1b28")
-	)
-	(wire
-		(pts
-			(xy 185.42 132.08) (xy 185.42 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "542e3c36-7bc6-4fe3-9701-99df74a9d372")
 	)
 	(wire
 		(pts
@@ -2403,26 +2338,6 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 142.24) (xy 185.42 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "82bff410-e7fe-4db1-827d-9a156473f9f9")
-	)
-	(wire
-		(pts
-			(xy 185.42 142.24) (xy 189.23 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "839fde35-be57-4109-996b-d67bc1a76726")
-	)
-	(wire
-		(pts
 			(xy 101.6 157.48) (xy 73.66 157.48)
 		)
 		(stroke
@@ -2453,16 +2368,6 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 132.08) (xy 189.23 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8c925c44-aff4-4165-9ebf-a1777b36f5d7")
-	)
-	(wire
-		(pts
 			(xy 231.14 39.37) (xy 233.68 39.37)
 		)
 		(stroke
@@ -2490,16 +2395,6 @@
 			(type default)
 		)
 		(uuid "94b7cee4-fffb-4ee1-984a-87b8c5b4a685")
-	)
-	(wire
-		(pts
-			(xy 180.34 152.4) (xy 185.42 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "981a509b-a2bd-453a-97ba-e1d05fb6bcce")
 	)
 	(wire
 		(pts
@@ -2910,16 +2805,6 @@
 			(type default)
 		)
 		(uuid "e0874a23-a239-4aba-84a9-30c390712d1d")
-	)
-	(wire
-		(pts
-			(xy 185.42 142.24) (xy 185.42 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e1a7d24c-4733-4bde-8f6c-e1bcc72d289a")
 	)
 	(wire
 		(pts
@@ -3370,7 +3255,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"Earth_Protective\""
 			(at 33.02 27.94 0)
 			(effects
 				(font
@@ -3437,7 +3322,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 245.11 26.67 0)
 			(effects
 				(font
@@ -3507,7 +3392,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 226.06 114.3 0)
 			(effects
 				(font
@@ -3580,7 +3465,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fan, tacho output, PWM input, 4-pin connector"
 			(at 247.65 142.24 0)
 			(effects
 				(font
@@ -3655,7 +3540,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 247.65 132.08 0)
 			(effects
 				(font
@@ -3722,7 +3607,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 245.11 39.37 0)
 			(effects
 				(font
@@ -3856,7 +3741,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 218.44 119.38 0)
 			(effects
 				(font
@@ -3921,7 +3806,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 57.15 21.59 0)
 			(effects
 				(font
@@ -3991,7 +3876,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 245.11 64.77 0)
 			(effects
 				(font
@@ -4061,7 +3946,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 226.06 87.63 0)
 			(effects
 				(font
@@ -4083,71 +3968,6 @@
 			(project "reflow-controller-v1"
 				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d"
 					(reference "J106")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 191.77 142.24 270)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4c8d2dfb-85a9-4bdc-9992-62b6d59f77c8")
-		(property "Reference" "H6"
-			(at 193.04 148.59 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "MountingHole_Pad"
-			(at 193.04 146.05 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Mounting_Wuerth:Mounting_Wuerth_WA-SMSI-M3_H15mm_9774150360"
-			(at 191.77 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole with connection"
-			(at 191.77 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "02e7866f-6f4f-4654-87b0-d447cbb5a9b9")
-		)
-		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d"
-					(reference "H6")
 					(unit 1)
 				)
 			)
@@ -4263,7 +4083,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 218.44 109.22 0)
 			(effects
 				(font
@@ -4329,7 +4149,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 25.4 24.13 0)
 			(effects
 				(font
@@ -4399,7 +4219,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 57.15 26.67 0)
 			(effects
 				(font
@@ -4418,201 +4238,6 @@
 			(project "reflow-controller-v1"
 				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d"
 					(reference "F102")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 191.77 132.08 270)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "92509759-0861-4c83-94e1-e541607827bd")
-		(property "Reference" "H7"
-			(at 193.04 138.43 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "MountingHole_Pad"
-			(at 193.04 135.89 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Mounting_Wuerth:Mounting_Wuerth_WA-SMSI-M3_H15mm_9774150360"
-			(at 191.77 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole with connection"
-			(at 191.77 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4bbcd6d8-6a7b-4df7-8333-d21bc0804e58")
-		)
-		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d"
-					(reference "H7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 177.8 152.4 90)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "99fbc5b3-cbf7-47ff-b829-bd126d55a71e")
-		(property "Reference" "H4"
-			(at 176.53 146.05 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "MountingHole_Pad"
-			(at 176.53 148.59 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Mounting_Wuerth:Mounting_Wuerth_WA-SMSI-M3_H15mm_9774150360"
-			(at 177.8 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 177.8 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole with connection"
-			(at 177.8 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c39c8a50-3d3b-4e15-854d-5bc8dea6308d")
-		)
-		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d"
-					(reference "H4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 191.77 152.4 270)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9b8ba2fc-216e-4c9e-810c-e05973a7695a")
-		(property "Reference" "H5"
-			(at 193.04 158.75 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "MountingHole_Pad"
-			(at 193.04 156.21 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Mounting_Wuerth:Mounting_Wuerth_WA-SMSI-M3_H15mm_9774150360"
-			(at 191.77 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole with connection"
-			(at 191.77 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ca35c9c9-144f-4b9c-b5e5-980f59a32d96")
-		)
-		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d"
-					(reference "H5")
 					(unit 1)
 				)
 			)
@@ -4663,7 +4288,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 247.65 149.86 0)
 			(effects
 				(font
@@ -4729,7 +4354,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 218.44 92.71 0)
 			(effects
 				(font
@@ -4796,7 +4421,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 245.11 52.07 0)
 			(effects
 				(font
@@ -5062,7 +4687,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 218.44 82.55 0)
 			(effects
 				(font

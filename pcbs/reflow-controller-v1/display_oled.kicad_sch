@@ -176,7 +176,7 @@
 			(symbol "SSD1315_0_1"
 				(rectangle
 					(start -8.89 -2.54)
-					(end 8.89 -8.89)
+					(end 3.81 -8.89)
 					(stroke
 						(width 0)
 						(type default)
@@ -259,31 +259,13 @@
 						)
 					)
 				)
-				(pin input line
-					(at 6.35 0 270)
-					(length 2.54)
-					(name "MP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 		)
 		(symbol "power:+3V3"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -381,8 +363,8 @@
 			(symbol "+3V3_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+3V3"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -401,9 +383,9 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -477,8 +459,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GND"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -514,10 +496,6 @@
 		(color 0 0 0 0)
 		(uuid "83e8a059-cbfa-4053-b8e6-41bffa2fc554")
 	)
-	(no_connect
-		(at 156.21 83.82)
-		(uuid "ba8d38d2-83a7-44bb-8497-7d9c491bd8c0")
-	)
 	(wire
 		(pts
 			(xy 101.6 91.44) (xy 138.43 91.44)
@@ -550,7 +528,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 80.01) (xy 165.1 83.82)
+			(xy 160.02 80.01) (xy 160.02 85.09)
 		)
 		(stroke
 			(width 0)
@@ -630,7 +608,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 80.01) (xy 165.1 80.01)
+			(xy 152.4 80.01) (xy 160.02 80.01)
 		)
 		(stroke
 			(width 0)
@@ -684,7 +662,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 165.1 83.82 0)
+		(at 160.02 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -693,7 +671,7 @@
 		(fields_autoplaced yes)
 		(uuid "02017202-7908-4c78-ad7d-d6af453a9ec0")
 		(property "Reference" "#PWR0903"
-			(at 165.1 90.17 0)
+			(at 160.02 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -702,7 +680,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 165.1 88.9 0)
+			(at 160.02 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -710,7 +688,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 165.1 83.82 0)
+			(at 160.02 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -719,7 +697,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 165.1 83.82 0)
+			(at 160.02 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -727,8 +705,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 165.1 83.82 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 160.02 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -812,7 +790,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 113.03 82.55 0)
 			(effects
 				(font
@@ -899,7 +877,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
 			(at 147.32 81.28 0)
 			(effects
 				(font
@@ -983,7 +961,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
 			(at 101.6 73.66 0)
 			(effects
 				(font
@@ -1030,10 +1008,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "8def9c4d-0709-491f-babc-7a6b4253ff58")
 		(property "Reference" "U6"
-			(at 160.02 88.8999 0)
+			(at 154.432 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1079,9 +1056,6 @@
 		)
 		(pin "4"
 			(uuid "23aab369-724f-4c6d-bd3d-66e12d901b26")
-		)
-		(pin "5"
-			(uuid "51d79ed7-c34c-41e0-bced-d7d6b290759a")
 		)
 		(pin "3"
 			(uuid "c6f545b4-b9c5-41d3-a685-129d82ecfc91")
@@ -1151,7 +1125,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 101.6 82.55 0)
 			(effects
 				(font
