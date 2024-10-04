@@ -1,0 +1,20 @@
+<library>
+  <repositories>
+     <repository>
+	     <path>../ext/modm/repo.lb</path>
+     </repository>
+  </repositories>
+  <extends>modm:nucleo-l476rg</extends>
+  <modules>
+    <module>modm:build:scons</module>
+    <module>modm:platform:spi:1</module>
+    <module>modm:driver:ili9341</module>
+    <module>modm:driver:ads7843</module>
+    <module>modm:ui:display</module>
+    <module>modm:ui:color</module>
+    <module>modm:ui:gui</module>
+    <module>modm:processing:timer</module>
+    <module>modm:architecture:delay</module>
+    <module>modm:container</module>
+  </modules>
+</library>
