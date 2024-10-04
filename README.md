@@ -2,16 +2,12 @@
 
 Description: tbd
 
-
 ## Folder structure
 
 #### `pcbs/pcb_name/`
 * KiCad files of the PCBs
 
-#### `src/test_*/`
-* Test software. Useful during PCB assembly
-
-#### `src/app/`
+#### `code/`
 * Main Software
 
 ## License
