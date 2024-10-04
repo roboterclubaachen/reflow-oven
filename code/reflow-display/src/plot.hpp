@@ -10,6 +10,7 @@
 using Point = modm::glcd::Point;
 
 /// @brief Class for plotting data on a square plot on a display
+/// TODO: Redo all the hard work with a plotting submodule like gnuplot
 class Plot
 {
     public:
