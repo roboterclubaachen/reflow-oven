@@ -8,29 +8,38 @@
 #include <cassert>
 
 using Point = modm::glcd::Point;
+using Rgb565 = modm::color::Rgb565;
 
-/// @brief Class for plotting data on a square plot on a display
-/// TODO: Redo all the hard work with a plotting submodule like gnuplot
+/** @brief Class for plotting data on a square plot on a display
+ *  This is a class which draws a 2D square plot with size x size.
+ *  Written to fit many applications when drawing plots on displays.
+ * 
+ * TODO: Redo all the hard work with a plotting submodule like gnuplot
+*/ 
 class Plot
 {
     public:
-    Plot(Point iPosition, uint16_t iSize ,modm::ColorGraphicDisplay& iDisplay) :
+    Plot(Point iPosition, uint16_t iSize ,modm::ColorGraphicDisplay& iDisplay, Rgb565 iColor = 0xF800/*red*/, Rgb565 iAltColor = 0xFFFF /*white*/, bool iConnectData = true) :
     position(iPosition),
     size(iSize),
-    display(iDisplay)
+    display(iDisplay),
+    color(iColor),
+    altColor(iAltColor),
+    connectData(iConnectData)
     {
         // Make sure that size is a proper number
-        assert(size < 40);
-        assert(size > 240);
+        assert(size > 40);
+        assert(size < 240);
     }
-
+    /// @brief Add a singular datapoint to the plot
+    /// @param dPoint Point to be added
     void addDataPoint(modm::Vector2f dPoint){data.append(dPoint);}
 
     /// @brief Finds the largest Value in a List of Vectors
     /// @param  LinkedList Linked list filled with Vectors
     /// @return biggest value
-    /// TODO: Write as template for any List with Vectors
-    int biggestValue(modm::LinkedList<modm::Vector2f>)
+    /// TODO: Untested. May contain a lot of bugs
+    uint16_t biggestValue()
     {
         //Find largest data value
         uint16_t biggestVal = 0;
@@ -45,10 +54,10 @@ class Plot
     /// @param yLabel label for y axis (char)
     /// @param color color in which the plot should be drawn
     /// @param biggestVal biggestValue of the datapoints
-    void drawPlot(char xLabel, char yLabel, modm::color::Rgb565 color, uint16_t biggestVal)
+    void drawPlot(char xLabel, char yLabel, uint16_t biggestVal)
     {
         // Set color
-        display.setColor(color);
+        display.setColor(altColor);
 
         uint16_t posX = position.getX();
         uint16_t posY = position.getY();
@@ -70,7 +79,7 @@ class Plot
 
             //Make those tiny lines on the side
             uint16_t lineDiff = (size)/8;
-            for(uint8_t i = 0; i >= 8; i++)
+            for(uint8_t i = 0; i < 8; i++)
             {
                 display.drawLine(Point(posX+offset, posY+(i*lineDiff)), Point(posX, posY+(i*lineDiff)));
             }
@@ -92,8 +101,8 @@ class Plot
         uint16_t posX = position.getX();
         uint16_t posY = position.getY();
         // Draw data
-        uint16_t yScale = biggestVal/size; //Y per pixel
-        uint16_t xScale = biggestStamp/(size-offset); //X per pixel
+        float yScale = static_cast<float>(size) / biggestVal;
+        float xScale = static_cast<float>(size - offset) / biggestStamp;
         for (auto it = data.begin(); it != data.end(); it++)
         {
             // Scale data down
@@ -103,13 +112,18 @@ class Plot
             // Draw points using color
             display.setPixel(Point(posX+offset+x, posY-y));
 
-            //Connect points to line:
-            auto next = it++;
-            if (next != data.end())
+            // If user wants to connect the dots
+            if(connectData)
             {
-                int nextX = next->getX() * xScale;
-                int nextY = next->getY() * yScale;
-                display.drawLine(Point(posX+offset+x, posY-y), Point(posX+offset+nextX, posY-nextY));
+                //Connect points to line:
+                display.setColor(color);
+                auto next = std::next(it);
+                if (next != data.end())
+                {
+                    int nextX = next->getX() * xScale;
+                    int nextY = next->getY() * yScale;
+                    display.drawLine(Point(posX+offset+x, posY-y), Point(posX+offset+nextX, posY-nextY));
+                }
             }
         }
     }
@@ -121,9 +135,9 @@ class Plot
     /// @param biggestVal biggestValue of the datapoints
     void draw(char xLabel, char yLabel, modm::color::Rgb565 color, uint16_t offset)
     {
-        int biggestVal = biggestValue(data);
+        int biggestVal = biggestValue();
         int biggestStamp = data.end()->getX();
-        drawPlot(xLabel, yLabel, color, biggestVal);
+        drawPlot(xLabel, yLabel, biggestVal);
         drawPoints(biggestVal, biggestStamp, offset);
     }
         
@@ -137,6 +151,12 @@ class Plot
     modm::ColorGraphicDisplay& display;
     /// @brief contains datapoints
     modm::LinkedList<modm::Vector2f> data;
+    /// @brief  color of connecting lines
+    Rgb565 color;
+    /// @brief color of plot and datapoints
+    Rgb565 altColor;
+    /// @brief Setting to connect data or not
+    bool connectData;
 };
 
 #endif //PLOT_H
