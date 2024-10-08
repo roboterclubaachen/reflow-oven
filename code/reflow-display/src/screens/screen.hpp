@@ -22,7 +22,7 @@ class Screen
     wGroup(modm::gui::Dimension(240,320))
     {}
 
-    modm::gui::WidgetGroup& getWidgetGroup() const{return wGroup;}
+    modm::gui::WidgetGroup& getWidgetGroup() {return wGroup;}
     cDisplay& getDisplay() const{return display;}
 
     private:

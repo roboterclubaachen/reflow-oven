@@ -2,8 +2,13 @@
 #define TIMER_H
 
 #include <modm/processing/timer/periodic_timer.hpp>
+#include <modm/processing/protothread.hpp>
+
 
 #include <chrono>
+#include <string>
+#include <sstream>
+#include <iomanip>
 
 // TODO add protothread to up performance
 
@@ -20,12 +25,8 @@ class timer
 
         ~timer() = default;
 
-        void restart()
-        {
-            secondsTimer.restart();
-        }
         /// @brief Timer function using PeriodicTimer to count seconds on microcontroller
-        void update()
+        void run()
         {
             if (secondsTimer.execute())
             {
@@ -71,12 +72,16 @@ class timer
         /// @return The same stream
         friend modm::IOStream& operator<<(modm::IOStream& stream, const timer& timer);
 
-        char* getTime()
+        /// @brief A function which gives back the timer formated as string
+        /// TODO: Somehow eliminate the need of a heap
+        /// @return Timer time as string
+        const char* getTime()
         {
-            char buffer[8];
-            snprintf(buffer, sizeof(buffer), "%02u:%02u:%02u", hours, minutes, seconds);
+            static char buffer[15];
+            std::snprintf(buffer, 15, "%02u:%02u:%02u", hours, minutes, seconds);
             return buffer;
         }
+
 
 
     private:

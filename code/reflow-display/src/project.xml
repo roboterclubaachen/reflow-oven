@@ -16,5 +16,6 @@
     <module>modm:processing:timer</module>
     <module>modm:architecture:delay</module>
     <module>modm:container</module>
+    <module>modm:platform:heap</module>
   </modules>
 </library>

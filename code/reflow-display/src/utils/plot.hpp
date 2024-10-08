@@ -65,8 +65,6 @@ class Plot
         //Draw axes
         display.drawLine(Point(posX+offset, posY), Point(posX+offset, posY+size));
         display.drawLine(Point(posX+offset, posY+size), Point(posX+size, posY+size));
-
-        uint16_t biggestStamp = data.end()->getX();
         //Look up if the plot is too smol
         if(!(offset < 10))
         {
@@ -133,7 +131,7 @@ class Plot
     /// @param yLabel label for y axis (char)
     /// @param color color in which the plot should be drawn
     /// @param biggestVal biggestValue of the datapoints
-    void draw(char xLabel, char yLabel, modm::color::Rgb565 color, uint16_t offset)
+    void draw(char xLabel, char yLabel, uint16_t offset)
     {
         int biggestVal = biggestValue();
         int biggestStamp = data.end()->getX();

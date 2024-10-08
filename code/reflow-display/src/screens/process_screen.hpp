@@ -3,7 +3,8 @@
 
 
 #include "screen.hpp"
-#include "timer.hpp"
+#include "../utils/timer.hpp"
+#include "../utils/plot.hpp"
 
 
 
@@ -46,12 +47,12 @@ class ProcessScreen : public Screen
          getWidgetGroup().markDirty();
    }
 
-    void connectTemperature(modm::Gpio Sck, modm::Gpio Mosi)
-    {
-        /// TODO: connect to temp Sondor via Spi
-        // tempSpi::connect(Sck::Sck, Mosi::Mosi);
-        // tempSpi::initialize(Board::SystemClock, 24_MHz);
-    }
+    // void connectTemperature(modm::Gpio Sck, modm::Gpio Mosi)
+    // {
+    //     /// TODO: connect to temp Sondor via Spi
+    //     // tempSpi::connect(Sck::Sck, Mosi::Mosi);
+    //     // tempSpi::initialize(Board::SystemClock, 24_MHz);
+    // }
 
     private:
     timer procTimer;

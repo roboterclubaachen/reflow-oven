@@ -10,8 +10,8 @@
 
 #include <modm/processing/timer/periodic_timer.hpp>
 
-#include "timer.hpp"
-#include "process_screen.hpp"
+#include "utils/timer.hpp"
+#include "screens/process_screen.hpp"
 
 // Define pins
 using DisplaySpi = modm::platform::SpiMaster1;
@@ -76,7 +76,7 @@ int main()
         // Update process screen every second
         if( updateTimer.execute() )
         {
-            testTimer.update();
+            testTimer.run();
             procScreen.updateProcessScreen();
             display.update();
         }
