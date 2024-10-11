@@ -5,27 +5,27 @@
 #include <modm/ui/gui.hpp>
 
 using cDisplay = modm::ColorGraphicDisplay;
-using dimension = modm::gui::Dimension;
+using Dimension = modm::gui::Dimension;
 using Point = modm::glcd::Point;
+using GuiViewStack = modm::gui::GuiViewStack;
 
-class Screen
+class Screen : public modm::gui::View
 {
     public:
-    Screen(cDisplay& iDisplay, modm::gui::WidgetGroup& iGroup) :
-    display(iDisplay),
-    wGroup(iGroup)
-    {}
+    Screen(GuiViewStack* iViewStack, u_int8_t iIdentifier, cDisplay& iDisplay, Dimension iDimensions, modm::gui::WidgetGroup& iGroup);
 
     // Overload for portrait display ili9431 full display
-    Screen(cDisplay& iDisplay) :
-    display(iDisplay),
-    wGroup(modm::gui::Dimension(240,320))
-    {}
+    Screen(GuiViewStack* iViewStack, u_int8_t iIdentifier, cDisplay& iDisplay);
+
+    bool hasChanged()
+    {
+        return true;
+    }
 
     modm::gui::WidgetGroup& getWidgetGroup() {return wGroup;}
     cDisplay& getDisplay() const{return display;}
 
-    private:
+    protected:
     cDisplay& display;
     modm::gui::WidgetGroup wGroup;
 };

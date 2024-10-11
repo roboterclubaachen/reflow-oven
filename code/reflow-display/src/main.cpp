@@ -66,18 +66,28 @@ int main()
     init();
     MODM_LOG_DEBUG << "reflow oven display initialized!" << modm::endl;
     //Create new object process screen
+
+    // TESTING //
     timer testTimer(0, 2); //DEBUG add timer for testing
-    ProcessScreen procScreen(testTimer, display);
-    procScreen.drawProcessScreen();
+    // modm::gui::inputQueue queue;
+    // GuiViewStack* stack = new GuiViewStack(display, queue);
+    // ProcessScreen procScreen(stack, 1, testTimer, display);
+    // procScreen.drawProcessScreen();
+    Plot plt(Point(20,20), 200, display);
+    plt.addDataPoint(modm::Vector2f(30, 240));
     // Initialize Timer to update screen
-    modm::ShortPeriodicTimer updateTimer(1s);
+    modm::ShortPeriodicTimer updateTimer(500ms);
     while(true) 
     {
         // Update process screen every second
         if( updateTimer.execute() )
         {
             testTimer.run();
-            procScreen.updateProcessScreen();
+            MODM_LOG_DEBUG << testTimer << modm::endl;
+
+            // procScreen.updateProcessScreen();
+            // stack->update();
+            plt.draw('x', 'y', 10);
             display.update();
         }
     }

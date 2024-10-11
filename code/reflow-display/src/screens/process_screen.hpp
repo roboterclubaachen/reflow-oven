@@ -2,6 +2,8 @@
 #define PROCESS_SCREEN_H
 
 
+#include <modm/ui/gui/view.hpp>
+
 #include "screen.hpp"
 #include "../utils/timer.hpp"
 #include "../utils/plot.hpp"
@@ -12,11 +14,12 @@
 class ProcessScreen : public Screen
 {
     public:
-    ProcessScreen(timer& iTimer, cDisplay& iDisplay) :
-    Screen::Screen(iDisplay),
+    ProcessScreen(GuiViewStack* iViewStack, u_int8_t iIdentifier, timer& iTimer, cDisplay& iDisplay) :
+    Screen::Screen(iViewStack, iIdentifier, iDisplay),
     procTimer(iTimer),
-    tTitle("Time left: ", Rgb565(0xffff)),
-    tTime("00:00:00", dimension(220, 60))
+    lbl_title("Ovening", Rgb565(0xffff)),
+    lbl_time("Time left: ", Rgb565(0xffff)),
+    lbl_clock("00:00:00", Dimension(220, 60))
     {}
 
     void drawProcessScreen()
@@ -26,13 +29,13 @@ class ProcessScreen : public Screen
         wGroup.setPosition(Point(0, 0));
 
         // Configure time widget
-        tTitle.setFont(modm::font::ArcadeClassic);
-        tTitle.markDrawn();
-        tTime.markDirty();
+        lbl_time.setFont(modm::font::ArcadeClassic);
+        lbl_time.markDrawn();
+        lbl_clock.markDirty();
 
         // Pack all widgets into group for mass rendering
-        wGroup.pack(&tTitle, Point(120, 10));
-        wGroup.pack(&tTime, Point(120, 35));
+        wGroup.pack(&lbl_time, Point(120, 10));
+        wGroup.pack(&lbl_clock, Point(120, 35));
 
     }
 
@@ -40,11 +43,11 @@ class ProcessScreen : public Screen
     void updateProcessScreen()
     {
         // Write remaining time
-        tTime.setValue(procTimer.getTime());   
-        tTime.markDirty(); 
+        lbl_clock.setValue(procTimer.getTime());   
+        //lbl_clock.markDirty(); 
 
         // Render all widgets
-         getWidgetGroup().markDirty();
+        getWidgetGroup().markDirty();
    }
 
     // void connectTemperature(modm::Gpio Sck, modm::Gpio Mosi)
@@ -56,8 +59,10 @@ class ProcessScreen : public Screen
 
     private:
     timer procTimer;
-    modm::gui::Label tTitle;
-    modm::gui::StringField tTime;
+    // Widgets
+    modm::gui::Label lbl_title;
+    modm::gui::Label lbl_time;
+    modm::gui::StringField lbl_clock;
 };
 
 #endif //PROCESS_SCREEN_H
