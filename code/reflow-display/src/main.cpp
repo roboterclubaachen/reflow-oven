@@ -1,14 +1,13 @@
 #include <modm/board.hpp>
 #include <modm/driver/display/ili9341.hpp>
 #include <modm/driver/display/ili9341_spi.hpp>
+#include <modm/driver/touch/touch2046.hpp>
 
 #include <modm/debug/logger.hpp>
-#include <modm/io/iostream.hpp>
-#include <modm/ui/display/graphic_display.hpp>
-#include <modm/ui/display/font/assertion.hpp>
-#include <modm/ui/color/rgb565.hpp>
 
 #include <modm/processing/timer/periodic_timer.hpp>
+
+#include <lvgl/lvgl.h>
 
 #include "utils/timer.hpp"
 #include "screens/process_screen.hpp"
@@ -29,10 +28,73 @@ using Rgb565 = modm::color::Rgb565;
 // Define the display
 modm::Ili9341Spi<DisplaySpi, Cs, Dc, Rst, Backlight> display;
 
-void init()
+//----------------------//
+//      STATICS         //
+//----------------------//
+static uint16_t* displayBuffer;
+
+static lv_disp_draw_buf_t draw_buf;
+static lv_color_t* buf;
+/*Declare a buffer for full screen size*/
+static lv_disp_drv_t disp_drv;        /*Descriptor of a display driver*/
+
+// END STATIC
+
+void my_flush_cb(lv_disp_drv_t* disp_drv, const lv_area_t* area, lv_color_t* color_p)
 {
-    // Startup Dev Board
-    Board::initialize();
+    int32_t x, y;
+    /*It's a very slow but simple implementation.*/
+    for(y = area->y1; y <= area->y2; y++) {
+        for(x = area->x1; x <= area->x2; x++) {
+            display.setColor(lv_color_to16(*color_p));
+            display.setPixel(x, y);
+            color_p++;
+        }
+    }
+    lv_disp_flush_ready(disp_drv);         /* Indicate you are ready with the flushing*/
+}
+
+// void
+// my_touchpad_read(lv_indev_drv_t*, lv_indev_data_t* data)
+// {
+// 	RF_CALL_BLOCKING(touch.readTouches());
+// 	Touch::touch_t tp;
+// 	touch.getData().getTouch(&tp, 0);
+// 	// mirror and rotate correctly
+// 	uint16_t x{tp.y}, y{uint16_t(480 - tp.x)};
+// 	data->state = (tp.event == Touch::Event::Contact) ? LV_INDEV_STATE_PR : LV_INDEV_STATE_REL;
+// 	if (data->state == LV_INDEV_STATE_PR)
+// 	{
+// 		data->point.x = x;
+// 		data->point.y = y;
+// 	}
+// }
+
+
+void lvglDriverInit()
+{
+
+
+    lv_disp_draw_buf_init(&draw_buf, buf, NULL, 240 * 320 / 10);  /*Initialize the display buffer.*/
+
+    lv_disp_drv_init(&disp_drv);          /*Basic initialization*/
+    disp_drv.flush_cb = my_flush_cb;    /*Set your driver function*/
+    disp_drv.draw_buf = &draw_buf;        /*Assign the buffer to the display*/
+    disp_drv.hor_res = 240;   /*Set the horizontal resolution of the display*/
+    disp_drv.ver_res = 320;   /*Set the vertical resolution of the display*/
+    lv_disp_drv_register(&disp_drv);      /*Finally register the driver*/
+
+    // Initialize touchscreen driver:
+	// lv_indev_drv_t indev_drv;
+	// lv_indev_drv_init(&indev_drv);
+	// indev_drv.type = LV_INDEV_TYPE_POINTER;
+	// indev_drv.read_cb = my_touchpad_read;
+	// lv_indev_drv_register(&indev_drv);
+
+}
+
+void initializeDisp()
+{
     // Initialize Display SPI
     // TODO: Get display to listen to SPI correctly
     DisplaySpi::connect<Sck::Sck, Mosi::Mosi, Miso::Miso>();
@@ -42,20 +104,22 @@ void init()
     // initialize and turn on display
     display.initialize();
     display.turnOn();
-    //Backlight::set();
 
-    // Configuration: //
-    // set colors
-    display.setBackgroundColor(Rgb565(0x0000)); // dark blue
-    display.setColor(Rgb565(0xffff)); // white OBSOLETE
-    // set brightness
-    display.setBrightness(0xFF); // full bright
-    // reduce color depth
-    display.setIdle(true);
-    display.setFont(modm::font::Assertion);
-    // clear all screen content on start
+    display.setIdle(false);
     display.clear();
-    display.flush();
+
+}
+
+void init()
+{
+    // Startup Dev Board
+    Board::initialize();
+
+    lv_init();
+
+    // Initialize Display and Touchscreen
+    initializeDisp();
+    lvglDriverInit();
 }
 
 
@@ -68,27 +132,15 @@ int main()
     //Create new object process screen
 
     // TESTING //
-    timer testTimer(0, 2); //DEBUG add timer for testing
-    // modm::gui::inputQueue queue;
-    // GuiViewStack* stack = new GuiViewStack(display, queue);
-    // ProcessScreen procScreen(stack, 1, testTimer, display);
-    // procScreen.drawProcessScreen();
-    Plot plt(Point(20,20), 200, display);
-    plt.addDataPoint(modm::Vector2f(30, 240));
+
     // Initialize Timer to update screen
-    modm::ShortPeriodicTimer updateTimer(500ms);
+    modm::ShortPeriodicTimer updateTimer{1ms};
     while(true) 
     {
         // Update process screen every second
         if( updateTimer.execute() )
         {
-            testTimer.run();
-            MODM_LOG_DEBUG << testTimer << modm::endl;
-
-            // procScreen.updateProcessScreen();
-            // stack->update();
-            plt.draw('x', 'y', 10);
-            display.update();
+            lv_task_handler();
         }
     }
     return 0;

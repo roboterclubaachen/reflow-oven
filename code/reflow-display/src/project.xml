@@ -9,11 +9,12 @@
     <module>modm:build:scons</module>
     <module>modm:platform:spi:1</module>
     <module>modm:driver:ili9341</module>
-    <module>modm:driver:ads7843</module>
+    <module>modm:driver:touch2046</module>
     <module>modm:ui:display</module>
+    <module>modm:processing:timer</module>
+    <module>modm:lvgl</module>
     <module>modm:ui:color</module>
     <module>modm:ui:gui</module>
-    <module>modm:processing:timer</module>
     <module>modm:architecture:delay</module>
     <module>modm:container</module>
     <module>modm:platform:heap</module>
