@@ -9,8 +9,7 @@
 
 #include <lvgl/lvgl.h>
 
-#include "utils/timer.hpp"
-#include "screens/process_screen.hpp"
+#include "screens/process_screen.h"
 
 // Define pins
 using DisplaySpi = modm::platform::SpiMaster1;
@@ -31,12 +30,13 @@ modm::Ili9341Spi<DisplaySpi, Cs, Dc, Rst, Backlight> display;
 //----------------------//
 //      STATICS         //
 //----------------------//
-static uint16_t* displayBuffer;
+//static uint16_t* displayBuffer;
 
 static lv_disp_draw_buf_t draw_buf;
-static lv_color_t* buf;
+static lv_color_t buf[240 * 32];
 /*Declare a buffer for full screen size*/
 static lv_disp_drv_t disp_drv;        /*Descriptor of a display driver*/
+static lv_disp_t disp;
 
 // END STATIC
 
@@ -75,14 +75,16 @@ void lvglDriverInit()
 {
 
 
-    lv_disp_draw_buf_init(&draw_buf, buf, NULL, 240 * 320 / 10);  /*Initialize the display buffer.*/
+    lv_disp_draw_buf_init(&draw_buf, &buf, NULL, 240 * 32);  /*Initialize the display buffer.*/
 
     lv_disp_drv_init(&disp_drv);          /*Basic initialization*/
     disp_drv.flush_cb = my_flush_cb;    /*Set your driver function*/
     disp_drv.draw_buf = &draw_buf;        /*Assign the buffer to the display*/
     disp_drv.hor_res = 240;   /*Set the horizontal resolution of the display*/
     disp_drv.ver_res = 320;   /*Set the vertical resolution of the display*/
-    lv_disp_drv_register(&disp_drv);      /*Finally register the driver*/
+    disp = *lv_disp_drv_register(&disp_drv);      /*Finally register the driver*/
+
+    lv_disp_set_default(&disp);
 
     // Initialize touchscreen driver:
 	// lv_indev_drv_t indev_drv;
@@ -129,10 +131,11 @@ int main()
 {
     init();
     MODM_LOG_DEBUG << "reflow oven display initialized!" << modm::endl;
-    //Create new object process screen
 
     // TESTING //
-
+    ProcScreen procScreen(360);
+    procScreen.initProcScreen();
+    lv_scr_load_anim(procScreen.getScreen(), LV_SCR_LOAD_ANIM_FADE_IN, 50, 0, true);
     // Initialize Timer to update screen
     modm::ShortPeriodicTimer updateTimer{1ms};
     while(true) 
