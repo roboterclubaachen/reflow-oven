@@ -75,7 +75,7 @@ void lvglDriverInit()
 {
 
 
-    lv_disp_draw_buf_init(&draw_buf, &buf, NULL, 240 * 32);  /*Initialize the display buffer.*/
+    lv_disp_draw_buf_init(&draw_buf, &buf, NULL, sizeof(buf));  /*Initialize the display buffer.*/
 
     lv_disp_drv_init(&disp_drv);          /*Basic initialization*/
     disp_drv.flush_cb = my_flush_cb;    /*Set your driver function*/
@@ -98,7 +98,6 @@ void lvglDriverInit()
 void initializeDisp()
 {
     // Initialize Display SPI
-    // TODO: Get display to listen to SPI correctly
     DisplaySpi::connect<Sck::Sck, Mosi::Mosi, Miso::Miso>();
     DisplaySpi::initialize<Board::SystemClock, 24_MHz>();
 
@@ -135,12 +134,12 @@ int main()
     // TESTING //
     ProcScreen procScreen(360);
     procScreen.initProcScreen();
-    lv_scr_load_anim(procScreen.getScreen(), LV_SCR_LOAD_ANIM_FADE_IN, 50, 0, true);
+    lv_scr_load(procScreen.getScreen());
     // Initialize Timer to update screen
     modm::ShortPeriodicTimer updateTimer{1ms};
     while(true) 
     {
-        // Update process screen every second
+        // Update process screen every millisecond
         if( updateTimer.execute() )
         {
             lv_task_handler();

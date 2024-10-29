@@ -12,17 +12,17 @@ class ProcScreen
 {
     private:
     timer procTimer;
-    lv_obj_t scr = *lv_obj_create(NULL);
-    lv_obj_t chart;
-    lv_obj_t lbl_time;
+    lv_obj_t* scr;
+    lv_obj_t* chart;
+    lv_obj_t* lbl_time;
     public:
 
     ProcScreen(u_int16_t iSeconds);
-    virtual ~ProcScreen() = default;
+    virtual ~ProcScreen();
 
     void initProcScreen();
 
-    lv_obj_t* getScreen() {return &scr;};
+    lv_obj_t* getScreen() {return scr;};
 
 };
 
