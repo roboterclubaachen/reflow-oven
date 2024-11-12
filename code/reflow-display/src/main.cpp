@@ -5,13 +5,17 @@
 
 #include <modm/debug/logger.hpp>
 
-#include <modm/processing/timer/periodic_timer.hpp>
+#include <modm/processing.hpp>
+
 
 #include <lvgl/lvgl.h>
 
-#include "screens/process_screen.h"
+// #include <lv_conf.h>
 
-// Define pins
+#undef MODM_LOG_LEVEL
+#define MODM_LOG_LEVEL modm::log::DEBUG
+
+// Define display pins
 using DisplaySpi = modm::platform::SpiMaster1;
 using Cs = Board::D10;
 using Dc = Board::D9;
@@ -21,6 +25,8 @@ using Backlight = Board::D7;
 using Mosi = Board::D11;
 using Miso = Board::D12;
 using Sck = Board::D13;
+
+
 // Defining aliases
 using Rgb565 = modm::color::Rgb565;
 
@@ -32,71 +38,35 @@ modm::Ili9341Spi<DisplaySpi, Cs, Dc, Rst, Backlight> display;
 //----------------------//
 //static uint16_t* displayBuffer;
 
-static lv_disp_draw_buf_t draw_buf;
-static lv_color_t buf[240 * 32];
-/*Declare a buffer for full screen size*/
-static lv_disp_drv_t disp_drv;        /*Descriptor of a display driver*/
-static lv_disp_t disp;
+static lv_disp_draw_buf_t disp_buf;
+static constexpr size_t bufSize = (LV_HOR_RES_MAX * LV_VER_RES_MAX) / 10;
+static lv_color_t buf[bufSize];
 
 // END STATIC
 
 void my_flush_cb(lv_disp_drv_t* disp_drv, const lv_area_t* area, lv_color_t* color_p)
 {
-    int32_t x, y;
     /*It's a very slow but simple implementation.*/
-    for(y = area->y1; y <= area->y2; y++) {
-        for(x = area->x1; x <= area->x2; x++) {
-            display.setColor(lv_color_to16(*color_p));
+    for(uint8_t y = area->y1; y <= area->y2; y++) {
+        for(uint8_t x = area->x1; x <= area->x2; x++) {
+            // Convert color to RGB565
+            lv_color16_t c16;
+            c16.full = lv_color_to16(*color_p);
+            Rgb565 c565 = Rgb565(c16.full);
+            display.setColor(c565);
             display.setPixel(x, y);
+            MODM_LOG_DEBUG << "Setting pixel (" << x << ", " << y << ") to color " << lv_color_to16(*color_p) << modm::endl;
             color_p++;
         }
     }
     lv_disp_flush_ready(disp_drv);         /* Indicate you are ready with the flushing*/
 }
 
-// void
-// my_touchpad_read(lv_indev_drv_t*, lv_indev_data_t* data)
-// {
-// 	RF_CALL_BLOCKING(touch.readTouches());
-// 	Touch::touch_t tp;
-// 	touch.getData().getTouch(&tp, 0);
-// 	// mirror and rotate correctly
-// 	uint16_t x{tp.y}, y{uint16_t(480 - tp.x)};
-// 	data->state = (tp.event == Touch::Event::Contact) ? LV_INDEV_STATE_PR : LV_INDEV_STATE_REL;
-// 	if (data->state == LV_INDEV_STATE_PR)
-// 	{
-// 		data->point.x = x;
-// 		data->point.y = y;
-// 	}
-// }
-
-
-void lvglDriverInit()
+int main()
 {
+    // Startup Dev Board
+    Board::initialize();
 
-
-    lv_disp_draw_buf_init(&draw_buf, &buf, NULL, sizeof(buf));  /*Initialize the display buffer.*/
-
-    lv_disp_drv_init(&disp_drv);          /*Basic initialization*/
-    disp_drv.flush_cb = my_flush_cb;    /*Set your driver function*/
-    disp_drv.draw_buf = &draw_buf;        /*Assign the buffer to the display*/
-    disp_drv.hor_res = 240;   /*Set the horizontal resolution of the display*/
-    disp_drv.ver_res = 320;   /*Set the vertical resolution of the display*/
-    disp = *lv_disp_drv_register(&disp_drv);      /*Finally register the driver*/
-
-    lv_disp_set_default(&disp);
-
-    // Initialize touchscreen driver:
-	// lv_indev_drv_t indev_drv;
-	// lv_indev_drv_init(&indev_drv);
-	// indev_drv.type = LV_INDEV_TYPE_POINTER;
-	// indev_drv.read_cb = my_touchpad_read;
-	// lv_indev_drv_register(&indev_drv);
-
-}
-
-void initializeDisp()
-{
     // Initialize Display SPI
     DisplaySpi::connect<Sck::Sck, Mosi::Mosi, Miso::Miso>();
     DisplaySpi::initialize<Board::SystemClock, 24_MHz>();
@@ -109,39 +79,43 @@ void initializeDisp()
     display.setIdle(false);
     display.clear();
 
-}
-
-void init()
-{
-    // Startup Dev Board
-    Board::initialize();
-
     lv_init();
 
-    // Initialize Display and Touchscreen
-    initializeDisp();
-    lvglDriverInit();
-}
+
+    lv_disp_draw_buf_init(&disp_buf, &buf, NULL, sizeof(buf));  /*Initialize the display buffer.*/
+
+    // Initialize the display:
+	lv_disp_drv_t disp_drv;
+	lv_disp_drv_init(&disp_drv);
+	disp_drv.draw_buf = &disp_buf;
+	disp_drv.flush_cb = my_flush_cb;
+    // disp_drv.direct_mode = true;
+	disp_drv.hor_res = LV_HOR_RES_MAX;
+	disp_drv.ver_res = LV_VER_RES_MAX;
+	lv_disp_drv_register(&disp_drv);
+
+    
 
 
-
-
-int main()
-{
-    init();
-    MODM_LOG_DEBUG << "reflow oven display initialized!" << modm::endl;
+    MODM_LOG_DEBUG << "[Info] reflow oven display initialized!" << modm::endl;
 
     // TESTING //
-    ProcScreen procScreen(360);
-    procScreen.initProcScreen();
-    lv_scr_load(procScreen.getScreen());
-    // Initialize Timer to update screen
-    modm::ShortPeriodicTimer updateTimer{1ms};
+    //ProcScreen procScreen(360);
+    //procScreen.initProcScreen();
+
+    // DEBUGGING //
+    // lv_obj_t* scr = lv_obj_create(NULL);
+    // lv_obj_t* btn1 = lv_btn_create(scr);
+    // lv_obj_set_x(btn1, 30);
+    // lv_obj_set_y(btn1, 10);
+    // lv_scr_load(scr);
+
+    modm::ShortPeriodicTimer tmr{5ms};
     while(true) 
     {
-        // Update process screen every millisecond
-        if( updateTimer.execute() )
+        if(tmr.execute())
         {
+            lv_timer_handler();
             lv_task_handler();
         }
     }

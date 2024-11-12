@@ -3,24 +3,24 @@
 
 ProcScreen::ProcScreen(uint16_t iSeconds) :
     procTimer(iSeconds),
-    scr(nullptr),
     chart(nullptr),
     lbl_time(nullptr)
 {
-    scr = lv_obj_create(NULL);
-    chart = lv_chart_create(scr);
-    lbl_time = lv_label_create(scr);
+    chart = lv_chart_create(lv_scr_act());
+    lbl_time = lv_label_create(lv_scr_act());
     MODM_LOG_DEBUG << "ProcScreen created!" << modm::endl;
 }
 
 ProcScreen::~ProcScreen()
 {
-    lv_obj_del(scr);
+    lv_obj_del(chart);
+    lv_obj_del(lbl_time);
 }
 
 
 void ProcScreen::initProcScreen()
 {
+    lv_obj_t* scr = lv_scr_act();
     // Set screen size
     lv_obj_set_size(scr, LV_HOR_RES, LV_VER_RES);
     lv_obj_center(scr);
