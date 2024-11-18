@@ -1,0 +1,19 @@
+<library>
+  <repositories>
+    <repository><path>../ext/modm/repo.lb</path></repository>
+  </repositories>
+  <extends>modm:nucleo-l476rg</extends>
+  <options>
+    <option name="modm:build:build.path">../build/reflow-display/</option>
+  </options>
+  <modules>
+    <module>modm:build:scons</module>
+    <module>modm:processing:timer</module>
+    <module>modm:driver:ili9341</module>
+    <module>modm:driver:touch2046</module>
+    <module>modm:platform:spi:1</module>
+    <module>modm:platform:spi:2</module>
+    <module>modm:platform:dma</module>
+    <module>modm:lvgl</module>
+  </modules>
+</library>
