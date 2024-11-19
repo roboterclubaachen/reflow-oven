@@ -21,12 +21,12 @@ namespace tft
 	using DmaTx = Dma1::Channel3;
 	using Spi = SpiMaster1_Dma<DmaRx, DmaTx>;
 	//using Spi = SpiMaster1;
-	using Cs = modm::platform::GpioC8;
-	using Sck = modm::platform::GpioA5;
-	using Miso = modm::platform::GpioA6;
-	using Mosi = modm::platform::GpioA7;
-	using DataCommands = modm::platform::GpioC5;
-	using Reset = modm::platform::GpioC6;
+	using Cs = Board::D10;
+	using Sck = Board::D13;
+	using Miso = Board::D12;
+	using Mosi = Board::D11;
+	using DataCommands = Board::D9;
+	using Reset = Board::D8;
 	using Backlight = modm::platform::GpioC9;
 }
 
@@ -40,19 +40,19 @@ modm::Ili9341Spi<
 
 namespace touch
 {
-	using Spi = SpiMaster2;
-	using Cs = modm::platform::GpioB3;
-	using Sck = modm::platform::GpioB13;
-	using Miso = modm::platform::GpioB14;
-	using Mosi = modm::platform::GpioB15;
+	using Spi = SpiMaster3;
+	using Cs = modm::platform::GpioD2;
+	using Sck = modm::platform::GpioC10;
+	using Miso = modm::platform::GpioC11;
+	using Mosi = modm::platform::GpioC12;
 	//using Interrupt = modm::platform::GpioA10;
 }
 
 modm::Touch2046<touch::Spi, touch::Cs> touchController;
 
 
-static constexpr size_t buf_size = LV_HOR_RES_MAX * LV_VER_RES_MAX / 8;
-static lv_color_t buf[buf_size];
+static constexpr size_t buf_size = 240 * 320 / 10;
+static lv_color_t modm_aligned(4) buf[buf_size];
 
 void my_touchpad_read(lv_indev_t*, lv_indev_data_t* data)
 {
@@ -84,7 +84,7 @@ main()
 		tft::Sck::Sck,
 		tft::Miso::Miso,
 		tft::Mosi::Mosi>();
-	tft::Spi::initialize<SystemClock, 25_MHz>();
+	tft::Spi::initialize<SystemClock, 24_MHz>();
 	tftController.initialize();
 	tftController.enableBacklight(true);
 
@@ -92,7 +92,7 @@ main()
 		touch::Sck::Sck,
 		touch::Miso::Miso,
 		touch::Mosi::Mosi>();
-	touch::Spi::initialize<SystemClock, 25_MHz>();
+	touch::Spi::initialize<SystemClock, 24_MHz>();
 	modm::touch2046::Calibration cal{
 		.OffsetX = -11,
 		.OffsetY = 335,
@@ -104,11 +104,11 @@ main()
 	};
 	touchController.setCalibration(cal);
 
-	MODM_LOG_INFO << "modm LVGL example on Nucleo-L452RE board!\n\n";
+	MODM_LOG_INFO << "reflow-display on nucleo-l476rg!\n\n";
 
-	lv_display_t *disp = lv_display_create(LV_HOR_RES_MAX, LV_VER_RES_MAX);
+	lv_display_t *disp = lv_display_create(240, 320);
 	lv_display_set_flush_cb(disp, disp_flush);
-	lv_display_set_buffers(disp, buf, NULL, sizeof(buf), LV_DISPLAY_RENDER_MODE_DIRECT);
+	lv_display_set_buffers(disp, buf, NULL, sizeof(buf), LV_DISPLAY_RENDER_MODE_PARTIAL);
 
 	// Initialize touchscreen driver:
 	lv_indev_t* indev = lv_indev_create();

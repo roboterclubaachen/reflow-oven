@@ -12,7 +12,7 @@
     <module>modm:driver:ili9341</module>
     <module>modm:driver:touch2046</module>
     <module>modm:platform:spi:1</module>
-    <module>modm:platform:spi:2</module>
+    <module>modm:platform:spi:3</module>
     <module>modm:platform:dma</module>
     <module>modm:lvgl</module>
   </modules>
