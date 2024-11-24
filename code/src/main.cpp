@@ -50,9 +50,13 @@ namespace touch
 
 modm::Touch2046<touch::Spi, touch::Cs> touchController;
 
-
-static constexpr size_t buf_size = 240 * 320 / 10;
+// Define display buffer 1
+static constexpr size_t buf_size = 240 * 320 / 8;
 static lv_color_t modm_aligned(4) buf[buf_size];
+
+// Define display buffer 2
+static constexpr size_t buf2_size = 240 * 320 / 8;
+static lv_color_t modm_aligned(4) buf2[buf2_size];
 
 void my_touchpad_read(lv_indev_t*, lv_indev_data_t* data)
 {
@@ -108,7 +112,7 @@ main()
 
 	lv_display_t *disp = lv_display_create(240, 320);
 	lv_display_set_flush_cb(disp, disp_flush);
-	lv_display_set_buffers(disp, buf, NULL, sizeof(buf), LV_DISPLAY_RENDER_MODE_PARTIAL);
+	lv_display_set_buffers(disp, buf, buf2, sizeof(buf), LV_DISPLAY_RENDER_MODE_PARTIAL);
 
 	// Initialize touchscreen driver:
 	lv_indev_t* indev = lv_indev_create();
@@ -141,7 +145,7 @@ main()
 
 	uint16_t counter = 0;
 
-	modm::ShortPeriodicTimer tmr{10ms};
+	modm::ShortPeriodicTimer tmr{20ms};
 
 	while (true)
 	{
