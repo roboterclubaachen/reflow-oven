@@ -5,6 +5,7 @@
 
 #include "lvgl/lvgl.h"
 
+static int procCounter = 0;
 
 void drawProcessScreen();
 

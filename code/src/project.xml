@@ -8,6 +8,8 @@
   </options>
   <modules>
     <module>modm:build:scons</module>
+    <module>modm:build:make</module>
+    <module>modm:ide:vscode</module>
     <module>modm:processing:timer</module>
     <module>modm:driver:ili9341</module>
     <module>modm:driver:touch2046</module>

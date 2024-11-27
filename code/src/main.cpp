@@ -6,6 +6,10 @@
 
 #include <lvgl/lvgl.h>
 
+// USER INCLUDES
+#include "screens/test_screen.h"
+#include "screens/process_screen.h"
+
 
 // Set the log level
 #undef	MODM_LOG_LEVEL
@@ -45,7 +49,7 @@ namespace touch
 	using Sck = modm::platform::GpioC10;
 	using Miso = modm::platform::GpioC11;
 	using Mosi = modm::platform::GpioC12;
-	//using Interrupt = modm::platform::GpioA10;
+	using Interrupt = modm::platform::GpioC9;
 }
 
 modm::Touch2046<touch::Spi, touch::Cs> touchController;
@@ -62,16 +66,17 @@ void my_touchpad_read(lv_indev_t*, lv_indev_data_t* data)
 {
 	data->state = RF_CALL_BLOCKING(touchController.isTouched()) ? LV_INDEV_STATE_PRESSED : LV_INDEV_STATE_RELEASED;
 	if(data->state == LV_INDEV_STATE_PRESSED) {
-		auto xy = RF_CALL_BLOCKING(touchController.getTouchPosition());
+		std::tuple xy = RF_CALL_BLOCKING(touchController.getTouchPosition());
 		data->point.x = std::get<0>(xy);
 		data->point.y = std::get<1>(xy);
+		MODM_LOG_DEBUG << "Touch: " << data->point.x << ", " << data->point.y << modm::endl;
 	}
 }
 
 void disp_flush(lv_display_t* disp, const lv_area_t* area, uint8_t* px_map)
 {
 	tftController.drawRaw(
-		{area->x1, area->y1},
+		{uint16_t(area->x1), uint16_t(area->y1)},
 		(area->x2 - area->x1 +1),
 		(area->y2 - area->y1 + 1),
 		(modm::color::Rgb565*)px_map);
@@ -88,7 +93,7 @@ main()
 		tft::Sck::Sck,
 		tft::Miso::Miso,
 		tft::Mosi::Mosi>();
-	tft::Spi::initialize<SystemClock, 24_MHz>();
+	tft::Spi::initialize<Board::SystemClock, modm::MHz(24)>();
 	tftController.initialize();
 	tftController.enableBacklight(true);
 
@@ -96,17 +101,17 @@ main()
 		touch::Sck::Sck,
 		touch::Miso::Miso,
 		touch::Mosi::Mosi>();
-	touch::Spi::initialize<SystemClock, 24_MHz>();
-	modm::touch2046::Calibration cal{
-		.OffsetX = -11,
-		.OffsetY = 335,
-		.FactorX = 22018,
-		.FactorY = -29358,
-		.MaxX = 240,
-		.MaxY = 320,
-		.ThresholdZ = 500,
-	};
-	touchController.setCalibration(cal);
+	touch::Spi::initialize<Board::SystemClock, modm::MHz(24)>();
+	// modm::touch2046::Calibration cal{
+	// 	.OffsetX = -11,
+	// 	.OffsetY = 335,
+	// 	.FactorX = 22018,
+	// 	.FactorY = -29358,
+	// 	.MaxX = 240,
+	// 	.MaxY = 320,
+	// 	.ThresholdZ = 500,
+	// };
+	// touchController.setCalibration(cal);
 
 	MODM_LOG_INFO << "reflow-display on nucleo-l476rg!\n\n";
 
@@ -116,34 +121,17 @@ main()
 
 	// Initialize touchscreen driver:
 	lv_indev_t* indev = lv_indev_create();
+	// Assert touchscreen driver was created successfully:
+	if (indev == NULL) {
+		MODM_LOG_ERROR << "Failed to create input device\n";
+		while (1) {}
+	}
+
 	lv_indev_set_type(indev, LV_INDEV_TYPE_POINTER);
 	lv_indev_set_read_cb(indev, my_touchpad_read);
 
-	lv_obj_t* labelA =  lv_label_create(lv_screen_active());
-	lv_label_set_text(labelA, "Hello world!");
-	lv_obj_set_pos(labelA, 60, 10);
-	lv_obj_set_size(labelA, 120, 50);
-
-	lv_obj_t* btn = lv_button_create(lv_screen_active());
-	lv_obj_set_pos(btn, 60, 135);
-	lv_obj_set_size(btn, 120, 50);
-
-	lv_obj_t* btnLabel = lv_label_create(btn);
-	lv_label_set_text(btnLabel, "Button");
-
-	lv_obj_add_event_cb(btn, [](lv_event_t *event)
-	{
-		static uint16_t btnCounter = 0;
-		lv_label_set_text_fmt((lv_obj_t*) lv_event_get_user_data(event),
-							  "Button: %d", ++btnCounter);
-	}, LV_EVENT_PRESSED, btnLabel);
-
-	lv_obj_t* labelB =  lv_label_create(lv_screen_active());
-	lv_label_set_text(labelB, "Big Font");
-	lv_obj_set_pos(labelB, 40, 260);
-	lv_obj_set_style_text_font(labelB, &lv_font_montserrat_36, LV_PART_MAIN);
-
-	uint16_t counter = 0;
+	drawTestScreen();
+	//drawProcessScreen();
 
 	modm::ShortPeriodicTimer tmr{20ms};
 
@@ -153,7 +141,7 @@ main()
 
 		if (tmr.execute())
 		{
-			lv_label_set_text_fmt(labelA, "counter=%d", ++counter);
+			setLblText();
 		}
 	}
 

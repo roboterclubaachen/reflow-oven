@@ -19,8 +19,10 @@
 #define LV_USE_LOG  1
 #define LV_LOG_LEVEL  LV_LOG_LEVEL_INFO
 
-// Enable a bigger font
+// Fonts:
 #define LV_FONT_MONTSERRAT_36  1
+#define LV_FONT_MONTSERRAT_24  1
+#define LV_FONT_MONTSERRAT_16  1
 
 // Disable anti-aliasing
 #define LV_ANTIALIAS  0
