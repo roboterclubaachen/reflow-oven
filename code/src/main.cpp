@@ -69,7 +69,13 @@ void my_touchpad_read(lv_indev_t*, lv_indev_data_t* data)
 		std::tuple xy = RF_CALL_BLOCKING(touchController.getTouchPosition());
 		data->point.x = std::get<0>(xy);
 		data->point.y = std::get<1>(xy);
-		MODM_LOG_DEBUG << "Touch: " << data->point.x << ", " << data->point.y << modm::endl;
+
+		std::tuple xyRAW = RF_CALL_BLOCKING(touchController.getRawValues());
+		int16_t rawX = std::get<0>(xyRAW);
+		int16_t rawY = std::get<1>(xyRAW);
+		// Display on test screen
+		setTouchText(data->point.x, data->point.y, rawX, rawY);
+
 	}
 }
 
@@ -101,17 +107,17 @@ main()
 		touch::Sck::Sck,
 		touch::Miso::Miso,
 		touch::Mosi::Mosi>();
-	touch::Spi::initialize<Board::SystemClock, modm::MHz(24)>();
-	// modm::touch2046::Calibration cal{
-	// 	.OffsetX = -11,
-	// 	.OffsetY = 335,
-	// 	.FactorX = 22018,
-	// 	.FactorY = -29358,
-	// 	.MaxX = 240,
-	// 	.MaxY = 320,
-	// 	.ThresholdZ = 500,
-	// };
-	// touchController.setCalibration(cal);
+	touch::Spi::initialize<Board::SystemClock, modm::MHz(1.5)>();
+	modm::touch2046::Calibration cal{
+		.OffsetX = -11,
+		.OffsetY = 335,
+		.FactorX = 22018,
+		.FactorY = -29358,
+		.MaxX = 240,
+		.MaxY = 320,
+		.ThresholdZ = 100,
+	};
+	touchController.setCalibration(cal);
 
 	MODM_LOG_INFO << "reflow-display on nucleo-l476rg!\n\n";
 
@@ -130,8 +136,8 @@ main()
 	lv_indev_set_type(indev, LV_INDEV_TYPE_POINTER);
 	lv_indev_set_read_cb(indev, my_touchpad_read);
 
-	drawTestScreen();
-	//drawProcessScreen();
+	//drawTestScreen();
+	drawProcessScreen();
 
 	modm::ShortPeriodicTimer tmr{20ms};
 
