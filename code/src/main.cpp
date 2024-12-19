@@ -139,15 +139,19 @@ main()
 	//drawTestScreen();
 	drawProcessScreen();
 
-	modm::ShortPeriodicTimer tmr{20ms};
+	// DEBUG
+	setTime(2, 60);
+	setTemperature(350);
+
+	modm::ShortPeriodicTimer secondTimer{1s};
 
 	while (true)
 	{
 		lv_timer_handler();
 
-		if (tmr.execute())
+		if (secondTimer.execute())
 		{
-			setLblText();
+			updateTime();
 		}
 	}
 

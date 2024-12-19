@@ -4,6 +4,38 @@ static lv_obj_t* scr;
 static lv_obj_t* chart;
 static lv_obj_t* lbl_time;
 static lv_obj_t* lbl_temperature;
+static lv_obj_t* btn_stop;
+
+Timer remainingTime(0, 0);
+
+void setTime(uint8_t uMinutes, uint8_t uSeconds)
+{
+    remainingTime.setMinutes(uMinutes);
+    remainingTime.setSeconds(uSeconds);
+
+    lv_label_set_text_fmt(lbl_time, "%u:%u", uMinutes, uSeconds);
+}
+
+/**
+ * @brief Counts down the timer and displays on screen
+ * 
+ */
+void updateTime()
+{
+    remainingTime.countDown();
+    lv_label_set_text_fmt(lbl_time, "%u:%u", remainingTime.getMinutes(), remainingTime.getSeconds());
+}
+
+void setTemperature(uint16_t uTemp)
+{
+    lv_label_set_text_fmt(lbl_temperature, "%u°C", uTemp);
+}
+
+void stop_button_callback(lv_event_t* e)
+{
+    // Handle stop button press
+    // TODO: Implement stop functionality
+}
 
 void drawProcessScreen()
 {
@@ -11,6 +43,9 @@ void drawProcessScreen()
     scr = lv_obj_create(NULL);
     lv_obj_set_size(scr, lv_pct(100), lv_pct(100));
     lv_obj_center(scr);
+
+    // Load the screen
+    lv_scr_load(scr);
 
     // Create a time label container directly on the screen
     lv_obj_t* label_container = lv_obj_create(scr);
@@ -39,12 +74,7 @@ void drawProcessScreen()
     // Add time label:
     lbl_time = lv_label_create(label_container);
     lv_obj_set_align(lbl_time, LV_ALIGN_BOTTOM_MID);
-    // receive a seconds number as test:
-    uint16_t totalSeconds = 210;
-    // Convert to minutes + seconds:
-    uint8_t minutes = totalSeconds / 60;
-    uint8_t seconds = totalSeconds % 60;
-    lv_label_set_text_fmt(lbl_time, "%u:%u", minutes, seconds);
+    lv_label_set_text_fmt(lbl_time, "--:--");
 
     // Stylize the time label:
     static lv_style_t time_label_style;
@@ -80,9 +110,7 @@ void drawProcessScreen()
     // Add temperature value label
     lbl_temperature = lv_label_create(temp_container);
     lv_obj_set_align(lbl_temperature, LV_ALIGN_BOTTOM_MID);
-    // Set a test temperature value
-    uint16_t currentTemperature = 25;
-    lv_label_set_text_fmt(lbl_temperature, "%u°C", currentTemperature);
+    lv_label_set_text_fmt(lbl_temperature, "---°C");
 
     // Stylize the temperature label
     static lv_style_t temperature_value_style;
@@ -171,6 +199,23 @@ void drawProcessScreen()
     lv_obj_set_pos(scaleLeft, 4, 80); // Adjusted position to be flush with the chart
     lv_obj_set_style_pad_all(scaleLeft, 0, 0);
 
-    // Load the screen
-    lv_scr_load(scr);
+    // Create a stop button
+    btn_stop = lv_btn_create(scr);
+    lv_obj_set_size(btn_stop, 50, 50); // Set button size
+    lv_obj_set_style_bg_color(btn_stop, lv_color_hex(0xFF0000), LV_PART_MAIN); // Red color
+    lv_obj_set_style_bg_opa(btn_stop, LV_OPA_COVER, LV_PART_MAIN); // Ensure opacity is full
+    lv_obj_set_style_radius(btn_stop, LV_RADIUS_CIRCLE, 0); // Make it round
+    lv_obj_align(btn_stop, LV_ALIGN_BOTTOM_RIGHT, -10, -10); // Position at bottom right
+    lv_obj_add_event_cb(btn_stop, stop_button_callback, LV_EVENT_CLICKED, NULL);
+    lv_obj_move_foreground(btn_stop); // Move stop button to the top layer
+
+    // Add a white rectangle to the stop button
+    lv_obj_t* rect_stop = lv_obj_create(btn_stop);
+    lv_obj_set_size(rect_stop, 20, 20); // Set rectangle size
+    lv_obj_set_style_bg_color(rect_stop, lv_color_white(), LV_PART_MAIN); // White color
+    lv_obj_set_style_radius(rect_stop, 0, LV_PART_MAIN); // No rounded corners
+    lv_obj_set_style_border_color(rect_stop, lv_color_white(), LV_PART_MAIN); // White border
+    lv_obj_center(rect_stop); // Center the rectangle within the button
+
+
 }
