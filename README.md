@@ -8,7 +8,7 @@ Description: tbd
 * KiCad files of the PCBs
 
 #### `code/`
-* Main Software
+* Main Software contains application for an ILI9341 display running via LVGL on modm for easier user control of the reflow oven.
 
 ## License
 
