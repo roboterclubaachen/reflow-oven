@@ -1,13 +1,15 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "2af30d8d-2720-483c-987e-a677f64c3b35")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Connector:Screw_Terminal_01x04"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -84,43 +86,9 @@
 						(type background)
 					)
 				)
-				(circle
-					(center 0 -5.08)
-					(radius 0.635)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 -2.54)
-					(radius 0.635)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(polyline
 					(pts
-						(xy -0.5334 -4.7498) (xy 0.3302 -5.588)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.5334 -2.2098) (xy 0.3302 -3.048)
+						(xy -0.5334 2.8702) (xy 0.3302 2.032)
 					)
 					(stroke
 						(width 0.1524)
@@ -144,7 +112,7 @@
 				)
 				(polyline
 					(pts
-						(xy -0.5334 2.8702) (xy 0.3302 2.032)
+						(xy -0.5334 -2.2098) (xy 0.3302 -3.048)
 					)
 					(stroke
 						(width 0.1524)
@@ -156,7 +124,7 @@
 				)
 				(polyline
 					(pts
-						(xy -0.3556 -4.572) (xy 0.508 -5.4102)
+						(xy -0.5334 -4.7498) (xy 0.3302 -5.588)
 					)
 					(stroke
 						(width 0.1524)
@@ -168,7 +136,7 @@
 				)
 				(polyline
 					(pts
-						(xy -0.3556 -2.032) (xy 0.508 -2.8702)
+						(xy -0.3556 3.048) (xy 0.508 2.2098)
 					)
 					(stroke
 						(width 0.1524)
@@ -192,8 +160,31 @@
 				)
 				(polyline
 					(pts
-						(xy -0.3556 3.048) (xy 0.508 2.2098)
+						(xy -0.3556 -2.032) (xy 0.508 -2.8702)
 					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 -4.572) (xy 0.508 -5.4102)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 2.54)
+					(radius 0.635)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -214,7 +205,18 @@
 					)
 				)
 				(circle
-					(center 0 2.54)
+					(center 0 -2.54)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 -5.08)
 					(radius 0.635)
 					(stroke
 						(width 0.1524)
@@ -297,9 +299,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -372,7 +377,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -384,7 +389,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -433,9 +438,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -554,6 +562,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Sensor_Temperature:MAX31865xTP"
 			(exclude_from_sim no)
@@ -635,35 +644,17 @@
 				)
 			)
 			(symbol "MAX31865xTP_1_1"
-				(pin power_out line
-					(at 15.24 15.24 180)
+				(pin output line
+					(at -15.24 15.24 0)
 					(length 2.54)
-					(name "BIAS"
+					(name "~{DRDY}"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 2.54 -17.78 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
+					(number "18"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -743,45 +734,10 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at -2.54 -17.78 90)
-					(length 2.54)
-					(name "DGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -17.78 90)
-					(length 2.54) hide
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin no_connect line
 					(at -12.7 -2.54 0)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -790,24 +746,6 @@
 						)
 					)
 					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at -15.24 15.24 0)
-					(length 2.54)
-					(name "~{DRDY}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "18"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -833,17 +771,17 @@
 						)
 					)
 				)
-				(pin input line
-					(at 15.24 12.7 180)
+				(pin power_in line
+					(at -2.54 -17.78 90)
 					(length 2.54)
-					(name "REFIN+"
+					(name "DGND"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "2"
+					(number "15"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -869,9 +807,47 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at 2.54 -17.78 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin passive line
 					(at 2.54 -17.78 90)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -17.78 90)
+					(length 2.54)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -880,6 +856,42 @@
 						)
 					)
 					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 15.24 15.24 180)
+					(length 2.54)
+					(name "BIAS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 15.24 12.7 180)
+					(length 2.54)
+					(name "REFIN+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1014,12 +1026,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3.3VA"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1091,7 +1108,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1103,7 +1120,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1134,12 +1151,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3V3"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1211,7 +1233,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1223,7 +1245,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1254,12 +1276,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1350,6 +1377,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(junction
@@ -1846,7 +1874,6 @@
 	)
 	(label "RTDIN+"
 		(at 181.61 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1857,7 +1884,6 @@
 	)
 	(label "RTDIN-"
 		(at 181.61 104.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1868,7 +1894,6 @@
 	)
 	(label "FORCE-"
 		(at 181.61 106.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1879,7 +1904,6 @@
 	)
 	(label "FORCE+"
 		(at 181.61 99.06 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1891,7 +1915,6 @@
 	(hierarchical_label "SDI"
 		(shape input)
 		(at 107.95 81.28 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1903,7 +1926,6 @@
 	(hierarchical_label "~{DRDY}"
 		(shape output)
 		(at 107.95 78.74 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1915,7 +1937,6 @@
 	(hierarchical_label "SCLK"
 		(shape input)
 		(at 107.95 83.82 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1927,7 +1948,6 @@
 	(hierarchical_label "SDO"
 		(shape output)
 		(at 107.95 88.9 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1939,7 +1959,6 @@
 	(hierarchical_label "~{CS}"
 		(shape input)
 		(at 107.95 86.36 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1958,7 +1977,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1f03234a-e2ce-483f-b69b-1cb47c03ffc1")
-		(property "Reference" "#PWR01203"
+		(property "Reference" "#PWR0803"
 			(at 138.43 128.27 0)
 			(effects
 				(font
@@ -2003,20 +2022,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "d2480ee5-1484-4dbd-87f7-e30a062542f8")
+			(uuid "38277dfc-ff02-4394-ba02-52e12326433b")
 		)
 		(instances
-			(project ""
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/47b4fc3d-8fc3-490e-b9bf-4506c270c925"
-					(reference "#PWR01203")
+			(project "ui"
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/84888cdd-db45-42bb-b95c-ed3400f55124"
+					(reference "#PWR01003")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d75ecda1-c4de-4de1-8c23-afebb28677b2"
-					(reference "#PWR01102")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/87e7ecdc-693c-4996-ac04-58cfcb8a8aea"
+					(reference "#PWR0803")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f6f2ca5e-25e6-4058-afda-5a23263ad8e9"
-					(reference "#PWR01303")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/eb4161c0-05a3-4d87-a471-773cbdf6d1b4"
+					(reference "#PWR0903")
 					(unit 1)
 				)
 			)
@@ -2032,7 +2051,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "238bbe04-ce95-48b0-8781-f3a2a62195d1")
-		(property "Reference" "R1201"
+		(property "Reference" "R801"
 			(at 161.29 111.76 0)
 			(effects
 				(font
@@ -2078,23 +2097,23 @@
 			)
 		)
 		(pin "1"
-			(uuid "a7d3838a-ef71-4687-ae64-9449563e86d1")
+			(uuid "d6cdb7b7-0e0d-4c0c-b6df-cc280d126217")
 		)
 		(pin "2"
-			(uuid "ad8617f8-da9c-4574-940c-a1533fc34c61")
+			(uuid "82ed67b1-fa6d-43ad-b147-fe7e5f5fb8ff")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/47b4fc3d-8fc3-490e-b9bf-4506c270c925"
-					(reference "R1201")
+			(project "ui"
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/84888cdd-db45-42bb-b95c-ed3400f55124"
+					(reference "R1001")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d75ecda1-c4de-4de1-8c23-afebb28677b2"
-					(reference "R1102")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/87e7ecdc-693c-4996-ac04-58cfcb8a8aea"
+					(reference "R801")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f6f2ca5e-25e6-4058-afda-5a23263ad8e9"
-					(reference "R1301")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/eb4161c0-05a3-4d87-a471-773cbdf6d1b4"
+					(reference "R901")
 					(unit 1)
 				)
 			)
@@ -2110,7 +2129,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2f69bcbe-9d68-4f8d-a7ea-2a482124bb2c")
-		(property "Reference" "C1201"
+		(property "Reference" "C801"
 			(at 124.46 58.42 0)
 			(effects
 				(font
@@ -2156,23 +2175,23 @@
 			)
 		)
 		(pin "1"
-			(uuid "c498f35f-7a8b-44d6-9ca4-b81c1a469833")
+			(uuid "a61e0374-f289-4fb0-bb0e-b4169712a1d8")
 		)
 		(pin "2"
-			(uuid "54fc33a4-d89f-4dac-a922-4b2d112f277a")
+			(uuid "a6b008ac-7ea3-40cd-9512-5ce0395d2d81")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/47b4fc3d-8fc3-490e-b9bf-4506c270c925"
-					(reference "C1201")
+			(project "ui"
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/84888cdd-db45-42bb-b95c-ed3400f55124"
+					(reference "C1001")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d75ecda1-c4de-4de1-8c23-afebb28677b2"
-					(reference "C1102")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/87e7ecdc-693c-4996-ac04-58cfcb8a8aea"
+					(reference "C801")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f6f2ca5e-25e6-4058-afda-5a23263ad8e9"
-					(reference "C1301")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/eb4161c0-05a3-4d87-a471-773cbdf6d1b4"
+					(reference "C901")
 					(unit 1)
 				)
 			)
@@ -2188,7 +2207,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "36264897-ec5c-4f78-838b-27454b5232e7")
-		(property "Reference" "#PWR01204"
+		(property "Reference" "#PWR0805"
 			(at 143.51 72.39 0)
 			(effects
 				(font
@@ -2233,20 +2252,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "0a8d5704-f4de-46c5-8879-f1c9debdeb5a")
+			(uuid "ec55a884-c2d7-4260-9197-093c12641851")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/47b4fc3d-8fc3-490e-b9bf-4506c270c925"
-					(reference "#PWR01204")
+			(project "ui"
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/84888cdd-db45-42bb-b95c-ed3400f55124"
+					(reference "#PWR01005")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d75ecda1-c4de-4de1-8c23-afebb28677b2"
-					(reference "#PWR01104")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/87e7ecdc-693c-4996-ac04-58cfcb8a8aea"
+					(reference "#PWR0805")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f6f2ca5e-25e6-4058-afda-5a23263ad8e9"
-					(reference "#PWR01304")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/eb4161c0-05a3-4d87-a471-773cbdf6d1b4"
+					(reference "#PWR0905")
 					(unit 1)
 				)
 			)
@@ -2262,7 +2281,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3869fbd3-cdf5-4206-958c-ee841a13862f")
-		(property "Reference" "R1202"
+		(property "Reference" "R802"
 			(at 167.64 82.55 0)
 			(effects
 				(font
@@ -2308,23 +2327,23 @@
 			)
 		)
 		(pin "1"
-			(uuid "7d2ce3b5-fe71-4880-b6bc-b603e25450ec")
+			(uuid "0100d599-f0e3-4632-bd8c-8eac798a232f")
 		)
 		(pin "2"
-			(uuid "aee915ca-c376-4d1a-8f82-f43ac40d774d")
+			(uuid "cf1a26ee-edfc-4408-af9d-47404a3b416c")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/47b4fc3d-8fc3-490e-b9bf-4506c270c925"
-					(reference "R1202")
+			(project "ui"
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/84888cdd-db45-42bb-b95c-ed3400f55124"
+					(reference "R1002")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d75ecda1-c4de-4de1-8c23-afebb28677b2"
-					(reference "R1101")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/87e7ecdc-693c-4996-ac04-58cfcb8a8aea"
+					(reference "R802")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f6f2ca5e-25e6-4058-afda-5a23263ad8e9"
-					(reference "R1302")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/eb4161c0-05a3-4d87-a471-773cbdf6d1b4"
+					(reference "R902")
 					(unit 1)
 				)
 			)
@@ -2340,7 +2359,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3c739518-9dda-4f3a-bd89-6068b313e4a2")
-		(property "Reference" "J1201"
+		(property "Reference" "J801"
 			(at 201.93 101.6 0)
 			(effects
 				(font
@@ -2386,29 +2405,29 @@
 			)
 		)
 		(pin "1"
-			(uuid "3a62918c-72bf-4580-816e-4484af468175")
+			(uuid "b28f695f-e447-4b05-b74b-88b27fa7a6ea")
 		)
 		(pin "2"
-			(uuid "8a6e72b6-56f6-437d-af06-3e0dfdeb1e82")
+			(uuid "a95044c7-12f2-4fd1-a3cf-99860efbc3c8")
 		)
 		(pin "3"
-			(uuid "2e022dc4-912c-4157-a393-6973c424362e")
+			(uuid "70ba1e01-e525-42df-9980-29f8dd14f21d")
 		)
 		(pin "4"
-			(uuid "19c8670c-a802-4d61-8415-2a87170ddc0b")
+			(uuid "afb9a6e6-60b3-4f4f-92ec-4ca0f4791fc3")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/47b4fc3d-8fc3-490e-b9bf-4506c270c925"
-					(reference "J1201")
+			(project "ui"
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/84888cdd-db45-42bb-b95c-ed3400f55124"
+					(reference "J1001")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d75ecda1-c4de-4de1-8c23-afebb28677b2"
-					(reference "J1101")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/87e7ecdc-693c-4996-ac04-58cfcb8a8aea"
+					(reference "J801")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f6f2ca5e-25e6-4058-afda-5a23263ad8e9"
-					(reference "J1301")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/eb4161c0-05a3-4d87-a471-773cbdf6d1b4"
+					(reference "J901")
 					(unit 1)
 				)
 			)
@@ -2423,7 +2442,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "498afea1-f9e5-408f-b5ed-6ea7c4658205")
-		(property "Reference" "U1201"
+		(property "Reference" "U801"
 			(at 123.19 74.93 0)
 			(effects
 				(font
@@ -2470,80 +2489,80 @@
 			)
 		)
 		(pin "1"
-			(uuid "7b2c596e-05d9-4585-8c80-c89d8545b616")
+			(uuid "23788f1d-bf75-4995-b0af-55a4098d9808")
 		)
 		(pin "10"
-			(uuid "faf2913e-53bd-4be1-aefd-a44bf51599f5")
+			(uuid "9cda49f6-6b20-4b03-9dc5-dc960d85c0a4")
 		)
 		(pin "11"
-			(uuid "7f61c8f7-795a-4c29-ae6c-6f42690a1f6b")
+			(uuid "0435b1ad-34b0-4491-9c6e-9c2f328f5117")
 		)
 		(pin "12"
-			(uuid "c108671c-15b1-4904-b09b-723cb432ef27")
+			(uuid "14922dfe-df49-4f34-a0fd-bb6f1dc2278a")
 		)
 		(pin "13"
-			(uuid "6b742351-68be-4b0d-9b43-725365d0fa7f")
+			(uuid "2ec36689-669f-4512-91f3-a8c60bc43247")
 		)
 		(pin "14"
-			(uuid "7226dbef-5af6-4f4c-a165-8a034a1f71c1")
+			(uuid "3f0710d5-d7a9-41df-8b9f-7762d2ab5a80")
 		)
 		(pin "15"
-			(uuid "c3928012-0aa8-45bd-94a0-047910ce68bf")
+			(uuid "9dbd7719-f440-4d03-8f0f-31485c871870")
 		)
 		(pin "16"
-			(uuid "f3eb3469-36fb-4df4-950d-3a25a8db668d")
+			(uuid "cabe8eaf-aa7c-4dfd-9e53-2003b14bd97b")
 		)
 		(pin "17"
-			(uuid "809e9bc0-4eea-4c29-95e1-358f553963f1")
+			(uuid "269cdf44-9dab-448c-b6e2-8ef24e65b3e9")
 		)
 		(pin "18"
-			(uuid "e1e3b64e-72a4-46d2-885b-77ee9eb53282")
+			(uuid "b95085a8-1f93-47d2-bc9a-94c46282e7bb")
 		)
 		(pin "19"
-			(uuid "9e081c7d-2515-4499-8911-9ebaa540af0b")
+			(uuid "84b57068-3f1d-48b4-abac-b87ac6849e7d")
 		)
 		(pin "2"
-			(uuid "dec067fa-fa40-466d-b898-ef0766cba0ec")
+			(uuid "b99c55be-56d3-4777-97ea-d0d5a8df11b1")
 		)
 		(pin "20"
-			(uuid "87de74b7-a124-4226-bf89-5a2e4dea921d")
+			(uuid "53f8cbbb-9427-4eb6-b1df-4e7f74191e7c")
 		)
 		(pin "21"
-			(uuid "16c2b30a-bca5-4ad4-8871-47888487ba16")
+			(uuid "9a9d5f2d-cd9f-42d2-a857-db5c90e29fba")
 		)
 		(pin "3"
-			(uuid "6933e1bb-044e-4894-9441-f04e1bcb24d3")
+			(uuid "c768d239-22e3-4586-94e7-bda7c00ecf04")
 		)
 		(pin "4"
-			(uuid "1c4b68af-dd7f-4611-8337-b5535d897198")
+			(uuid "1e2e7575-f74b-4fdb-a058-c290fd8ac664")
 		)
 		(pin "5"
-			(uuid "5cafedc4-1b2f-4b69-879a-ae746e77e049")
+			(uuid "1ebc4ea4-705c-46b6-a552-d201098aa6d5")
 		)
 		(pin "6"
-			(uuid "18059684-353f-4ac4-abb9-fd254e41eaea")
+			(uuid "3cb25273-fd6d-4471-bc33-20032a93a83b")
 		)
 		(pin "7"
-			(uuid "e8edd62e-0e49-4200-89e8-73662fa11402")
+			(uuid "0a9d049c-4cda-4095-bdc0-5589292f7c46")
 		)
 		(pin "8"
-			(uuid "d418b000-6d6f-4e4a-8297-060d3a565553")
+			(uuid "10151623-c098-49ee-b911-b4ccdac0e49d")
 		)
 		(pin "9"
-			(uuid "4a51d792-086d-4c79-b5f6-54d18b94125b")
+			(uuid "b7cce603-1abb-4c24-8ab1-ffd7b69408c0")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/47b4fc3d-8fc3-490e-b9bf-4506c270c925"
-					(reference "U1201")
+			(project "ui"
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/84888cdd-db45-42bb-b95c-ed3400f55124"
+					(reference "U1001")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d75ecda1-c4de-4de1-8c23-afebb28677b2"
-					(reference "U1101")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/87e7ecdc-693c-4996-ac04-58cfcb8a8aea"
+					(reference "U801")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f6f2ca5e-25e6-4058-afda-5a23263ad8e9"
-					(reference "U1301")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/eb4161c0-05a3-4d87-a471-773cbdf6d1b4"
+					(reference "U901")
 					(unit 1)
 				)
 			)
@@ -2559,7 +2578,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4da87b01-3672-474c-8429-4b6e6fb32801")
-		(property "Reference" "#PWR01201"
+		(property "Reference" "#PWR0801"
 			(at 120.65 72.39 0)
 			(effects
 				(font
@@ -2604,20 +2623,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "0efdc9e8-b28e-412a-9156-76fc3b33f166")
+			(uuid "b9f87a9f-0c70-4940-a128-889dd336e6bc")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/47b4fc3d-8fc3-490e-b9bf-4506c270c925"
-					(reference "#PWR01201")
+			(project "ui"
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/84888cdd-db45-42bb-b95c-ed3400f55124"
+					(reference "#PWR01001")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d75ecda1-c4de-4de1-8c23-afebb28677b2"
-					(reference "#PWR01103")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/87e7ecdc-693c-4996-ac04-58cfcb8a8aea"
+					(reference "#PWR0801")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f6f2ca5e-25e6-4058-afda-5a23263ad8e9"
-					(reference "#PWR01301")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/eb4161c0-05a3-4d87-a471-773cbdf6d1b4"
+					(reference "#PWR0901")
 					(unit 1)
 				)
 			)
@@ -2633,7 +2652,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "89b0c157-8288-4d45-8268-744d6ad7b298")
-		(property "Reference" "C1202"
+		(property "Reference" "C802"
 			(at 147.32 58.42 0)
 			(effects
 				(font
@@ -2679,23 +2698,23 @@
 			)
 		)
 		(pin "1"
-			(uuid "1ec2da13-e962-41fa-9db1-c98b04992ccb")
+			(uuid "cd734253-fe18-4bbd-8d18-6cfc773f253b")
 		)
 		(pin "2"
-			(uuid "d2fb641d-4a2b-4f43-93db-2d12ce5655d4")
+			(uuid "8703dc22-a9b1-4e2b-8167-235a8088343f")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/47b4fc3d-8fc3-490e-b9bf-4506c270c925"
-					(reference "C1202")
+			(project "ui"
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/84888cdd-db45-42bb-b95c-ed3400f55124"
+					(reference "C1002")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d75ecda1-c4de-4de1-8c23-afebb28677b2"
-					(reference "C1101")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/87e7ecdc-693c-4996-ac04-58cfcb8a8aea"
+					(reference "C802")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f6f2ca5e-25e6-4058-afda-5a23263ad8e9"
-					(reference "C1302")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/eb4161c0-05a3-4d87-a471-773cbdf6d1b4"
+					(reference "C902")
 					(unit 1)
 				)
 			)
@@ -2711,7 +2730,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b073a7b8-8020-4d3c-93a2-dab633f60477")
-		(property "Reference" "#PWR01202"
+		(property "Reference" "#PWR0802"
 			(at 133.35 54.61 0)
 			(effects
 				(font
@@ -2756,20 +2775,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "32a5c92c-4025-4f6e-9a21-de5b5a4be8b7")
+			(uuid "0a8962ad-1282-4937-b3fe-b8c9aa5ae9e9")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/47b4fc3d-8fc3-490e-b9bf-4506c270c925"
-					(reference "#PWR01202")
+			(project "ui"
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/84888cdd-db45-42bb-b95c-ed3400f55124"
+					(reference "#PWR01002")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d75ecda1-c4de-4de1-8c23-afebb28677b2"
-					(reference "#PWR01101")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/87e7ecdc-693c-4996-ac04-58cfcb8a8aea"
+					(reference "#PWR0802")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f6f2ca5e-25e6-4058-afda-5a23263ad8e9"
-					(reference "#PWR01302")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/eb4161c0-05a3-4d87-a471-773cbdf6d1b4"
+					(reference "#PWR0902")
 					(unit 1)
 				)
 			)
@@ -2785,7 +2804,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e35a1a4d-3927-4b82-a136-80858fd3cdda")
-		(property "Reference" "#PWR01205"
+		(property "Reference" "#PWR0804"
 			(at 139.7 55.88 0)
 			(effects
 				(font
@@ -2830,20 +2849,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "22da7610-ce68-4284-a53d-ad4b7e2ee79a")
+			(uuid "6225ae0a-35c1-4c50-8593-60c4a3de11df")
 		)
 		(instances
-			(project ""
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/47b4fc3d-8fc3-490e-b9bf-4506c270c925"
-					(reference "#PWR01205")
+			(project "ui"
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/84888cdd-db45-42bb-b95c-ed3400f55124"
+					(reference "#PWR01004")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d75ecda1-c4de-4de1-8c23-afebb28677b2"
-					(reference "#PWR01105")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/87e7ecdc-693c-4996-ac04-58cfcb8a8aea"
+					(reference "#PWR0804")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f6f2ca5e-25e6-4058-afda-5a23263ad8e9"
-					(reference "#PWR01305")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/eb4161c0-05a3-4d87-a471-773cbdf6d1b4"
+					(reference "#PWR0904")
 					(unit 1)
 				)
 			)
@@ -2858,7 +2877,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "f3cfecf1-82aa-479f-bdd1-4fad325d5042")
-		(property "Reference" "R1203"
+		(property "Reference" "R803"
 			(at 165.1 92.71 90)
 			(effects
 				(font
@@ -2902,23 +2921,23 @@
 			)
 		)
 		(pin "1"
-			(uuid "a4b078b2-c851-4114-8a95-1b87038e5e7d")
+			(uuid "2dd1c0b3-4c97-49bd-b5f8-9b3720fa1546")
 		)
 		(pin "2"
-			(uuid "d6b4738a-d6a6-4650-b08e-2e81ad26dca9")
+			(uuid "53cfdd48-83ac-4edd-bb6a-fd05f3d1677e")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/47b4fc3d-8fc3-490e-b9bf-4506c270c925"
-					(reference "R1203")
+			(project "ui"
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/84888cdd-db45-42bb-b95c-ed3400f55124"
+					(reference "R1003")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d75ecda1-c4de-4de1-8c23-afebb28677b2"
-					(reference "R1103")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/87e7ecdc-693c-4996-ac04-58cfcb8a8aea"
+					(reference "R803")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f6f2ca5e-25e6-4058-afda-5a23263ad8e9"
-					(reference "R1303")
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/eb4161c0-05a3-4d87-a471-773cbdf6d1b4"
+					(reference "R903")
 					(unit 1)
 				)
 			)

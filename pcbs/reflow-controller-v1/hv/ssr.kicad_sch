@@ -1,12 +1,14 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "a28d403f-c65c-41bd-8cd0-b9578c245ebe")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Device:C"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -79,7 +81,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -91,7 +93,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -140,189 +142,12 @@
 					)
 				)
 			)
-		)
-		(symbol "Device:Q_TRIAC_A1A2G"
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 3.175 0.635 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "Q_TRIAC_A1A2G"
-				(at 3.175 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 1.905 0.635 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Triode for alternating current, anode1/anode2/gate"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "TRIAC"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Q_TRIAC_A1A2G_0_1"
-				(polyline
-					(pts
-						(xy -2.54 -1.27) (xy 2.54 -1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 1.27) (xy 2.54 1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -2.54) (xy -0.635 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 1.27) (xy -1.27 -1.27) (xy 0 1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -1.27) (xy 1.27 1.27) (xy 2.54 -1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Q_TRIAC_A1A2G_1_1"
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.54)
-					(name "A1"
-						(effects
-							(font
-								(size 0.635 0.635)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.54)
-					(name "A2"
-						(effects
-							(font
-								(size 0.635 0.635)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -3.81 -2.54 0)
-					(length 2.54)
-					(name "G"
-						(effects
-							(font
-								(size 0.635 0.635)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -441,6 +266,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Relay_SolidState:MOC3043M"
 			(exclude_from_sim no)
@@ -526,7 +352,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.286 -2.54) (xy 1.397 -2.54)
+						(xy 1.524 -0.635) (xy 1.016 -1.016) (xy 1.016 -2.032)
 					)
 					(stroke
 						(width 0)
@@ -538,7 +364,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.524 -0.635) (xy 1.016 -1.016) (xy 1.016 -2.032)
+						(xy 2.286 -2.54) (xy 1.397 -2.54)
 					)
 					(stroke
 						(width 0)
@@ -571,79 +397,19 @@
 				)
 				(polyline
 					(pts
-						(xy -3.175 -0.635) (xy -1.905 -0.635)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 -0.635) (xy 1.524 0.635)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.048 0.635) (xy 3.048 -0.635)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.286 -0.635) (xy 2.286 -2.54) (xy 5.08 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.286 0.635) (xy 2.286 2.54) (xy 5.08 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.286 2.54) (xy 0.508 2.54) (xy 0.508 -2.032)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy -5.08 2.54) (xy -2.54 2.54) (xy -2.54 -2.54) (xy -5.08 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 -0.635) (xy -1.905 -0.635)
 					)
 					(stroke
 						(width 0)
@@ -667,19 +433,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0.889 -0.635) (xy 3.683 -0.635) (xy 3.048 0.635) (xy 2.413 -0.635)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.683 0.635) (xy 0.889 0.635) (xy 1.524 -0.635) (xy 2.159 0.635)
+						(xy -1.143 0.508) (xy 0.127 0.508) (xy -0.254 0.381) (xy -0.254 0.635) (xy 0.127 0.508)
 					)
 					(stroke
 						(width 0)
@@ -703,7 +457,66 @@
 				)
 				(polyline
 					(pts
-						(xy -1.143 0.508) (xy 0.127 0.508) (xy -0.254 0.381) (xy -0.254 0.635) (xy 0.127 0.508)
+						(xy 0.889 -0.635) (xy 3.683 -0.635) (xy 3.048 0.635) (xy 2.413 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -0.635) (xy 1.524 0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 2.54) (xy 0.508 2.54) (xy 0.508 -2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.286 2.54)
+					(radius 0.127)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 0.635) (xy 2.286 2.54) (xy 5.08 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -0.635) (xy 2.286 -2.54) (xy 5.08 -2.54)
 					)
 					(stroke
 						(width 0)
@@ -724,9 +537,22 @@
 						(type none)
 					)
 				)
-				(circle
-					(center 2.286 2.54)
-					(radius 0.127)
+				(polyline
+					(pts
+						(xy 3.048 0.635) (xy 3.048 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.683 0.635) (xy 0.889 0.635) (xy 1.524 -0.635) (xy 2.159 0.635)
+					)
 					(stroke
 						(width 0)
 						(type default)
@@ -775,7 +601,8 @@
 				)
 				(pin no_connect line
 					(at -5.08 0 0)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -791,27 +618,10 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 7.62 -2.54 180)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin no_connect line
 					(at 5.08 0 180)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -845,13 +655,217 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
+		)
+		(symbol "Triac_Thyristor:Generic_Triac_A1A2G"
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 3.175 0.635 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Generic_Triac_A1A2G"
+				(at 3.175 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 1.905 0.635 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Triode for alternating current, anode1/anode2/gate"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "TRIAC"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Generic_Triac_A1A2G_0_1"
+				(polyline
+					(pts
+						(xy -2.54 1.27) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 1.27) (xy -1.27 -1.27) (xy 0 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy 2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -0.635 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 1.27 1.27) (xy 2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Generic_Triac_A1A2G_1_1"
+				(pin input line
+					(at -3.81 -2.54 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 0.635 0.635)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.54)
+					(name "A2"
+						(effects
+							(font
+								(size 0.635 0.635)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 0.635 0.635)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3V3"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -923,7 +937,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -935,7 +949,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -966,7 +980,40 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "\"snubberless\""
+		(exclude_from_sim no)
+		(at 176.53 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "60ba2e76-f3da-4700-bdb2-295bbcc44105")
+	)
+	(text "SSR schematic from https://www.onsemi.com/pdf/datasheet/moc3043m-d.pdf"
+		(exclude_from_sim no)
+		(at 189.992 31.242 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "b31c2ee0-ac04-492d-920d-1d458e92f031")
+	)
+	(text "10n 250VAC X2"
+		(exclude_from_sim no)
+		(at 200.66 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "de3e35c3-3c17-406f-a694-f09191c8a3a4")
 	)
 	(junction
 		(at 172.72 110.49)
@@ -7703,45 +7750,66 @@
 			"JEmSJEmSJEmSpEImHEqSJEmSJEmSJEmSJEmSpEImHEqSJEmSJEmSJEmSJEmSpEImHEqSJEmSJEmS"
 			"JEmSJEmSpEImHEqSJEmSJEmSJEmSJEmSpEImHEqSJEmSJEmSJEmSJEmSpEImHEqSJEmSJEmSJEmS"
 			"JEmSpEImHEqSJEmSJEmSJEmSJEmSpEImHEqSJEmSJEmSJEmSJEmSpEImHEqSJEmSJEmSJEmSJEmS"
-			"pEImHEqSJEmSJEmSJEmSJEmSpEL/A2rktVJ9ewkIAAAAAElFTkSuQmCC"
+			"pEImHEqSJEmSJEmSJEmSJEmSpEL/A2rktVJ9ewkIAAAAAElFTkSuQmCCAAAAbgAAAEMAAABUAAAA"
+			"WQAAAEYAAAArAAAAdAAAADkAAAAwAAAAQQAAAFQAAABEAAAAcQAAAEYAAAA2AAAAYQAAAEkAAABB"
+			"AAAAbAAAAGwAAABFAAAAdQAAAFQAAABpAAAAUAAAAGoAAAAwAAAARQAAADgAAABtAAAAaAAAAEwA"
+			"AABwAAAAVwAAAG0AAABRAAAAMgAAADgAAAArAAAAcwAAAE4AAABZAAAAegAAAHYAAABQAAAAMwAA"
+			"AEQAAABnAAAAZwAAAEcAAAAzAAAAYgAAAEIAAABRAAAAcwAAAFcAAABXAAAATQAAAGoAAABUAAAA"
+			"dgAAAHcAAAA4AAAAUQAAADkAAABDAAAASgAAAHcAAABTAAAATwAAAGcAAAByAAAAMgAAAG4AAABa"
+			"AAAAbgAAADMAAABXAAAAMwAAAGQAAAB1AAAAdAAAAFYAAABhAAAASQAAAG0AAABsAAAAMQAAADMA"
+			"AABMAAAANQAAADkAAABlAAAAMAAAAGEAAABRAAAAMgAAAGsAAABQAAAAQQAAAG0AAABzAAAAQQAA"
+			"AGcAAAB6AAAAYQAAADYAAABaAAAAQgAAAFIAAABpAAAAOQAAAC8AAABZAAAAMAAAAFcAAAAxAAAA"
+			"cwAAAHgAAABHAAAARQAAAFIAAABNAAAATwAAAHYAAABPAAAAUwAAAFMAAABTAAAAMgAAAHcAAABj"
+			"AAAATgAAAFkAAAAyAAAASAAAAHYAAABPAAAAWgAAAGwAAABoAAAAZwAAAGEAAAAxAAAARgAAAFMA"
+			"AAB0AAAAVwAAAHUAAABJAAAAYwAAAGYAAABmAAAAdAAAAGgAAABhAAAAMQAAAFAAAAB6AAAAQgAA"
+			"AFcAAABlAAAANgAAAFgAAAA1AAAAYgAAAGoAAAAvAAAALwAAAHYAAAB0AAAAZAAAAHoAAABaAAAA"
+			"bwAAADEAAABiAAAAVAAAADAAAABsAAAAaQAAAHcAAABLAAAASAAAAG8AAABiAAAAeAAAAEEAAAA2"
+			"AAAAVAAAADMAAAAzAAAAMwAAAE8AAABOAAAARwAAAGoAAAB4AAAANQAAAHQAAAArAAAAMAAAAHQA"
+			"AABtAAAAeAAAAHgAAAB5AAAATwAAAFAAAAB6AAAAeQAAADMAAABDAAAAZAAAAEUAAAAyAAAAYgAA"
+			"AHQAAAB3AAAANAAAAGEAAAB0AAAAaAAAAFYAAABnAAAAYwAAAFAAAAAwAAAAdwAAAGYAAAB0AAAA"
+			"YgAAAHQAAABqAAAAdgAAAEgAAABwAAAARwAAADMAAABiAAAAdAAAAHQAAABtAAAAQwAAADgAAAB6"
+			"AAAAdwAAACsAAAA5AAAAOQAAAHgAAAB6AAAAMwAAAGIAAABSAAAAcAAAADAAAABtAAAANQAAAEgA"
+			"AABJAAAASQAAADkAAABBAAAASAAAAFEAAABGAAAAZgAAAHgAAABpAAAAYQAAAHYAAABXAAAANwAA"
+			"AGYAAABPAAAAMgAAAGsAAABYAAAANQAAAE0AAAAvAAAAZgAAAGoAAABEAAAAKwAAAHUAAABCAAAA"
+			"ZwAAAEIAAAA0AAAAagAAAG0AAAA3AAAAdAAAADIAAAA3AAAAVwAAAHEAAAB0AAAAbwAAAHoAAAB3"
+			"AAAAMwAAAHMAAAB4AAAAdQAAAEUAAABJAAAAVgAAAHgAAABEAAAAYwAAACsAAABDAAAAdwAAAFkA"
+			"AABjAAAAUAAAAGMAAABoAAAAQQAAAGsAAABUAAAATAAAAEkAAABRAAAAWAAAADcAAABzAAAAUQAA"
+			"AFQAAABUAAAANwAAAFIAAAB3AAAARgAAAFIAAABkAAAAawAAAEMAAABkAAAARQAAAFIAAABOAAAA"
+			"QwAAADUAAABkAAAAdQAAAHIAAABUAAAAOQAAAEgAAABZAAAAKwAAAEIAAABNAAAAYwAAAGoAAABj"
+			"AAAARAAAAHMAAAB0AAAAUAAAAE8AAABKAAAAQQAAAFcAAABSAAAAcAAAAGIAAAA5AAAAcwAAADgA"
+			"AAA4AAAAKwAAAHMAAAArAAAAVgAAAG4AAABaAAAATAAAAEUAAAAvAAAASwAAAEEAAABqAAAAQwAA"
+			"AG0AAABBAAAAUgAAADMAAABDAAAASAAAAFkAAAAxAAAAYgAAAE4AAABqAAAAUQAAAEYAAABTAAAA"
+			"eAAAAFkAAABNAAAATQAAAHQAAABsAAAANQAAADcAAABaAAAAbgAAAHoAAABaAAAAcgAAAGwAAABI"
+			"AAAAbgAAAC8AAAA4AAAAYwAAAFEAAAB0AAAANAAAACsAAABrAAAATwAAAFgAAAByAAAARgAAADkA"
+			"AABDAAAAaAAAADQAAABRAAAAaQAAAFcAAABTAAAANwAAAFcAAABiAAAANQAAAEUAAABpAAAAUgAA"
+			"AFMAAAB6AAAAWQAAAHkAAABYAAAAMgAAAHcAAABYAAAAZwAAAG4AAAAzAAAARQAAAFIAAAB5AAAA"
+			"aQAAAHoAAABaAAAAQQAAAHYAAAAxAAAAaQAAADEAAAAvAAAAOQAAAGoAAABjAAAASwAAAHMAAAB0"
+			"AAAANAAAADQAAAAvAAAAdAAAAHgAAAA1AAAANQAAADUAAAAwAAAAMgAAAFMAAAByAAAAVgAAAG8A"
+			"AAAwAAAAYQAAAEkAAABSAAAAbgAAADQAAABDAAAATQAAAFoAAABIAAAANwAAAGwAAABsAAAAVgAA"
+			"AGUAAABzAAAAZQAAAGQAAABNAAAAZgAAAFMAAAB1AAAATQAAAEMAAABkAAAAQwAAADcAAABDAAAA"
+			"eAAAADQAAABQAAAAQQAAAEQAAAArAAAAMgAAAEcAAAB0AAAASQAAAHoAAAA1AAAAbQAAAHoAAABZ"
+			"AAAASQAAAFoAAABkAAAARwAAAGUAAABTAAAATwAAAE8AAABaAAAASgAAAEUAAAArAAAAUQAAAEoA"
+			"AAAyAAAAdwAAAFQAAABFAAAAVAAAAGcAAABFAAAARgAAADAAAABvAAAAWgAAAGcAAABVAAAAdgAA"
+			"AGcAAABMAAAAQgAAAHoAAAA3AAAASgAAAEsAAABFAAAAdQAAAFIAAAB0AAAAQgAAADYAAAB3AAAA"
+			"YgAAAHQAAABJAAAARQAAAGgAAABVAAAANAAAADkAAABOAAAAQgAAADgAAABRAAAAaQAAAEIAAAB1"
+			"AAAALwAAAFAAAABqAAAAeAAAAGIAAAB1AAAANwAAAGMAAAB1AAAAZgAAAGEAAAA4AAAAeQAAAGEA"
+			"AAB4AAAAQgAAAGgAAABoAAAAQQAAAGMAAABJAAAAVAAAAHUAAAArAAAAQwAAAE0AAABrAAAAUgAA"
+			"AEcAAABPAAAAUwAAAEwAAAAwAAAASgAAAHcAAAAzAAAASAAAAHAAAAByAAAAdwAAAEcAAABiAAAA"
+			"ZAAAAEgAAABpAAAASQAAADIAAAB3AAAAQwAAADAAAABHAAAAVwAAAGMAAABJAAAAVAAAAGoAAABD"
+			"AAAATAAAAFQAAABRAAAAcgAAAEUAAABhAAAAegAAAEgAAAA2AAAAUAAAAHEAAABDAAAAYwAAAEgA"
+			"AABFAAAAaQAAAC8AAAB1AAAAbQAAAFEAAABaAAAASAAAAG4AAABJAAAANAAAADIAAABFAAAANAAA"
+			"AFcAAABPAAAAYgAAAFAAAABWAAAANgAAADQAAABqAAAANQAAAEcAAABpAAAAaAAAAFEAAABvAAAA"
+			"VgAAAHMAAAB2AAAAdAAAAGsAAAArAAAAVwAAAGsAAABtAAAANQAAAFQAAABaAAAAWQAAAHIAAAA0"
+			"AAAAUgAAADEAAABXAAAARwAAADYAAABDAAAAaQAAAHoAAAB3AAAARwAAAEgAAABrAAAAOAAAADQA"
+			"AABBAAAAbwAAAHcAAABFAAAAYwAAAEYAAABqAAAAMgAAAGEAAAA2AAAANgAAADUAAAB4AAAAZwAA"
+			"AEsAAABpAAAAawAAAFkAAABMAAAAbgAAADMAAAB2AAAAagAAAHEAAABrAAAAUwAAAE4AAABIAAAA"
+			"VwAAAHEAAAB2AAAAdQAAADUAAAA1AAAAOQAAAC8AAABmAAAAcwAAAFIAAAB0AAAARQAAAGkAAAA3"
+			"AAAAawAAAGQAAABrAAAAcQAAAFUAAABLAAAASgAAAEUAAAB4AAAAgA=="
 		)
-	)
-	(text "\"snubberless\""
-		(exclude_from_sim no)
-		(at 176.53 100.33 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "60ba2e76-f3da-4700-bdb2-295bbcc44105")
-	)
-	(text "SSR schematic from https://www.onsemi.com/pdf/datasheet/moc3043m-d.pdf"
-		(exclude_from_sim no)
-		(at 189.992 31.242 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "b31c2ee0-ac04-492d-920d-1d458e92f031")
-	)
-	(text "10n 250VAC X2"
-		(exclude_from_sim no)
-		(at 200.66 109.22 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "de3e35c3-3c17-406f-a694-f09191c8a3a4")
 	)
 	(hierarchical_label "MAIN_OUT"
 		(shape output)
 		(at 229.87 110.49 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7753,7 +7821,6 @@
 	(hierarchical_label "MAIN"
 		(shape input)
 		(at 229.87 87.63 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7765,7 +7832,6 @@
 	(hierarchical_label "IN"
 		(shape input)
 		(at 96.52 92.71 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7775,7 +7841,7 @@
 		(uuid "ce3c3942-a090-472f-918d-116f7f224ffa")
 	)
 	(symbol
-		(lib_id "Device:Q_TRIAC_A1A2G")
+		(lib_id "Triac_Thyristor:Generic_Triac_A1A2G")
 		(at 172.72 95.25 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7783,9 +7849,9 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "2163ca2a-8d41-4202-9cf5-1b41a9480d8a")
+		(uuid "08996dbb-03c3-4bd7-a9ee-d7a59016d1f5")
 		(property "Reference" "D301"
-			(at 176.53 94.5642 0)
+			(at 176.53 94.5514 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7794,7 +7860,7 @@
 			)
 		)
 		(property "Value" "T1620T-8G-TR"
-			(at 176.53 97.1042 0)
+			(at 176.53 97.0914 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7820,7 +7886,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Triode for alternating current, anode1/anode2/gate"
 			(at 172.72 95.25 0)
 			(effects
 				(font
@@ -7829,31 +7895,31 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "d987a432-f8da-47df-9413-98eb670a2b71")
-		)
 		(pin "2"
-			(uuid "61ec4d64-bfc6-41dd-a9e4-fc4d29211b85")
+			(uuid "910b4441-ebf2-42aa-a57d-fa574d9faa7d")
 		)
 		(pin "3"
-			(uuid "db7aae5b-1bbe-49bc-bbca-76162de55d49")
+			(uuid "1a5c82dc-c65b-41f2-b0eb-ccabb60c41e8")
+		)
+		(pin "1"
+			(uuid "9dad98f4-042f-4634-ba93-4dbb6dedd48f")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/94211d26-ff3c-4acb-b144-cfe40e8f0a35"
+			(project ""
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/1cb6bb87-45f7-45e3-b8e2-22b69ba73433"
 					(reference "D301")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/bf699baa-3e6a-4a91-ac5a-92265d8da39b"
-					(reference "D401")
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/362403c2-e421-45d9-a4dd-ebf6c6ebc905"
+					(reference "D501")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d39e2a20-14f5-42cb-89e9-f72ba71cc332"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/a9d9e936-a3ba-45ce-ae79-dffda72cc449"
 					(reference "D601")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/ff92a92a-c511-4475-9e4c-f32ae016d085"
-					(reference "D501")
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/f46069bb-7a6a-4e5e-ae84-de559ecdde7f"
+					(reference "D401")
 					(unit 1)
 				)
 			)
@@ -7869,7 +7935,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2ec855e3-4fb3-40c2-ab18-ba708c7e2154")
-		(property "Reference" "R304"
+		(property "Reference" "R302"
 			(at 154.94 102.87 0)
 			(effects
 				(font
@@ -7915,27 +7981,27 @@
 			)
 		)
 		(pin "1"
-			(uuid "e615a402-a394-4145-a68e-80d959eb4711")
+			(uuid "f127ac69-fd70-459f-9368-3c4e4a3a4283")
 		)
 		(pin "2"
-			(uuid "20f32e1e-9611-403f-9b89-108c84fd695a")
+			(uuid "b96376dd-ae08-4619-b76d-1c87bb6ccc1f")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/94211d26-ff3c-4acb-b144-cfe40e8f0a35"
-					(reference "R304")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/1cb6bb87-45f7-45e3-b8e2-22b69ba73433"
+					(reference "R302")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/bf699baa-3e6a-4a91-ac5a-92265d8da39b"
-					(reference "R402")
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/362403c2-e421-45d9-a4dd-ebf6c6ebc905"
+					(reference "R502")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d39e2a20-14f5-42cb-89e9-f72ba71cc332"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/a9d9e936-a3ba-45ce-ae79-dffda72cc449"
 					(reference "R602")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/ff92a92a-c511-4475-9e4c-f32ae016d085"
-					(reference "R502")
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/f46069bb-7a6a-4e5e-ae84-de559ecdde7f"
+					(reference "R402")
 					(unit 1)
 				)
 			)
@@ -7995,27 +8061,27 @@
 			)
 		)
 		(pin "1"
-			(uuid "896b631a-e233-4c89-9890-ea1aeba29885")
+			(uuid "ecc4e7ff-716c-4901-987e-2f5f986e643b")
 		)
 		(pin "2"
-			(uuid "bd98bee6-2379-49ad-b5b3-411d20349120")
+			(uuid "4e5c08ef-e4e2-4077-a69a-c0aaa44bf0d5")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/94211d26-ff3c-4acb-b144-cfe40e8f0a35"
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/1cb6bb87-45f7-45e3-b8e2-22b69ba73433"
 					(reference "R301")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/bf699baa-3e6a-4a91-ac5a-92265d8da39b"
-					(reference "R401")
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/362403c2-e421-45d9-a4dd-ebf6c6ebc905"
+					(reference "R501")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d39e2a20-14f5-42cb-89e9-f72ba71cc332"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/a9d9e936-a3ba-45ce-ae79-dffda72cc449"
 					(reference "R601")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/ff92a92a-c511-4475-9e4c-f32ae016d085"
-					(reference "R501")
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/f46069bb-7a6a-4e5e-ae84-de559ecdde7f"
+					(reference "R401")
 					(unit 1)
 				)
 			)
@@ -8031,7 +8097,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "646a7f9e-60cf-4453-9f22-ae2aaee29d89")
-		(property "Reference" "R302"
+		(property "Reference" "R303"
 			(at 158.75 81.28 90)
 			(effects
 				(font
@@ -8075,27 +8141,27 @@
 			)
 		)
 		(pin "1"
-			(uuid "49c357be-1b7a-47e2-a49f-b91ca3bdf134")
+			(uuid "03a8eab8-6562-4d8b-9a5d-7d6108249d79")
 		)
 		(pin "2"
-			(uuid "ce4a891c-52e9-4300-bba8-d8994ccb57db")
+			(uuid "8387af75-7782-43b6-bd4f-38970e8fecf2")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/94211d26-ff3c-4acb-b144-cfe40e8f0a35"
-					(reference "R302")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/1cb6bb87-45f7-45e3-b8e2-22b69ba73433"
+					(reference "R303")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/bf699baa-3e6a-4a91-ac5a-92265d8da39b"
-					(reference "R403")
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/362403c2-e421-45d9-a4dd-ebf6c6ebc905"
+					(reference "R503")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d39e2a20-14f5-42cb-89e9-f72ba71cc332"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/a9d9e936-a3ba-45ce-ae79-dffda72cc449"
 					(reference "R603")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/ff92a92a-c511-4475-9e4c-f32ae016d085"
-					(reference "R503")
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/f46069bb-7a6a-4e5e-ae84-de559ecdde7f"
+					(reference "R403")
 					(unit 1)
 				)
 			)
@@ -8111,7 +8177,7 @@
 		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "8ec79a8b-b84a-48e5-b914-4628b59832a0")
-		(property "Reference" "R305"
+		(property "Reference" "R304"
 			(at 199.39 92.71 0)
 			(effects
 				(font
@@ -8157,27 +8223,27 @@
 			)
 		)
 		(pin "1"
-			(uuid "3fc60532-69dc-4e3e-9cd9-cfdbb2ddedf4")
+			(uuid "d16e9f50-cf3d-4f52-8ec7-cc14d75997cd")
 		)
 		(pin "2"
-			(uuid "4c3fc21b-6616-4b6e-9a05-0b3b05113643")
+			(uuid "3765df62-fcdb-401b-a6a5-c9b926edd4f5")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/94211d26-ff3c-4acb-b144-cfe40e8f0a35"
-					(reference "R305")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/1cb6bb87-45f7-45e3-b8e2-22b69ba73433"
+					(reference "R304")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/bf699baa-3e6a-4a91-ac5a-92265d8da39b"
-					(reference "R404")
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/362403c2-e421-45d9-a4dd-ebf6c6ebc905"
+					(reference "R504")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d39e2a20-14f5-42cb-89e9-f72ba71cc332"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/a9d9e936-a3ba-45ce-ae79-dffda72cc449"
 					(reference "R604")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/ff92a92a-c511-4475-9e4c-f32ae016d085"
-					(reference "R504")
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/f46069bb-7a6a-4e5e-ae84-de559ecdde7f"
+					(reference "R404")
 					(unit 1)
 				)
 			)
@@ -8240,39 +8306,39 @@
 			)
 		)
 		(pin "1"
-			(uuid "32fbe335-8353-43ec-92aa-1d2e83557ec3")
+			(uuid "a48e2207-412c-490c-af38-ffd738d4b385")
 		)
 		(pin "2"
-			(uuid "8bbe8cd7-80ad-4af3-94a6-efb9e728c7d4")
+			(uuid "e15dc58d-4bed-4172-841f-0928d5127516")
 		)
 		(pin "3"
-			(uuid "6b93a1d7-407c-4bee-ada8-9406cc40dd0c")
+			(uuid "499d9922-96d3-49ef-9211-4b987e28c31b")
 		)
 		(pin "4"
-			(uuid "74ed2e1a-19db-48a2-8685-9477e02554d1")
+			(uuid "ab30abf2-3bcd-4f6e-a6b9-89bbba2d7377")
 		)
 		(pin "5"
-			(uuid "76060788-86eb-41d9-89e1-8636112c291f")
+			(uuid "86591363-fcc6-4130-8332-abbeab51128e")
 		)
 		(pin "6"
-			(uuid "7558505b-9913-482e-9c9e-a7dd76575970")
+			(uuid "a288549c-b9eb-4fd3-ad96-e239a89482d6")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/94211d26-ff3c-4acb-b144-cfe40e8f0a35"
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/1cb6bb87-45f7-45e3-b8e2-22b69ba73433"
 					(reference "U301")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/bf699baa-3e6a-4a91-ac5a-92265d8da39b"
-					(reference "U401")
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/362403c2-e421-45d9-a4dd-ebf6c6ebc905"
+					(reference "U501")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d39e2a20-14f5-42cb-89e9-f72ba71cc332"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/a9d9e936-a3ba-45ce-ae79-dffda72cc449"
 					(reference "U601")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/ff92a92a-c511-4475-9e4c-f32ae016d085"
-					(reference "U501")
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/f46069bb-7a6a-4e5e-ae84-de559ecdde7f"
+					(reference "U401")
 					(unit 1)
 				)
 			)
@@ -8334,27 +8400,27 @@
 			)
 		)
 		(pin "1"
-			(uuid "5a9855ee-9c1f-485b-8f3d-e6359b279141")
+			(uuid "fc17551c-4792-464f-a967-cc2801eee670")
 		)
 		(pin "2"
-			(uuid "d3825780-7ae1-4f54-938d-db5085d71010")
+			(uuid "126a06d1-9cdd-4890-981c-373b7408e28a")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/94211d26-ff3c-4acb-b144-cfe40e8f0a35"
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/1cb6bb87-45f7-45e3-b8e2-22b69ba73433"
 					(reference "C301")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/bf699baa-3e6a-4a91-ac5a-92265d8da39b"
-					(reference "C401")
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/362403c2-e421-45d9-a4dd-ebf6c6ebc905"
+					(reference "C501")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d39e2a20-14f5-42cb-89e9-f72ba71cc332"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/a9d9e936-a3ba-45ce-ae79-dffda72cc449"
 					(reference "C601")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/ff92a92a-c511-4475-9e4c-f32ae016d085"
-					(reference "C501")
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/f46069bb-7a6a-4e5e-ae84-de559ecdde7f"
+					(reference "C401")
 					(unit 1)
 				)
 			)
@@ -8415,24 +8481,24 @@
 			)
 		)
 		(pin "1"
-			(uuid "620d0993-0415-4423-9114-3fbb78625eae")
+			(uuid "02568899-b67c-4975-8895-89b369230f0c")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/94211d26-ff3c-4acb-b144-cfe40e8f0a35"
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/1cb6bb87-45f7-45e3-b8e2-22b69ba73433"
 					(reference "#PWR0301")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/bf699baa-3e6a-4a91-ac5a-92265d8da39b"
-					(reference "#PWR0401")
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/362403c2-e421-45d9-a4dd-ebf6c6ebc905"
+					(reference "#PWR0501")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/d39e2a20-14f5-42cb-89e9-f72ba71cc332"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/a9d9e936-a3ba-45ce-ae79-dffda72cc449"
 					(reference "#PWR0601")
 					(unit 1)
 				)
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/ff92a92a-c511-4475-9e4c-f32ae016d085"
-					(reference "#PWR0501")
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/f46069bb-7a6a-4e5e-ae84-de559ecdde7f"
+					(reference "#PWR0401")
 					(unit 1)
 				)
 			)

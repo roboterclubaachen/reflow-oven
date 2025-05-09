@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "wuerth")(type "KiCad")(uri "${KIPRJMOD}/../common/libs/wuerth.pretty")(options "")(descr ""))
+)

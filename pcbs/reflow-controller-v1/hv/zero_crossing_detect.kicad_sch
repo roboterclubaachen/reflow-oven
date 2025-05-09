@@ -1,12 +1,14 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "f7f562db-4664-4d67-971e-15f78b28f098")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Device:C_Polarized"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -162,11 +164,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:D"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -264,10 +271,10 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 0) (xy -1.27 0)
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
 					)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -276,10 +283,10 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+						(xy 1.27 0) (xy -1.27 0)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -325,9 +332,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -446,10 +456,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Transistor_BJT:MMBT3904"
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -522,7 +535,7 @@
 			(symbol "MMBT3904_0_1"
 				(polyline
 					(pts
-						(xy 0.635 0.635) (xy 2.54 2.54)
+						(xy -2.54 0) (xy 0.635 0)
 					)
 					(stroke
 						(width 0)
@@ -534,19 +547,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+						(xy 0.635 1.905) (xy 0.635 -1.905)
 					)
 					(stroke
 						(width 0.508)
@@ -554,18 +555,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
 					)
 				)
 				(circle
@@ -581,9 +570,45 @@
 				)
 			)
 			(symbol "MMBT3904_1_1"
+				(polyline
+					(pts
+						(xy 0.635 0.635) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -0.635) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
 				(pin input line
 					(at -5.08 0 0)
-					(length 5.715)
+					(length 2.54)
 					(name "B"
 						(effects
 							(font
@@ -592,24 +617,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "E"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -635,13 +642,36 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3V3"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -713,7 +743,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -725,7 +755,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -756,12 +786,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -852,6 +887,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "wuerth:WL-OCPT_SERIES_101X"
 			(exclude_from_sim no)
@@ -913,18 +949,6 @@
 			(symbol "WL-OCPT_SERIES_101X_1_0"
 				(polyline
 					(pts
-						(xy -5.08 -3.81) (xy 5.08 -3.81)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy -5.08 3.81) (xy -5.08 -3.81)
 					)
 					(stroke
@@ -949,79 +973,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.54 -2.54) (xy -5.08 -2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 -1.27) (xy -3.81 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 -1.27) (xy -3.81 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 -1.27) (xy -2.54 -2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 1.27) (xy -3.81 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 1.27) (xy -2.54 -1.27)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 1.27) (xy -2.54 2.54)
+						(xy -5.08 -3.81) (xy 5.08 -3.81)
 					)
 					(stroke
 						(width 0.1524)
@@ -1045,7 +997,91 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 -1.27) (xy -2.54 -1.27)
+						(xy -2.54 1.27) (xy -3.81 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 1.27) (xy -2.54 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 1.27) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy -3.81 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy -3.81 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy -2.54 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -2.54) (xy -5.08 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -2.54 1.27)
 					)
 					(stroke
 						(width 0.254)
@@ -1069,22 +1105,10 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 1.27) (xy -2.54 1.27)
+						(xy -1.27 -1.27) (xy -2.54 -1.27)
 					)
 					(stroke
 						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.762 -0.508) (xy 0.508 -0.508)
-					)
-					(stroke
-						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -1105,10 +1129,10 @@
 				)
 				(polyline
 					(pts
-						(xy 1.98 -0.8) (xy 1.98 -1.7)
+						(xy -0.762 -0.508) (xy 0.508 -0.508)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -1117,10 +1141,34 @@
 				)
 				(polyline
 					(pts
-						(xy 1.98 -0.8) (xy 4.445 -2.54)
+						(xy 0.254 0.762) (xy 1.016 0.508) (xy 0.254 0.254)
 					)
 					(stroke
-						(width 0.2)
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 -0.254) (xy 1.016 -0.508) (xy 0.254 -0.762)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.98 1.7) (xy 1.98 0.7)
+					)
+					(stroke
+						(width 0.254)
 						(type solid)
 					)
 					(fill
@@ -1153,10 +1201,46 @@
 				)
 				(polyline
 					(pts
-						(xy 1.98 1.7) (xy 1.98 0.7)
+						(xy 1.98 -0.8) (xy 1.98 -1.7)
 					)
 					(stroke
 						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.98 -0.8) (xy 4.445 -2.54)
+					)
+					(stroke
+						(width 0.2)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.278 -1.354) (xy 2.951 -1.827) (xy 3.7494 -2.0556)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 2.54) (xy 5.08 2.54)
+					)
+					(stroke
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -1177,18 +1261,6 @@
 				)
 				(polyline
 					(pts
-						(xy 4.445 2.54) (xy 5.08 2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy 5.08 -3.81) (xy 5.08 3.81)
 					)
 					(stroke
@@ -1197,42 +1269,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 -0.254) (xy 1.016 -0.508) (xy 0.254 -0.762)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 0.762) (xy 1.016 0.508) (xy 0.254 0.254)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.278 -1.354) (xy 2.951 -1.827) (xy 3.7494 -2.0556)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type outline)
 					)
 				)
 				(text "A"
@@ -1308,24 +1344,6 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 -2.54 180)
-					(length 2.54)
-					(name "3"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at 7.62 2.54 180)
 					(length 2.54)
 					(name "4"
@@ -1343,8 +1361,37 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "https://cdn.hackaday.io/files/1597066832861504/SimpleIsolatedZeroCrossDetector.pdf"
+		(exclude_from_sim no)
+		(at 117.602 16.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
 		)
+		(uuid "5d6a905d-5f64-4aea-8063-88b53839ae8a")
 	)
 	(junction
 		(at 101.6 63.5)
@@ -1796,20 +1843,9 @@
 		)
 		(uuid "f84e9778-856e-4e39-829f-e82337430922")
 	)
-	(text "https://cdn.hackaday.io/files/1597066832861504/SimpleIsolatedZeroCrossDetector.pdf"
-		(exclude_from_sim no)
-		(at 117.602 16.51 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "5d6a905d-5f64-4aea-8063-88b53839ae8a")
-	)
 	(hierarchical_label "MAIN"
 		(shape input)
 		(at 49.53 41.91 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1821,7 +1857,6 @@
 	(hierarchical_label "MAIN_OUT"
 		(shape output)
 		(at 49.53 52.07 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1833,7 +1868,6 @@
 	(hierarchical_label "Crossing"
 		(shape output)
 		(at 170.18 50.8 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1852,7 +1886,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1b6b1d71-800a-43f4-96a4-60c8b5fbc39e")
-		(property "Reference" "R1602"
+		(property "Reference" "R702"
 			(at 63.5 45.72 90)
 			(effects
 				(font
@@ -1896,15 +1930,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "a1778133-9a71-4f8e-ae81-afe9c0d9f925")
+			(uuid "a5c65d24-76df-4366-88ae-466e333d95fc")
 		)
 		(pin "2"
-			(uuid "df1fd98c-0b77-44d5-8ff2-dc88733f7b10")
+			(uuid "9cde87de-1e3e-4e8c-827d-21530eaa21fd")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/750e63f5-dc4e-4e64-b2d6-60412c57ffed"
-					(reference "R1602")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/9b322a1f-f97f-4e42-b612-e764afdaf494"
+					(reference "R702")
 					(unit 1)
 				)
 			)
@@ -1920,7 +1954,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2c2239f8-e644-460f-80bf-b64e94c4380b")
-		(property "Reference" "R1604"
+		(property "Reference" "R703"
 			(at 104.14 57.1499 0)
 			(effects
 				(font
@@ -1966,15 +2000,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "03eb0fb3-10d0-4260-9dd6-f0a24044ebf5")
+			(uuid "a33e8db1-7ab9-4d26-bbea-2ab542c4aa0b")
 		)
 		(pin "2"
-			(uuid "dbd28274-e6a3-4e6a-9b77-165f8a99400c")
+			(uuid "f1cabaaf-628c-4029-850e-33294bcfb787")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/750e63f5-dc4e-4e64-b2d6-60412c57ffed"
-					(reference "R1604")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/9b322a1f-f97f-4e42-b612-e764afdaf494"
+					(reference "R703")
 					(unit 1)
 				)
 			)
@@ -1990,7 +2024,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5efbf2b0-f470-4e79-ab5f-4709291e34f1")
-		(property "Reference" "C1602"
+		(property "Reference" "C701"
 			(at 116.84 44.8309 0)
 			(effects
 				(font
@@ -2036,15 +2070,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "abdf2b61-5ee4-4e37-acbc-fd2c863626f7")
+			(uuid "1dac84c1-7d65-4ec0-b987-a575885e25bf")
 		)
 		(pin "2"
-			(uuid "824221d4-35ef-4beb-81ff-2f41374bfc80")
+			(uuid "aa9f0337-c5e8-45d4-80e3-003ce5c0ae0f")
 		)
 		(instances
-			(project ""
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/750e63f5-dc4e-4e64-b2d6-60412c57ffed"
-					(reference "C1602")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/9b322a1f-f97f-4e42-b612-e764afdaf494"
+					(reference "C701")
 					(unit 1)
 				)
 			)
@@ -2060,7 +2094,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "65d5a617-d911-45c2-8342-c6a1b3e3668d")
-		(property "Reference" "D1602"
+		(property "Reference" "D702"
 			(at 93.98 45.72 0)
 			(effects
 				(font
@@ -2122,15 +2156,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "9f04d61e-38a9-4f65-a815-623acda91887")
+			(uuid "c3b50a06-1205-4438-95c8-1714250b779c")
 		)
 		(pin "2"
-			(uuid "067ea7a4-c874-410b-93a2-58feb86647ce")
+			(uuid "c5e75773-ac33-43d9-9cd5-3943661892b9")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/750e63f5-dc4e-4e64-b2d6-60412c57ffed"
-					(reference "D1602")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/9b322a1f-f97f-4e42-b612-e764afdaf494"
+					(reference "D702")
 					(unit 1)
 				)
 			)
@@ -2146,7 +2180,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7b7158a3-ed67-4478-b1ee-e331a2042cf3")
-		(property "Reference" "Q1602"
+		(property "Reference" "Q702"
 			(at 148.7162 40.64 0)
 			(effects
 				(font
@@ -2162,7 +2196,7 @@
 				)
 			)
 		)
-		(property "Footprint" "WL-OCPT_LSOP4"
+		(property "Footprint" "wuerth:WL-OCPT_SOP4"
 			(at 149.098 54.356 0)
 			(effects
 				(font
@@ -2190,21 +2224,21 @@
 			)
 		)
 		(pin "1"
-			(uuid "00e0b411-30e7-4235-9ab3-6d785a8400a7")
+			(uuid "d2451c88-90bd-4024-a6ed-eb054ef60381")
 		)
 		(pin "2"
-			(uuid "9270cc1b-e1d8-44c5-b68a-91cdc4e135a2")
+			(uuid "cec9f1f1-f0ba-484a-a89c-fd8c4129a0cf")
 		)
 		(pin "4"
-			(uuid "cc464d87-3164-40bc-9b18-e4cb7c2de613")
+			(uuid "35890af1-1fce-41a9-8863-18107c62d157")
 		)
 		(pin "3"
-			(uuid "5383e53b-ac47-4133-a5ec-f78e0715d867")
+			(uuid "708a1a2c-39cb-481a-9e3a-40eacd7c94b5")
 		)
 		(instances
-			(project ""
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/750e63f5-dc4e-4e64-b2d6-60412c57ffed"
-					(reference "Q1602")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/9b322a1f-f97f-4e42-b612-e764afdaf494"
+					(reference "Q702")
 					(unit 1)
 				)
 			)
@@ -2220,7 +2254,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "87666055-55b3-4b67-b8fe-94e14da756d6")
-		(property "Reference" "Q1601"
+		(property "Reference" "Q701"
 			(at 125.73 50.8 90)
 			(effects
 				(font
@@ -2267,18 +2301,18 @@
 			)
 		)
 		(pin "1"
-			(uuid "5ad00998-69e7-4c0e-948f-d46008fa328e")
+			(uuid "e94b4dc1-36fc-4f2b-94ba-e5f5ea81be2e")
 		)
 		(pin "3"
-			(uuid "b9829702-e130-43a9-a6c4-d8f02b7b2d2d")
+			(uuid "3e326ce9-9ff3-47fe-9e1f-550fdc570faa")
 		)
 		(pin "2"
-			(uuid "b7495f2d-cdbd-49cc-89a5-70ba1ddb5441")
+			(uuid "e7b38ffb-c1c7-49c0-9870-89199d3c6d97")
 		)
 		(instances
-			(project ""
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/750e63f5-dc4e-4e64-b2d6-60412c57ffed"
-					(reference "Q1601")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/9b322a1f-f97f-4e42-b612-e764afdaf494"
+					(reference "Q701")
 					(unit 1)
 				)
 			)
@@ -2294,7 +2328,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8bba771d-9696-4bfd-99c5-d6739a7490a1")
-		(property "Reference" "#PWR01602"
+		(property "Reference" "#PWR0702"
 			(at 158.75 67.31 0)
 			(effects
 				(font
@@ -2339,12 +2373,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "4bf0cbdc-1238-4e42-98d6-5f3a9717e978")
+			(uuid "1d3797f0-de14-4721-abb3-6f282e3e8ccc")
 		)
 		(instances
-			(project ""
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/750e63f5-dc4e-4e64-b2d6-60412c57ffed"
-					(reference "#PWR01602")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/9b322a1f-f97f-4e42-b612-e764afdaf494"
+					(reference "#PWR0702")
 					(unit 1)
 				)
 			)
@@ -2360,7 +2394,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8c978ab5-b55a-449b-bf51-5a6c7836cba2")
-		(property "Reference" "R1605"
+		(property "Reference" "R705"
 			(at 161.29 53.3399 0)
 			(effects
 				(font
@@ -2406,15 +2440,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "f3bcdf7b-3ff6-4a65-9f8a-db0a49d6bc52")
+			(uuid "c2b2f075-e923-43dc-b71e-eccfe185661a")
 		)
 		(pin "2"
-			(uuid "94016db4-1a22-45ec-934d-5e4320e79ab9")
+			(uuid "50642dcf-0f62-45e4-b9ad-f77c9ae817fe")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/750e63f5-dc4e-4e64-b2d6-60412c57ffed"
-					(reference "R1605")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/9b322a1f-f97f-4e42-b612-e764afdaf494"
+					(reference "R705")
 					(unit 1)
 				)
 			)
@@ -2430,7 +2464,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "90ab1b50-86a7-4d0e-ad5f-de07efaed73a")
-		(property "Reference" "R1601"
+		(property "Reference" "R701"
 			(at 63.5 35.56 90)
 			(effects
 				(font
@@ -2474,15 +2508,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "25ec4e4c-7780-47c0-b6ce-8187057e793b")
+			(uuid "01118539-b912-474e-8edb-58d642489a20")
 		)
 		(pin "2"
-			(uuid "c8bd0928-bc7b-450b-9d67-5560ae3cddaf")
+			(uuid "22bb878e-9720-430b-9c0d-754277fcdea0")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/750e63f5-dc4e-4e64-b2d6-60412c57ffed"
-					(reference "R1601")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/9b322a1f-f97f-4e42-b612-e764afdaf494"
+					(reference "R701")
 					(unit 1)
 				)
 			)
@@ -2498,7 +2532,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "99b12764-b906-470f-8289-cd703ffd9ed1")
-		(property "Reference" "D1604"
+		(property "Reference" "D704"
 			(at 93.98 66.04 0)
 			(effects
 				(font
@@ -2560,15 +2594,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "5bbf1d65-6c35-4cbf-b0e6-18e104b5753d")
+			(uuid "ced24a23-5f5d-4968-a18c-24a6347618b7")
 		)
 		(pin "2"
-			(uuid "4c9ae5a2-ffab-4c21-8b25-a77214d643f5")
+			(uuid "34793da1-b147-4750-83df-3e4242734005")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/750e63f5-dc4e-4e64-b2d6-60412c57ffed"
-					(reference "D1604")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/9b322a1f-f97f-4e42-b612-e764afdaf494"
+					(reference "D704")
 					(unit 1)
 				)
 			)
@@ -2584,7 +2618,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a9b4b3cf-a893-40cf-affa-31b70bbda7d3")
-		(property "Reference" "R1603"
+		(property "Reference" "R704"
 			(at 129.54 35.56 90)
 			(effects
 				(font
@@ -2628,15 +2662,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "c96e5d60-b760-4e6b-ad81-7bd84b39d6df")
+			(uuid "db5ac08b-0c79-4a40-83f1-645ae8c30189")
 		)
 		(pin "2"
-			(uuid "6b2835fd-a69d-4978-b13b-4b8e29632cd6")
+			(uuid "f1149b6b-1218-421b-8aff-349d94700c12")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/750e63f5-dc4e-4e64-b2d6-60412c57ffed"
-					(reference "R1603")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/9b322a1f-f97f-4e42-b612-e764afdaf494"
+					(reference "R704")
 					(unit 1)
 				)
 			)
@@ -2652,7 +2686,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b2df6578-3950-4870-b0e9-762aeb576b32")
-		(property "Reference" "D1605"
+		(property "Reference" "D705"
 			(at 115.57 60.9599 90)
 			(effects
 				(font
@@ -2716,15 +2750,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "f13b44a6-8cf9-4f9a-a9c0-3d31880a156f")
+			(uuid "9f39b758-80d5-49ba-bf5d-3d8c53abafb1")
 		)
 		(pin "2"
-			(uuid "51829400-5c7e-42f2-8c2a-3e91f7b67fae")
+			(uuid "a060bce8-9a31-432b-bf46-9a85f6a70e34")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/750e63f5-dc4e-4e64-b2d6-60412c57ffed"
-					(reference "D1605")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/9b322a1f-f97f-4e42-b612-e764afdaf494"
+					(reference "D705")
 					(unit 1)
 				)
 			)
@@ -2740,7 +2774,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d4f376f7-39d1-4df6-95e5-c7bfdf17566a")
-		(property "Reference" "D1601"
+		(property "Reference" "D701"
 			(at 93.98 35.56 0)
 			(effects
 				(font
@@ -2802,15 +2836,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "787da844-89de-43e4-a424-a873d8c8b1bf")
+			(uuid "09c4a6b1-62de-42d0-861a-6019d36c2980")
 		)
 		(pin "2"
-			(uuid "9bda14a3-3db8-4c60-bde2-ef5be90df6b3")
+			(uuid "53b53296-b9dd-4fed-972d-3c9ad2a4bec7")
 		)
 		(instances
-			(project ""
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/750e63f5-dc4e-4e64-b2d6-60412c57ffed"
-					(reference "D1601")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/9b322a1f-f97f-4e42-b612-e764afdaf494"
+					(reference "D701")
 					(unit 1)
 				)
 			)
@@ -2826,7 +2860,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dd170c7b-0a4e-4f1f-af21-751dc169275c")
-		(property "Reference" "#PWR01601"
+		(property "Reference" "#PWR0701"
 			(at 157.48 46.99 0)
 			(effects
 				(font
@@ -2871,12 +2905,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "e8ae62ff-4278-44cb-ad4a-134b5bfc89ee")
+			(uuid "f7c87a63-6475-4e9a-9ebf-939cc2573922")
 		)
 		(instances
-			(project ""
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/750e63f5-dc4e-4e64-b2d6-60412c57ffed"
-					(reference "#PWR01601")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/9b322a1f-f97f-4e42-b612-e764afdaf494"
+					(reference "#PWR0701")
 					(unit 1)
 				)
 			)
@@ -2892,7 +2926,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e0a1867a-2d13-4dd6-a79e-6ca0d5c4af54")
-		(property "Reference" "D1603"
+		(property "Reference" "D703"
 			(at 93.98 57.15 0)
 			(effects
 				(font
@@ -2954,15 +2988,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "bba91087-010f-42ff-af3b-fe129318e7a7")
+			(uuid "dae996d7-7a73-4333-b3dc-09f5d23dcc7c")
 		)
 		(pin "2"
-			(uuid "38b850f7-5959-4910-820f-927b11fc69b2")
+			(uuid "afc58c31-2cab-4810-a62f-702c48ac5f76")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/750e63f5-dc4e-4e64-b2d6-60412c57ffed"
-					(reference "D1603")
+			(project "hv"
+				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/9b322a1f-f97f-4e42-b612-e764afdaf494"
+					(reference "D703")
 					(unit 1)
 				)
 			)

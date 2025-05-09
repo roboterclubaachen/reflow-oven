@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "8da0a7fe-cd27-47eb-ae2d-1e936b06e611")
 	(paper "A4")
 	(lib_symbols
@@ -67,6 +67,132 @@
 			)
 			(symbol "ILI9341_1_1"
 				(pin input line
+					(at -11.43 22.86 0)
+					(length 2.54)
+					(name "SCK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 20.32 0)
+					(length 2.54)
+					(name "MOSI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -11.43 17.78 0)
+					(length 2.54)
+					(name "MISO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 15.24 0)
+					(length 2.54)
+					(name "~{CS}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 12.7 0)
+					(length 2.54)
+					(name "DC/RS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 6.35 0)
+					(length 2.54)
+					(name "~{RESET}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 3.81 0)
+					(length 2.54)
+					(name "LED"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
 					(at -2.54 30.48 270)
 					(length 2.54)
 					(name "VCC"
@@ -85,6 +211,42 @@
 					)
 				)
 				(pin input line
+					(at 2.54 30.48 270)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 6.35 30.48 270)
+					(length 2.54)
+					(name "MP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
 					(at 11.43 22.86 180)
 					(length 2.54)
 					(name "T_CLK"
@@ -95,24 +257,6 @@
 						)
 					)
 					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 11.43 15.24 180)
-					(length 2.54)
-					(name "T_CS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -156,6 +300,24 @@
 						)
 					)
 				)
+				(pin input line
+					(at 11.43 15.24 180)
+					(length 2.54)
+					(name "T_CS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin output line
 					(at 11.43 12.7 180)
 					(length 2.54)
@@ -175,16 +337,16 @@
 					)
 				)
 				(pin input line
-					(at 11.43 2.54 180)
+					(at 11.43 10.16 180)
 					(length 2.54)
-					(name "Touch"
+					(name "SD_SCK"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "15"
+					(number "18"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -229,178 +391,16 @@
 					)
 				)
 				(pin input line
-					(at 11.43 10.16 180)
+					(at 11.43 2.54 180)
 					(length 2.54)
-					(name "SD_SCK"
+					(name "Touch"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 6.35 30.48 270)
-					(length 2.54)
-					(name "MP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 2.54 30.48 270)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -11.43 15.24 0)
-					(length 2.54)
-					(name "~{CS}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -11.43 6.35 0)
-					(length 2.54)
-					(name "~{RESET}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -11.43 12.7 0)
-					(length 2.54)
-					(name "DC/RS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -11.43 20.32 0)
-					(length 2.54)
-					(name "MOSI"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -11.43 22.86 0)
-					(length 2.54)
-					(name "SCK"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -11.43 3.81 0)
-					(length 2.54)
-					(name "LED"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at -11.43 17.78 0)
-					(length 2.54)
-					(name "MISO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
+					(number "15"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -409,12 +409,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3V3"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -486,7 +491,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -498,7 +503,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -529,12 +534,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -625,6 +635,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(no_connect
@@ -824,7 +835,6 @@
 	(hierarchical_label "SD_MISO"
 		(shape output)
 		(at 151.13 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -836,7 +846,6 @@
 	(hierarchical_label "~{RESET}"
 		(shape input)
 		(at 120.65 100.33 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -848,7 +857,6 @@
 	(hierarchical_label "DC{slash}RS"
 		(shape input)
 		(at 120.65 93.98 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -860,7 +868,6 @@
 	(hierarchical_label "MISO"
 		(shape output)
 		(at 120.65 88.9 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -872,7 +879,6 @@
 	(hierarchical_label "~{CS}"
 		(shape input)
 		(at 120.65 91.44 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -884,7 +890,6 @@
 	(hierarchical_label "T_DO"
 		(shape output)
 		(at 151.13 88.9 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -896,7 +901,6 @@
 	(hierarchical_label "T_IRQ"
 		(shape output)
 		(at 151.13 93.98 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -908,7 +912,6 @@
 	(hierarchical_label "MOSI"
 		(shape input)
 		(at 120.65 86.36 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -920,7 +923,6 @@
 	(hierarchical_label "SCK"
 		(shape input)
 		(at 120.65 83.82 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -932,7 +934,6 @@
 	(hierarchical_label "T_DIN"
 		(shape input)
 		(at 151.13 86.36 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -944,7 +945,6 @@
 	(hierarchical_label "T_CLK"
 		(shape input)
 		(at 151.13 83.82 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -956,7 +956,6 @@
 	(hierarchical_label "SD_MOSI"
 		(shape input)
 		(at 151.13 99.06 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -968,7 +967,6 @@
 	(hierarchical_label "T_CS"
 		(shape input)
 		(at 151.13 91.44 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -980,7 +978,6 @@
 	(hierarchical_label "LED"
 		(shape input)
 		(at 120.65 102.87 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -992,7 +989,6 @@
 	(hierarchical_label "SD_SCK"
 		(shape input)
 		(at 151.13 96.52 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1004,7 +1000,6 @@
 	(hierarchical_label "Touch"
 		(shape output)
 		(at 151.13 104.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1023,7 +1018,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1c0c09a6-8ff8-4f38-9d7b-6b21f21fbff2")
-		(property "Reference" "U4"
+		(property "Reference" "U401"
 			(at 135.89 107.95 0)
 			(effects
 				(font
@@ -1067,66 +1062,66 @@
 			)
 		)
 		(pin "8"
-			(uuid "a916c403-5890-4179-8f83-61c4b4174750")
+			(uuid "148661fd-7cef-4183-8fbf-7281f6624c92")
 		)
 		(pin "12"
-			(uuid "61783140-97e2-4116-8fbe-c6ef62fc8d15")
+			(uuid "b7f7acdc-6fe6-4561-8934-13c246460f50")
 		)
 		(pin "6"
-			(uuid "9e9e8503-1817-4f9f-822f-b99ceffd134d")
+			(uuid "8bfa272e-cb38-4171-bae3-24891283498c")
 		)
 		(pin "18"
-			(uuid "955ab016-69da-4cbb-89c0-cb54166f3223")
+			(uuid "05d1ceda-11c4-4ecd-9bca-bdbf177d3003")
 		)
 		(pin "11"
-			(uuid "e109d098-f2b1-4a68-b875-f24edd080689")
+			(uuid "af7e5ab1-7869-4dff-8ea9-7581dc1be6da")
 		)
 		(pin "10"
-			(uuid "a940a8c0-92fe-4bf8-b4c5-b0318512cf00")
+			(uuid "b9245522-d0fd-43f4-b819-6ee7a241cf04")
 		)
 		(pin "15"
-			(uuid "59e7affe-e936-485b-8e65-2fe33416685c")
+			(uuid "8489d4b9-19ce-411d-9eea-b64a7338dbc5")
 		)
 		(pin "14"
-			(uuid "97daf96c-ab55-496a-9944-a1cb49eae29c")
+			(uuid "0f7fbb28-5c60-4359-b5f0-841b710ca2d9")
 		)
 		(pin "16"
-			(uuid "17bbdd93-a5df-4f5d-97c0-162e0f3e73fd")
+			(uuid "ce9825cc-5f6a-4036-9443-1b45dfe75bd4")
 		)
 		(pin "17"
-			(uuid "dd72adc9-ae7c-4d09-810b-2ef754de7213")
+			(uuid "5aa61a41-c364-4514-a084-057a96d1251d")
 		)
 		(pin "7"
-			(uuid "4a9a9384-4db7-456d-be9e-8d3222bdea3e")
+			(uuid "dbe4776b-b3d6-47e7-b226-fda64a704a81")
 		)
 		(pin "2"
-			(uuid "419b5b38-8f88-422e-921f-fbbd924afd57")
+			(uuid "76205516-57f7-4bdb-ab3e-24286ed27c90")
 		)
 		(pin "3"
-			(uuid "e5a29872-5a92-44d4-9106-8f1ec976b8e2")
+			(uuid "b54ab876-1fea-4011-ab82-632a552d3717")
 		)
 		(pin "5"
-			(uuid "f9e2ed33-4ede-490d-b521-5e4f245ede1a")
+			(uuid "e46702e9-248e-4d20-bfd7-7fa921675138")
 		)
 		(pin "19"
-			(uuid "4b0c03de-f07e-4c22-bb1c-abf5cacd7177")
+			(uuid "e54a9f38-0105-41ad-ad9f-b47d39906a13")
 		)
 		(pin "4"
-			(uuid "7597dc1e-a2bf-49be-a196-c9e10405358b")
+			(uuid "7c9367cb-2fbd-4b43-be26-a01f1441a856")
 		)
 		(pin "1"
-			(uuid "a787a979-445b-46b2-9aa4-c6831a9e2fbc")
+			(uuid "8f5d7ea0-7774-49d4-a883-27394d6d38e0")
 		)
 		(pin "13"
-			(uuid "9abaf801-9e00-4942-8d47-5c97b8766c2c")
+			(uuid "73afa7f6-570b-426e-ab04-2caebe1b37e5")
 		)
 		(pin "9"
-			(uuid "30301fad-ebbf-445d-8536-9aebd1874a27")
+			(uuid "f2416c75-4012-49d2-a456-4a5dd252e129")
 		)
 		(instances
-			(project ""
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f628d05d-4e2a-4195-9ee3-f88b775e9255"
-					(reference "U4")
+			(project "ui"
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/3002f892-b564-4483-ae2b-de535155d456"
+					(reference "U401")
 					(unit 1)
 				)
 			)
@@ -1142,7 +1137,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c70817b5-d098-4853-a3f1-a1b9467cc151")
-		(property "Reference" "#PWR0702"
+		(property "Reference" "#PWR0402"
 			(at 147.32 81.28 0)
 			(effects
 				(font
@@ -1187,12 +1182,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "54e183ed-98da-4a3c-acc5-93e7bd9780ce")
+			(uuid "3f0bfaec-dae8-4a5e-a3d5-0849d62b0c32")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f628d05d-4e2a-4195-9ee3-f88b775e9255"
-					(reference "#PWR0702")
+			(project "ui"
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/3002f892-b564-4483-ae2b-de535155d456"
+					(reference "#PWR0402")
 					(unit 1)
 				)
 			)
@@ -1208,7 +1203,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f4408f01-bf04-4f52-9bb5-1fa29a1e9706")
-		(property "Reference" "#PWR0701"
+		(property "Reference" "#PWR0401"
 			(at 133.35 76.2 0)
 			(effects
 				(font
@@ -1253,12 +1248,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "8ff85a30-492b-4b28-8809-d047734263ab")
+			(uuid "1f942a7b-956b-40b0-88d1-7f0e1319245c")
 		)
 		(instances
-			(project "reflow-controller-v1"
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/f628d05d-4e2a-4195-9ee3-f88b775e9255"
-					(reference "#PWR0701")
+			(project "ui"
+				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/3002f892-b564-4483-ae2b-de535155d456"
+					(reference "#PWR0401")
 					(unit 1)
 				)
 			)
