@@ -1393,6 +1393,28 @@
 		)
 		(uuid "5d6a905d-5f64-4aea-8063-88b53839ae8a")
 	)
+	(text "LV Part. \nIf something fails closed, the optocuppler should save the rest.\n"
+		(exclude_from_sim no)
+		(at 78.74 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "66702df9-381d-4f4e-96fb-9d700f653957")
+	)
+	(text "With a short in the LV part.\nI=522μA\nP=120mW\n+ Safety because we definatly don't want these to fail closed\n=> P=300mW\n"
+		(exclude_from_sim no)
+		(at 76.2 61.214 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "db48dfb0-2697-4ae8-88c8-97da63d31019")
+	)
 	(junction
 		(at 101.6 63.5)
 		(diameter 0)
@@ -1875,6 +1897,52 @@
 			(justify left)
 		)
 		(uuid "64f8bef4-b667-4046-873d-ca2b19a18bad")
+	)
+	(rule_area
+		(polyline
+			(pts
+				(xy 78.74 33.02) (xy 78.74 77.47) (xy 137.16 77.47) (xy 137.16 33.02)
+			)
+			(stroke
+				(width 0)
+				(type dash)
+			)
+			(fill
+				(type none)
+			)
+			(uuid 0a5dc5d9-dbfc-410e-8839-3a4950fcea04)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 97.79 33.02 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e1c6c832-4971-4bf3-a3c6-bd0b245fd760")
+		(property "Netclass" "LV"
+			(at 98.4885 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -46.99 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:R")

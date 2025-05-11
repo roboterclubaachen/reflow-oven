@@ -1353,37 +1353,6 @@
 		)
 		(uuid "e6d88d80-ba63-4104-a3bc-7d34cf17adb7")
 	)
-	(netclass_flag ""
-		(length 2.54)
-		(shape round)
-		(at 246.38 20.32 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c3c2538f-89f9-4c2d-b259-044e7836d39c")
-		(property "Netclass" "Default"
-			(at 247.0785 17.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Component Class" ""
-			(at -53.34 -26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-	)
 	(symbol
 		(lib_id "power:Earth_Protective")
 		(at 45.72 41.91 0)
@@ -1459,7 +1428,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "09ec4620-5fb9-4f95-a406-275950dd5977")
 		(property "Reference" "J102"
 			(at 260.35 40.64 0)
@@ -1470,7 +1438,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "EB163A-02-C-180"
+		(property "Value" "691401700002B"
 			(at 260.35 43.18 0)
 			(effects
 				(font
@@ -1479,7 +1447,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Phoenix_SPT:PhoenixContact_SPT_2.5_2-V-5.0-EX_1x02_P5.0mm_Vertical"
+		(property "Footprint" "wuerth:691401700002B"
 			(at 257.81 40.64 0)
 			(effects
 				(font
@@ -1529,7 +1497,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "32cfed79-cbc8-477f-a194-170d86558f16")
 		(property "Reference" "J103"
 			(at 260.35 53.34 0)
@@ -1540,7 +1507,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "EB163A-02-C-180"
+		(property "Value" "691401700002B"
 			(at 260.35 55.88 0)
 			(effects
 				(font
@@ -1549,7 +1516,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Phoenix_SPT:PhoenixContact_SPT_2.5_2-V-5.0-EX_1x02_P5.0mm_Vertical"
+		(property "Footprint" "wuerth:691401700002B"
 			(at 257.81 53.34 0)
 			(effects
 				(font
@@ -1667,7 +1634,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "439b955d-45ca-4a6b-b01c-56eaacd1c0af")
 		(property "Reference" "J105"
 			(at 260.35 78.74 0)
@@ -1678,7 +1644,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "EB163A-02-C-180"
+		(property "Value" "691401700002B"
 			(at 260.35 81.28 0)
 			(effects
 				(font
@@ -1687,7 +1653,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Phoenix_SPT:PhoenixContact_SPT_2.5_2-V-5.0-EX_1x02_P5.0mm_Vertical"
+		(property "Footprint" "wuerth:691401700002B"
 			(at 257.81 78.74 0)
 			(effects
 				(font
@@ -1876,7 +1842,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "cde90c23-c5db-422b-99c5-b2bd1c23bb28")
 		(property "Reference" "J104"
 			(at 260.35 66.04 0)
@@ -1887,7 +1852,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "EB163A-02-C-180"
+		(property "Value" "691401700002B"
 			(at 260.35 68.58 0)
 			(effects
 				(font
@@ -1896,7 +1861,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Phoenix_SPT:PhoenixContact_SPT_2.5_2-V-5.0-EX_1x02_P5.0mm_Vertical"
+		(property "Footprint" "wuerth:691401700002B"
 			(at 257.81 66.04 0)
 			(effects
 				(font
