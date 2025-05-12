@@ -1576,7 +1576,7 @@
 				)
 			)
 		)
-		(property "Value" "Schurter 0031.8221"
+		(property "Value" "Würth 696103101002"
 			(at 69.85 33.02 90)
 			(effects
 				(font
@@ -1584,7 +1584,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_OGN-SMD_Horizontal_Open"
+		(property "Footprint" "Fuse:Fuseholder_Cylinder-5x20mm_Wuerth_696103101002-SMD_Horizontal_Open"
 			(at 69.85 37.338 90)
 			(effects
 				(font
@@ -1784,7 +1784,7 @@
 				)
 			)
 		)
-		(property "Value" "Schurter 0031.8221"
+		(property "Value" "Würth 696103101002"
 			(at 69.85 45.72 90)
 			(effects
 				(font
@@ -1792,7 +1792,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_OGN-SMD_Horizontal_Open"
+		(property "Footprint" "Fuse:Fuseholder_Cylinder-5x20mm_Wuerth_696103101002-SMD_Horizontal_Open"
 			(at 69.85 42.418 90)
 			(effects
 				(font

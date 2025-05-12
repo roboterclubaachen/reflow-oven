@@ -7876,6 +7876,52 @@
 		)
 		(uuid "ce3c3942-a090-472f-918d-116f7f224ffa")
 	)
+	(rule_area
+		(polyline
+			(pts
+				(xy 88.9 73.66) (xy 88.9 102.87) (xy 132.08 102.87) (xy 132.08 73.66)
+			)
+			(stroke
+				(width 0)
+				(type dash)
+			)
+			(fill
+				(type none)
+			)
+			(uuid 885a09a8-89a4-4bb7-8e55-999d447c0950)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 109.22 73.66 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b81f7e7e-c3ad-4127-9d09-2110532f8c58")
+		(property "Netclass" "LV"
+			(at 109.9185 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -52.07 -11.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
 	(symbol
 		(lib_id "Triac_Thyristor:Generic_Triac_A1A2G")
 		(at 172.72 95.25 0)
@@ -7913,7 +7959,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/t1620t-8g.pdf"
 			(at 172.72 95.25 90)
 			(effects
 				(font
@@ -7980,7 +8026,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330"
+		(property "Value" "330Ω"
 			(at 154.94 105.41 0)
 			(effects
 				(font
@@ -8061,7 +8107,7 @@
 				)
 			)
 		)
-		(property "Value" "180"
+		(property "Value" "180Ω"
 			(at 118.11 83.82 90)
 			(effects
 				(font
@@ -8078,7 +8124,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/560112116097.pdf"
 			(at 118.11 87.63 0)
 			(effects
 				(font
@@ -8089,6 +8135,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 118.11 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order" "Würth 560112116097"
+			(at 118.11 87.63 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8141,7 +8196,7 @@
 				)
 			)
 		)
-		(property "Value" "360"
+		(property "Value" "360Ω"
 			(at 158.75 83.82 90)
 			(effects
 				(font

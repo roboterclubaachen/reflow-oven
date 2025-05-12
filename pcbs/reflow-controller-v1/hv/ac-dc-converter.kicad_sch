@@ -818,17 +818,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "47µF"
-		(exclude_from_sim no)
-		(at 163.83 43.18 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f143df65-9050-4321-a6e0-d8e22e28b277")
-	)
 	(junction
 		(at 160.02 33.02)
 		(diameter 0)
@@ -1047,7 +1036,7 @@
 			(fill
 				(type none)
 			)
-			(uuid f058f2ba-062b-49e0-a2b9-ff2cda4d91ee)
+			(uuid 0a709c9d-31a1-4eb2-80f8-48c1968da591)
 		)
 	)
 	(netclass_flag ""
@@ -1163,7 +1152,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "67e784d0-b557-4a83-aa4d-ba32f88f64dc")
 		(property "Reference" "C201"
 			(at 144.78 38.1 0)
@@ -1192,7 +1180,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/885012205018.pdf"
 			(at 140.97 39.37 0)
 			(effects
 				(font
@@ -1208,6 +1196,15 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Order" "Würth 885012205018"
+			(at 144.78 42.672 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(pin "1"
@@ -1299,10 +1296,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "ad0ead7b-cd94-49fa-bb29-601442bdc8ec")
 		(property "Reference" "C202"
-			(at 163.83 37.211 0)
+			(at 163.83 37.2109 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1310,8 +1306,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "EEEFK1E470P"
-			(at 163.83 39.751 0)
+		(property "Value" "47μF"
+			(at 163.83 39.7509 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1328,7 +1324,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/865060343004.pdf"
 			(at 160.02 39.37 0)
 			(effects
 				(font
@@ -1344,6 +1340,15 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Order" "Würth 865060343004"
+			(at 163.83 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(pin "1"
