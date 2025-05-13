@@ -448,7 +448,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+3.3V"
+		(symbol "power:+3V3"
 			(power)
 			(pin_numbers
 				(hide yes)
@@ -469,7 +469,7 @@
 					(hide yes)
 				)
 			)
-			(property "Value" "+3.3V"
+			(property "Value" "+3V3"
 				(at 0 3.556 0)
 				(effects
 					(font
@@ -495,7 +495,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(property "Description" "Power symbol creates a global label with name \"+3V3\""
 				(at 0 0 0)
 				(effects
 					(font
@@ -513,7 +513,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "+3.3V_0_1"
+			(symbol "+3V3_0_1"
 				(polyline
 					(pts
 						(xy -0.762 1.27) (xy 0 2.54)
@@ -551,7 +551,7 @@
 					)
 				)
 			)
-			(symbol "+3.3V_1_1"
+			(symbol "+3V3_1_1"
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
@@ -922,7 +922,7 @@
 	)
 	(hierarchical_label "SSR2"
 		(shape bidirectional)
-		(at 163.83 97.79 0)
+		(at 163.83 102.87 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -933,7 +933,7 @@
 	)
 	(hierarchical_label "SSR4"
 		(shape bidirectional)
-		(at 163.83 102.87 0)
+		(at 163.83 97.79 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -955,7 +955,7 @@
 	)
 	(hierarchical_label "Zero"
 		(shape bidirectional)
-		(at 163.83 105.41 0)
+		(at 163.83 95.25 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -966,7 +966,7 @@
 	)
 	(hierarchical_label "SSR1"
 		(shape bidirectional)
-		(at 163.83 95.25 0)
+		(at 163.83 105.41 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1311,7 +1311,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
+		(lib_id "power:+3V3")
 		(at 166.37 68.58 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1319,8 +1319,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "d04338b3-3ef7-41f6-abe1-fe986eabf31b")
-		(property "Reference" "#PWR0804"
+		(uuid "d0119dab-df4b-4a2b-8c6f-b363764ff136")
+		(property "Reference" "#PWR0805"
 			(at 166.37 72.39 0)
 			(effects
 				(font
@@ -1329,7 +1329,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
+		(property "Value" "+3V3"
 			(at 166.37 63.5 0)
 			(effects
 				(font
@@ -1355,7 +1355,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
 			(at 166.37 68.58 0)
 			(effects
 				(font
@@ -1365,24 +1365,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "0a9637b2-10ac-4f7c-9cf1-479de2630767")
+			(uuid "0a1aca42-89c4-4034-9b47-1312c6992a7c")
 		)
 		(instances
-			(project "ui"
-				(path "/2ced3b3e-2fc8-4776-88d1-4bcb3cd16514/f84f6660-f8eb-481a-b914-aee57f214b58"
-					(reference "#PWR0204")
-					(unit 1)
-				)
-			)
 			(project ""
-				(path "/843848ae-bf49-42cb-8f8b-76790d2e568d/70a6fcff-45f3-4adb-97e9-6ae77cc29097"
-					(reference "#PWR01702")
-					(unit 1)
-				)
-			)
-			(project "hv"
 				(path "/bfc257b6-4a03-4e6b-b2e0-eeb653e202b4/32264195-0edd-4756-a40a-d0c1061e5db1"
-					(reference "#PWR0804")
+					(reference "#PWR0805")
 					(unit 1)
 				)
 			)

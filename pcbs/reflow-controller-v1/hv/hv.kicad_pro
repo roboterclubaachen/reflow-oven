@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.8
         }
       },
       "diff_pair_dimensions": [
@@ -58,7 +58,44 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "courtyards_overlap|96730627|64312722|516dca50-957d-4a86-ad1e-a533b7b82552|5c8a3a4c-b2b5-40a3-9c4a-6f9a6c80ac72",
+          "The hight diference between the reverse mounted fixture and the pin lenght of the THT DCDCshould sufice"
+        ],
+        [
+          "lib_footprint_mismatch|113345000|171931235|b0257271-14f8-4e9b-bfe5-d753ba43deef|00000000-0000-0000-0000-000000000000",
+          "Rounded pad corners"
+        ],
+        [
+          "lib_footprint_mismatch|72404210|157149999|71e75b41-c960-4359-bd4d-378e57b69e78|00000000-0000-0000-0000-000000000000",
+          "Adjusted to remove silkscreen over trensh"
+        ],
+        [
+          "lib_footprint_mismatch|80025000|113760000|bba23951-b64c-4bca-86e9-9621b0989bf8|00000000-0000-0000-0000-000000000000",
+          "Adjusted to remove silkscreen over trensh"
+        ],
+        [
+          "lib_footprint_mismatch|80025000|132489999|384bbed3-4cc7-4e33-b396-0d0eca71ceaf|00000000-0000-0000-0000-000000000000",
+          "Adjusted to remove silkscreen over trensh"
+        ],
+        [
+          "lib_footprint_mismatch|80025000|151210000|053b9bda-6b79-4eeb-923f-6eb2b968b7b3|00000000-0000-0000-0000-000000000000",
+          "Adjusted to remove silkscreen over trensh"
+        ],
+        [
+          "lib_footprint_mismatch|80025000|95030000|ad595b57-3f69-424f-bcff-38921c4cdf0d|00000000-0000-0000-0000-000000000000",
+          "Adjusted to remove silkscreen over trensh"
+        ],
+        [
+          "lib_footprint_mismatch|84690000|171931235|180f8b76-0efd-415c-8ca2-cc694fc9bb72|00000000-0000-0000-0000-000000000000",
+          "Rounded pad corners"
+        ],
+        [
+          "lib_footprint_mismatch|90572500|75700000|5c8a3a4c-b2b5-40a3-9c4a-6f9a6c80ac72|00000000-0000-0000-0000-000000000000",
+          "Adjusted to remove silkscreen over trensh"
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -549,10 +586,22 @@
       "GND": [
         "LV"
       ],
+      "Net-(D701-+)": [
+        "LV"
+      ],
+      "Net-(D701--)": [
+        "LV"
+      ],
       "Net-(D701-A)": [
         "LV"
       ],
       "Net-(D701-K)": [
+        "LV"
+      ],
+      "Net-(D701-Pad2)": [
+        "LV"
+      ],
+      "Net-(D701-Pad3)": [
         "LV"
       ],
       "Net-(D702-A)": [
